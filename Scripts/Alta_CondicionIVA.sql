@@ -1,0 +1,8 @@
+insert into CondicionesIVA (codigo,Descripcion,estado,fechaalta,UsuarioAlta)
+values('CF','Consumidor Final',1,getdate(),'Admin')
+insert into CondicionesIVA (codigo,Descripcion,estado,fechaalta,UsuarioAlta)
+values('RI','Responsable Inscripto',1,getdate(),'Admin')
+insert into CondicionesIVA (codigo,Descripcion,estado,fechaalta,UsuarioAlta)
+values('RNI','Responsable No Inscripto',1,getdate(),'Admin')
+insert into CondicionesIVA (codigo,Descripcion,estado,fechaalta,UsuarioAlta)
+values('EX','Exento',1,getdate(),'Admin')
