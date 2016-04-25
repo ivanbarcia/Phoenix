@@ -1,0 +1,2675 @@
+<?xml version="1.0"?>
+<DTS:Executable
+  DTS:refId="Package" xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ExecutableType="SSIS.Package.3"
+  DTS:CreatorName="cesar-PC\cesar"
+  DTS:CreatorComputerName="CESAR-PC"
+  DTS:CreationDate="4/9/2016 11:30:57 AM"
+  DTS:PackageType="5"
+  DTS:VersionBuild="11"
+  DTS:VersionGUID="{A0347668-A62B-4636-A2B0-D1079AF49B31}"
+  DTS:LastModifiedProductVersion="11.0.2100.60"
+  DTS:LocaleID="3082"
+  DTS:ObjectName="Package"
+  DTS:DTSID="{CE975987-AEE4-4CDA-93E9-40DF0FCF7B68}"
+  DTS:CreationName="SSIS.Package.3">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">6</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Administrador de conexiones con Excel]"
+      DTS:ObjectName="Administrador de conexiones con Excel"
+      DTS:DTSID="{3AF51786-2612-48FE-8F05-FB4065D825B9}"
+      DTS:CreationName="EXCEL">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\cesar\Documents\SABAR\Phoenix\ArticulosCob.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Administrador de conexiones con Excel 1]"
+      DTS:ObjectName="Administrador de conexiones con Excel 1"
+      DTS:DTSID="{51DA26EF-B697-415C-9994-8E1C80270946}"
+      DTS:CreationName="EXCEL">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\cesar\Documents\SABAR\Phoenix\ArticulosCob.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Administrador de conexiones con Excel 2]"
+      DTS:ObjectName="Administrador de conexiones con Excel 2"
+      DTS:DTSID="{7C46B9A2-8604-4006-89BB-B7233D725A06}"
+      DTS:CreationName="EXCEL">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\cesar\Documents\SABAR\Phoenix\Rubros - Sub-Rubros.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Administrador de conexiones con Excel 3]"
+      DTS:ObjectName="Administrador de conexiones con Excel 3"
+      DTS:DTSID="{F9CF6A1E-C1C8-46B7-B2A8-CCFD5DBB724E}"
+      DTS:CreationName="EXCEL">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\cesar\Documents\SABAR\Phoenix\ArticulosCob.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Administrador de conexiones con Excel 4]"
+      DTS:ObjectName="Administrador de conexiones con Excel 4"
+      DTS:DTSID="{C27A7CEB-6FC9-480E-A4BC-DB8793E4A6C3}"
+      DTS:CreationName="EXCEL">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\cesar\Documents\SABAR\Phoenix\ProvinciasARG.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[CESAR-PC.Phoenix.sa]"
+      DTS:ObjectName="CESAR-PC.Phoenix.sa"
+      DTS:DTSID="{7E0FDA1D-137A-46D2-BCC8-C401E9873B15}"
+      DTS:CreationName="OLEDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=CESAR-PC;User ID=sa;Initial Catalog=Phoenix;Provider=SQLNCLI11.1;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAFUIRybdMMEqzrQdII/G6+gAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADmrBc+MXIHxk8xLjIJgIRDLDLz3VemilZ0YiqA+pgZdQAAAAAOgAAAAAIAACAAAADI/eTmhvTc0sPaidRKHZdmqEyG66SCEhgUoPVc5voQbxAAAABQQCkJdCn8AUf7vQxTRz5hQAAAAJu6oO1/IwjV/9xzsrjzAzjUGbhiHNLkS3ND2ASWiUPNeN1lBWeZOWhPwCIbrtj6KZJ+1lueiEgKQyxtiprNKRE</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Alta_CategoriaAtributos"
+      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:ThreadHint="1"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Alta_CategoriaAtributos"
+      DTS:DTSID="{A9DD83F2-8A29-47EF-879A-1510F63A1090}"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{7E0FDA1D-137A-46D2-BCC8-C401E9873B15}"
+          SQLTask:SqlStatementSource="DECLARE @categoriaTalle int = (select id from CategoriaTalles where codigo ='TZ')&#xA;insert into CategoriaAtributo (CategoriaTalleId,TalleId,Estado,FechaAlta,UsuarioAlta)&#xA;values (@categoriaTalle,(select id from Talles where codigo='35'),1,GETDATE(),'Admin')&#xA;insert into CategoriaAtributo (CategoriaTalleId,TalleId,Estado,FechaAlta,UsuarioAlta)&#xA;values (@categoriaTalle,(select id from Talles where codigo='36'),1,GETDATE(),'Admin')&#xA;insert into CategoriaAtributo (CategoriaTalleId,TalleId,Estado,FechaAlta,UsuarioAlta)&#xA;values (@categoriaTalle,(select id from Talles where codigo='37'),1,GETDATE(),'Admin')&#xA;insert into CategoriaAtributo (CategoriaTalleId,TalleId,Estado,FechaAlta,UsuarioAlta)&#xA;values (@categoriaTalle,(select id from Talles where codigo='38'),1,GETDATE(),'Admin')&#xA;insert into CategoriaAtributo (CategoriaTalleId,TalleId,Estado,FechaAlta,UsuarioAlta)&#xA;values (@categoriaTalle,(select id from Talles where codigo='39'),1,GETDATE(),'Admin')&#xA;insert into CategoriaAtributo (CategoriaTalleId,TalleId,Estado,FechaAlta,UsuarioAlta)&#xA;values (@categoriaTalle,(select id from Talles where codigo='40'),1,GETDATE(),'Admin')&#xA;SET @categoriaTalle  = (select id from CategoriaTalles where codigo ='CP')&#xA;insert into CategoriaAtributo (CategoriaTalleId,TalleId,Estado,FechaAlta,UsuarioAlta)&#xA;values (@categoriaTalle,(select id from Talles where codigo='1'),1,GETDATE(),'Admin')&#xA;insert into CategoriaAtributo (CategoriaTalleId,TalleId,Estado,FechaAlta,UsuarioAlta)&#xA;values (@categoriaTalle,(select id from Talles where codigo='2'),1,GETDATE(),'Admin')&#xA;insert into CategoriaAtributo (CategoriaTalleId,TalleId,Estado,FechaAlta,UsuarioAlta)&#xA;values (@categoriaTalle,(select id from Talles where codigo='3'),1,GETDATE(),'Admin')&#xA;SET @categoriaTalle  = (select id from CategoriaTalles where codigo ='U')&#xA;insert into CategoriaAtributo (CategoriaTalleId,TalleId,Estado,FechaAlta,UsuarioAlta)&#xA;values (@categoriaTalle,(select id from Talles where codigo='0'),1,GETDATE(),'Admin')" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Alta_Categoria_Talles"
+      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:ThreadHint="2"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Alta_Categoria_Talles"
+      DTS:DTSID="{34A72FEB-60F0-4CEF-BE28-BFE1582A1252}"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{7E0FDA1D-137A-46D2-BCC8-C401E9873B15}"
+          SQLTask:BypassPrepare="False"
+          SQLTask:SqlStatementSource="/* CATEGORIA TALLES */&#xA;delete from CategoriaAtributo&#xA;delete from CategoriaTalles&#xA;delete from talles&#xA;insert into CategoriaTalles (Codigo,Descripcion,Estado,FechaAlta,UsuarioAlta)&#xA;values ('TZ','Tarea de zapatos',1,getdate(),'Admin')&#xA;insert into CategoriaTalles (Codigo,Descripcion,Estado,FechaAlta,UsuarioAlta)&#xA;values ('CP','Curva de prendas',1,getdate(),'Admin')&#xA;insert into CategoriaTalles (Codigo,Descripcion,Estado,FechaAlta,UsuarioAlta)&#xA;values ('U','Talle Unico',1,getdate(),'Admin')&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Alta_Talles"
+      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:ThreadHint="0"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Alta_Talles"
+      DTS:DTSID="{72A42B66-99C6-48FA-94B7-393E198914B4}"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{7E0FDA1D-137A-46D2-BCC8-C401E9873B15}"
+          SQLTask:BypassPrepare="False"
+          SQLTask:SqlStatementSource="/*Alta de talles*/&#xA;insert into talles (Codigo,Descripcion,Estado,FechaAlta,UsuarioAlta)&#xA;values (35,'Talle 35',1,getdate(),'Admin')&#xA;insert into talles (Codigo,Descripcion,Estado,FechaAlta,UsuarioAlta)&#xA;values (36,'Talle 36',1,getdate(),'Admin')&#xA;insert into talles (Codigo,Descripcion,Estado,FechaAlta,UsuarioAlta)&#xA;values (37,'Talle 37',1,getdate(),'Admin')&#xA;insert into talles (Codigo,Descripcion,Estado,FechaAlta,UsuarioAlta)&#xA;values (38,'Talle 38',1,getdate(),'Admin')&#xA;insert into talles (Codigo,Descripcion,Estado,FechaAlta,UsuarioAlta)&#xA;values (39,'Talle 39',1,getdate(),'Admin')&#xA;insert into talles (Codigo,Descripcion,Estado,FechaAlta,UsuarioAlta)&#xA;values (40,'Talle 40',1,getdate(),'Admin')&#xA;insert into talles (Codigo,Descripcion,Estado,FechaAlta,UsuarioAlta)&#xA;values (1,'Talle 1',1,getdate(),'Admin')&#xA;insert into talles (Codigo,Descripcion,Estado,FechaAlta,UsuarioAlta)&#xA;values (2,'Talle 2',1,getdate(),'Admin')&#xA;insert into talles (Codigo,Descripcion,Estado,FechaAlta,UsuarioAlta)&#xA;values (3,'Talle 3',1,getdate(),'Admin')&#xA;insert into talles (Codigo,Descripcion,Estado,FechaAlta,UsuarioAlta)&#xA;values (0,'Talle Unico',1,getdate(),'Admin')" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Altra_Temporadas"
+      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:ThreadHint="3"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Altra_Temporadas"
+      DTS:DTSID="{69044659-DAAB-477B-AA24-47928DAB6A99}"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{7E0FDA1D-137A-46D2-BCC8-C401E9873B15}"
+          SQLTask:SqlStatementSource="declare @AnoTemporada int = 2010&#xA;insert into temporadas (Codigo,descripcion,FechaDesde,FechaHasta,Estado,FechaAlta,UsuarioAlta)&#xA;values('IV'+STR (@AnoTemporada),'Invierno - Verano ' + STR(@AnoTemporada),'01/01/'+STR(@AnoTemporada),'31/12/'+STR(@AnoTemporada),1,getdate(),'Admin')&#xA;insert into temporadas (Codigo,descripcion,FechaDesde,FechaHasta,Estado,FechaAlta,UsuarioAlta)&#xA;values('I'+STR (@AnoTemporada),'Invierno  ' + STR(@AnoTemporada),'25/02/'+STR(@AnoTemporada),'15/08/'+STR(@AnoTemporada),1,getdate(),'Admin')&#xA;insert into temporadas (Codigo,descripcion,FechaDesde,FechaHasta,Estado,FechaAlta,UsuarioAlta)&#xA;values('V'+STR (@AnoTemporada),'Verano ' + STR(@AnoTemporada),'16/08/'+STR(@AnoTemporada),'24/02/'+STR(@AnoTemporada),1,getdate(),'Admin')&#xA;set @AnoTemporada = 2011&#xA;insert into temporadas (Codigo,descripcion,FechaDesde,FechaHasta,Estado,FechaAlta,UsuarioAlta)&#xA;values('IV'+STR (@AnoTemporada),'Invierno - Verano ' + STR(@AnoTemporada),'01/01/'+STR(@AnoTemporada),'31/12/'+STR(@AnoTemporada),1,getdate(),'Admin')&#xA;insert into temporadas (Codigo,descripcion,FechaDesde,FechaHasta,Estado,FechaAlta,UsuarioAlta)&#xA;values('I'+STR (@AnoTemporada),'Invierno  ' + STR(@AnoTemporada),'25/02/'+STR(@AnoTemporada),'15/08/'+STR(@AnoTemporada),1,getdate(),'Admin')&#xA;insert into temporadas (Codigo,descripcion,FechaDesde,FechaHasta,Estado,FechaAlta,UsuarioAlta)&#xA;values('V'+STR (@AnoTemporada),'Verano ' + STR(@AnoTemporada),'16/08/'+STR(@AnoTemporada),'24/02/'+STR(@AnoTemporada),1,getdate(),'Admin')&#xA;set @AnoTemporada = 2012&#xA;insert into temporadas (Codigo,descripcion,FechaDesde,FechaHasta,Estado,FechaAlta,UsuarioAlta)&#xA;values('IV'+STR (@AnoTemporada),'Invierno - Verano ' + STR(@AnoTemporada),'01/01/'+STR(@AnoTemporada),'31/12/'+STR(@AnoTemporada),1,getdate(),'Admin')&#xA;insert into temporadas (Codigo,descripcion,FechaDesde,FechaHasta,Estado,FechaAlta,UsuarioAlta)&#xA;values('I'+STR (@AnoTemporada),'Invierno  ' + STR(@AnoTemporada),'25/02/'+STR(@AnoTemporada),'15/08/'+STR(@AnoTemporada),1,getdate(),'Admin')&#xA;insert into temporadas (Codigo,descripcion,FechaDesde,FechaHasta,Estado,FechaAlta,UsuarioAlta)&#xA;values('V'+STR (@AnoTemporada),'Verano ' + STR(@AnoTemporada),'16/08/'+STR(@AnoTemporada),'24/02/'+STR(@AnoTemporada),1,getdate(),'Admin')&#xA;set @AnoTemporada = 2013&#xA;insert into temporadas (Codigo,descripcion,FechaDesde,FechaHasta,Estado,FechaAlta,UsuarioAlta)&#xA;values('IV'+STR (@AnoTemporada),'Invierno - Verano ' + STR(@AnoTemporada),'01/01/'+STR(@AnoTemporada),'31/12/'+STR(@AnoTemporada),1,getdate(),'Admin')&#xA;insert into temporadas (Codigo,descripcion,FechaDesde,FechaHasta,Estado,FechaAlta,UsuarioAlta)&#xA;values('I'+STR (@AnoTemporada),'Invierno  ' + STR(@AnoTemporada),'25/02/'+STR(@AnoTemporada),'15/08/'+STR(@AnoTemporada),1,getdate(),'Admin')&#xA;insert into temporadas (Codigo,descripcion,FechaDesde,FechaHasta,Estado,FechaAlta,UsuarioAlta)&#xA;values('V'+STR (@AnoTemporada),'Verano ' + STR(@AnoTemporada),'16/08/'+STR(@AnoTemporada),'24/02/'+STR(@AnoTemporada),1,getdate(),'Admin')&#xA;set @AnoTemporada = 2014&#xA;insert into temporadas (Codigo,descripcion,FechaDesde,FechaHasta,Estado,FechaAlta,UsuarioAlta)&#xA;values('IV'+STR (@AnoTemporada),'Invierno - Verano ' + STR(@AnoTemporada),'01/01/'+STR(@AnoTemporada),'31/12/'+STR(@AnoTemporada),1,getdate(),'Admin')&#xA;insert into temporadas (Codigo,descripcion,FechaDesde,FechaHasta,Estado,FechaAlta,UsuarioAlta)&#xA;values('I'+STR (@AnoTemporada),'Invierno  ' + STR(@AnoTemporada),'25/02/'+STR(@AnoTemporada),'15/08/'+STR(@AnoTemporada),1,getdate(),'Admin')&#xA;insert into temporadas (Codigo,descripcion,FechaDesde,FechaHasta,Estado,FechaAlta,UsuarioAlta)&#xA;values('V'+STR (@AnoTemporada),'Verano ' + STR(@AnoTemporada),'16/08/'+STR(@AnoTemporada),'24/02/'+STR(@AnoTemporada),1,getdate(),'Admin')&#xA;set @AnoTemporada = 2015&#xA;insert into temporadas (Codigo,descripcion,FechaDesde,FechaHasta,Estado,FechaAlta,UsuarioAlta)&#xA;values('IV'+STR (@AnoTemporada),'Invierno - Verano ' + STR(@AnoTemporada),'01/01/'+STR(@AnoTemporada),'31/12/'+STR(@AnoTemporada),1,getdate(),'Admin')&#xA;insert into temporadas (Codigo,descripcion,FechaDesde,FechaHasta,Estado,FechaAlta,UsuarioAlta)&#xA;values('I'+STR (@AnoTemporada),'Invierno  ' + STR(@AnoTemporada),'25/02/'+STR(@AnoTemporada),'15/08/'+STR(@AnoTemporada),1,getdate(),'Admin')&#xA;insert into temporadas (Codigo,descripcion,FechaDesde,FechaHasta,Estado,FechaAlta,UsuarioAlta)&#xA;values('V'+STR (@AnoTemporada),'Verano ' + STR(@AnoTemporada),'16/08/'+STR(@AnoTemporada),'24/02/'+STR(@AnoTemporada),1,getdate(),'Admin')&#xA;set @AnoTemporada = 2016&#xA;insert into temporadas (Codigo,descripcion,FechaDesde,FechaHasta,Estado,FechaAlta,UsuarioAlta)&#xA;values('IV'+STR (@AnoTemporada),'Invierno - Verano ' + STR(@AnoTemporada),'01/01/'+STR(@AnoTemporada),'31/12/'+STR(@AnoTemporada),1,getdate(),'Admin')&#xA;insert into temporadas (Codigo,descripcion,FechaDesde,FechaHasta,Estado,FechaAlta,UsuarioAlta)&#xA;values('I'+STR (@AnoTemporada),'Invierno  ' + STR(@AnoTemporada),'25/02/'+STR(@AnoTemporada),'15/08/'+STR(@AnoTemporada),1,getdate(),'Admin')&#xA;insert into temporadas (Codigo,descripcion,FechaDesde,FechaHasta,Estado,FechaAlta,UsuarioAlta)&#xA;values('V'+STR (@AnoTemporada),'Verano ' + STR(@AnoTemporada),'16/08/'+STR(@AnoTemporada),'24/02/'+STR(@AnoTemporada),1,getdate(),'Admin')&#xA;set @AnoTemporada = 2017&#xA;insert into temporadas (Codigo,descripcion,FechaDesde,FechaHasta,Estado,FechaAlta,UsuarioAlta)&#xA;values('IV'+STR (@AnoTemporada),'Invierno - Verano ' + STR(@AnoTemporada),'01/01/'+STR(@AnoTemporada),'31/12/'+STR(@AnoTemporada),1,getdate(),'Admin')&#xA;insert into temporadas (Codigo,descripcion,FechaDesde,FechaHasta,Estado,FechaAlta,UsuarioAlta)&#xA;values('I'+STR (@AnoTemporada),'Invierno  ' + STR(@AnoTemporada),'25/02/'+STR(@AnoTemporada),'15/08/'+STR(@AnoTemporada),1,getdate(),'Admin')&#xA;insert into temporadas (Codigo,descripcion,FechaDesde,FechaHasta,Estado,FechaAlta,UsuarioAlta)&#xA;values('V'+STR (@AnoTemporada),'Verano ' + STR(@AnoTemporada),'16/08/'+STR(@AnoTemporada),'24/02/'+STR(@AnoTemporada),1,getdate(),'Admin')&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\completar_excel_provincias"
+      DTS:ExecutableType="SSIS.Pipeline.3"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="completar_excel_provincias"
+      DTS:DTSID="{208722DE-3549-4C15-AD1A-C120669529AA}"
+      DTS:Description="Tarea Flujo de datos"
+      DTS:CreationName="SSIS.Pipeline.3">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\completar_excel_provincias\Completar datos en excel de provincias"
+              name="Completar datos en excel de provincias"
+              componentClassID="{1F5D5712-2FBA-4CB9-A95A-86C1F336E1DA}"
+              description="Destino de Excel"
+              usesDispositions="true"
+              contactInfo="Destino de Excel;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0">
+              <properties>
+                <property
+                  name="CommandTimeout"
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito.">0</property>
+                <property
+                  name="OpenRowset"
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas.">ProvinciasARG$</property>
+                <property
+                  name="OpenRowsetVariable"
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."></property>
+                <property
+                  name="SqlCommand"
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  name="AccessMode"
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  typeConverter="AccessMode">0</property>
+                <property
+                  name="FastLoadKeepIdentity"
+                  dataType="System.Boolean"
+                  description="Indica si los valores proporcionados para columnas de identidad se van a copiar al destino. Si es False, los valores de las columnas de identidad se generan automáticamente en el destino. Sólo se aplica si está activada la carga rápida.">false</property>
+                <property
+                  name="FastLoadKeepNulls"
+                  dataType="System.Boolean"
+                  description="Indica si las columnas que contienen NULL tendrán NULL insertado en el destino. Si es False, las columnas que contienen NULL tendrán sus valores predeterminados insertados en el destino. Sólo se aplica si está activada la carga rápida.">false</property>
+                <property
+                  name="FastLoadOptions"
+                  dataType="System.String"
+                  description="Especifica opciones para usar con la carga rápida. Sólo se aplica si está activada la carga rápida."></property>
+                <property
+                  name="FastLoadMaxInsertCommitSize"
+                  dataType="System.Int32"
+                  description="Especifica cuándo se emiten confirmaciones durante la inserción de datos. El valor 0 especifica que se emitirá una confirmación al final de la inserción de datos. Sólo se aplica si está activada la carga rápida.">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\completar_excel_provincias\Completar datos en excel de provincias.Connections[OleDbConnection]"
+                  name="OleDbConnection"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  connectionManagerID="Package.ConnectionManagers[Administrador de conexiones con Excel 4]"
+                  connectionManagerRefId="Package.ConnectionManagers[Administrador de conexiones con Excel 4]" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\completar_excel_provincias\Completar datos en excel de provincias.Inputs[Entrada de destino de Excel]"
+                  name="Entrada de destino de Excel"
+                  hasSideEffects="true"
+                  errorOrTruncationOperation="Insertar"
+                  errorRowDisposition="FailComponent">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\completar_excel_provincias\Completar datos en excel de provincias.Inputs[Entrada de destino de Excel].Columns[PaisId]"
+                      lineageId="Package\completar_excel_provincias\Obtener_datos_pais_fechaAlta_UusarioAlta.Outputs[Salida de origen de OLE DB].Columns[PaisId]"
+                      externalMetadataColumnId="Package\completar_excel_provincias\Completar datos en excel de provincias.Inputs[Entrada de destino de Excel].ExternalColumns[PaisId]"
+                      cachedName="PaisId"
+                      cachedDataType="i4" />
+                    <inputColumn
+                      refId="Package\completar_excel_provincias\Completar datos en excel de provincias.Inputs[Entrada de destino de Excel].Columns[FechaAlta]"
+                      lineageId="Package\completar_excel_provincias\Obtener_datos_pais_fechaAlta_UusarioAlta.Outputs[Salida de origen de OLE DB].Columns[FechaAlta]"
+                      externalMetadataColumnId="Package\completar_excel_provincias\Completar datos en excel de provincias.Inputs[Entrada de destino de Excel].ExternalColumns[FechaAlta]"
+                      cachedName="FechaAlta"
+                      cachedDataType="dbTimeStamp" />
+                    <inputColumn
+                      refId="Package\completar_excel_provincias\Completar datos en excel de provincias.Inputs[Entrada de destino de Excel].Columns[UserAlta]"
+                      lineageId="Package\completar_excel_provincias\Obtener_datos_pais_fechaAlta_UusarioAlta.Outputs[Salida de origen de OLE DB].Columns[UserAlta]"
+                      externalMetadataColumnId="Package\completar_excel_provincias\Completar datos en excel de provincias.Inputs[Entrada de destino de Excel].ExternalColumns[UsuarioAlta]"
+                      cachedName="UserAlta"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedCodepage="1252" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\completar_excel_provincias\Completar datos en excel de provincias.Inputs[Entrada de destino de Excel].ExternalColumns[Descripcion]"
+                      name="Descripcion"
+                      dataType="wstr"
+                      length="255" />
+                    <externalMetadataColumn
+                      refId="Package\completar_excel_provincias\Completar datos en excel de provincias.Inputs[Entrada de destino de Excel].ExternalColumns[Codigo]"
+                      name="Codigo"
+                      dataType="wstr"
+                      length="255" />
+                    <externalMetadataColumn
+                      refId="Package\completar_excel_provincias\Completar datos en excel de provincias.Inputs[Entrada de destino de Excel].ExternalColumns[PaisId]"
+                      name="PaisId"
+                      dataType="wstr"
+                      length="255" />
+                    <externalMetadataColumn
+                      refId="Package\completar_excel_provincias\Completar datos en excel de provincias.Inputs[Entrada de destino de Excel].ExternalColumns[FechaAlta]"
+                      name="FechaAlta"
+                      dataType="wstr"
+                      length="255" />
+                    <externalMetadataColumn
+                      refId="Package\completar_excel_provincias\Completar datos en excel de provincias.Inputs[Entrada de destino de Excel].ExternalColumns[UsuarioAlta]"
+                      name="UsuarioAlta"
+                      dataType="wstr"
+                      length="255" />
+                    <externalMetadataColumn
+                      refId="Package\completar_excel_provincias\Completar datos en excel de provincias.Inputs[Entrada de destino de Excel].ExternalColumns[Estado]"
+                      name="Estado"
+                      dataType="r8" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\completar_excel_provincias\Completar datos en excel de provincias.Outputs[Salida de error de destino de Excel]"
+                  name="Salida de error de destino de Excel"
+                  exclusionGroup="1"
+                  synchronousInputId="Package\completar_excel_provincias\Completar datos en excel de provincias.Inputs[Entrada de destino de Excel]"
+                  isErrorOut="true">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\completar_excel_provincias\Completar datos en excel de provincias.Outputs[Salida de error de destino de Excel].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      lineageId="Package\completar_excel_provincias\Completar datos en excel de provincias.Outputs[Salida de error de destino de Excel].Columns[ErrorCode]"
+                      dataType="i4"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\completar_excel_provincias\Completar datos en excel de provincias.Outputs[Salida de error de destino de Excel].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      lineageId="Package\completar_excel_provincias\Completar datos en excel de provincias.Outputs[Salida de error de destino de Excel].Columns[ErrorColumn]"
+                      dataType="i4"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\completar_excel_provincias\Obtener_datos_pais_fechaAlta_UusarioAlta"
+              name="Obtener_datos_pais_fechaAlta_UusarioAlta"
+              componentClassID="{165A526D-D5DE-47FF-96A6-F8274C19826B}"
+              description="Origen de OLE DB"
+              usesDispositions="true"
+              version="7"
+              contactInfo="Origen de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;7">
+              <properties>
+                <property
+                  name="CommandTimeout"
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito.">0</property>
+                <property
+                  name="OpenRowset"
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas.">[dbo].[Paises]</property>
+                <property
+                  name="OpenRowsetVariable"
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."></property>
+                <property
+                  name="SqlCommand"
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select id as PaisId,getdate() as FechaAlta, 'Admin' as UserAlta from paises where codigo ='ARG'</property>
+                <property
+                  name="SqlCommandVariable"
+                  dataType="System.String"
+                  description="Variable que contiene el comando SQL para ejecutar."></property>
+                <property
+                  name="DefaultCodePage"
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos.">1252</property>
+                <property
+                  name="AlwaysUseDefaultCodePage"
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir caracteres.">false</property>
+                <property
+                  name="AccessMode"
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  typeConverter="AccessMode">2</property>
+                <property
+                  name="ParameterMapping"
+                  dataType="System.String"
+                  description="Asignaciones entre los parámetros del comando SQL y las variables."></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\completar_excel_provincias\Obtener_datos_pais_fechaAlta_UusarioAlta.Connections[OleDbConnection]"
+                  name="OleDbConnection"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  connectionManagerID="Package.ConnectionManagers[CESAR-PC.Phoenix.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[CESAR-PC.Phoenix.sa]" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\completar_excel_provincias\Obtener_datos_pais_fechaAlta_UusarioAlta.Outputs[Salida de origen de OLE DB]"
+                  name="Salida de origen de OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\completar_excel_provincias\Obtener_datos_pais_fechaAlta_UusarioAlta.Outputs[Salida de origen de OLE DB].Columns[PaisId]"
+                      name="PaisId"
+                      lineageId="Package\completar_excel_provincias\Obtener_datos_pais_fechaAlta_UusarioAlta.Outputs[Salida de origen de OLE DB].Columns[PaisId]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\completar_excel_provincias\Obtener_datos_pais_fechaAlta_UusarioAlta.Outputs[Salida de origen de OLE DB].ExternalColumns[PaisId]" />
+                    <outputColumn
+                      refId="Package\completar_excel_provincias\Obtener_datos_pais_fechaAlta_UusarioAlta.Outputs[Salida de origen de OLE DB].Columns[FechaAlta]"
+                      name="FechaAlta"
+                      lineageId="Package\completar_excel_provincias\Obtener_datos_pais_fechaAlta_UusarioAlta.Outputs[Salida de origen de OLE DB].Columns[FechaAlta]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\completar_excel_provincias\Obtener_datos_pais_fechaAlta_UusarioAlta.Outputs[Salida de origen de OLE DB].ExternalColumns[FechaAlta]" />
+                    <outputColumn
+                      refId="Package\completar_excel_provincias\Obtener_datos_pais_fechaAlta_UusarioAlta.Outputs[Salida de origen de OLE DB].Columns[UserAlta]"
+                      name="UserAlta"
+                      lineageId="Package\completar_excel_provincias\Obtener_datos_pais_fechaAlta_UusarioAlta.Outputs[Salida de origen de OLE DB].Columns[UserAlta]"
+                      length="5"
+                      dataType="str"
+                      codePage="1252"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\completar_excel_provincias\Obtener_datos_pais_fechaAlta_UusarioAlta.Outputs[Salida de origen de OLE DB].ExternalColumns[UserAlta]" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\completar_excel_provincias\Obtener_datos_pais_fechaAlta_UusarioAlta.Outputs[Salida de origen de OLE DB].ExternalColumns[PaisId]"
+                      name="PaisId"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      refId="Package\completar_excel_provincias\Obtener_datos_pais_fechaAlta_UusarioAlta.Outputs[Salida de origen de OLE DB].ExternalColumns[FechaAlta]"
+                      name="FechaAlta"
+                      dataType="dbTimeStamp" />
+                    <externalMetadataColumn
+                      refId="Package\completar_excel_provincias\Obtener_datos_pais_fechaAlta_UusarioAlta.Outputs[Salida de origen de OLE DB].ExternalColumns[UserAlta]"
+                      name="UserAlta"
+                      dataType="str"
+                      length="5"
+                      codePage="1252" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\completar_excel_provincias\Obtener_datos_pais_fechaAlta_UusarioAlta.Outputs[Salida de error de origen de OLE DB]"
+                  name="Salida de error de origen de OLE DB"
+                  isErrorOut="true">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\completar_excel_provincias\Obtener_datos_pais_fechaAlta_UusarioAlta.Outputs[Salida de error de origen de OLE DB].Columns[PaisId]"
+                      name="PaisId"
+                      lineageId="Package\completar_excel_provincias\Obtener_datos_pais_fechaAlta_UusarioAlta.Outputs[Salida de error de origen de OLE DB].Columns[PaisId]"
+                      dataType="i4" />
+                    <outputColumn
+                      refId="Package\completar_excel_provincias\Obtener_datos_pais_fechaAlta_UusarioAlta.Outputs[Salida de error de origen de OLE DB].Columns[FechaAlta]"
+                      name="FechaAlta"
+                      lineageId="Package\completar_excel_provincias\Obtener_datos_pais_fechaAlta_UusarioAlta.Outputs[Salida de error de origen de OLE DB].Columns[FechaAlta]"
+                      dataType="dbTimeStamp" />
+                    <outputColumn
+                      refId="Package\completar_excel_provincias\Obtener_datos_pais_fechaAlta_UusarioAlta.Outputs[Salida de error de origen de OLE DB].Columns[UserAlta]"
+                      name="UserAlta"
+                      lineageId="Package\completar_excel_provincias\Obtener_datos_pais_fechaAlta_UusarioAlta.Outputs[Salida de error de origen de OLE DB].Columns[UserAlta]"
+                      length="5"
+                      dataType="str"
+                      codePage="1252" />
+                    <outputColumn
+                      refId="Package\completar_excel_provincias\Obtener_datos_pais_fechaAlta_UusarioAlta.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      lineageId="Package\completar_excel_provincias\Obtener_datos_pais_fechaAlta_UusarioAlta.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\completar_excel_provincias\Obtener_datos_pais_fechaAlta_UusarioAlta.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      lineageId="Package\completar_excel_provincias\Obtener_datos_pais_fechaAlta_UusarioAlta.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\completar_excel_provincias.Paths[Salida de origen de OLE DB]"
+              name="Salida de origen de OLE DB"
+              startId="Package\completar_excel_provincias\Obtener_datos_pais_fechaAlta_UusarioAlta.Outputs[Salida de origen de OLE DB]"
+              endId="Package\completar_excel_provincias\Completar datos en excel de provincias.Inputs[Entrada de destino de Excel]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Delete_Inicial_Tablas"
+      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:ThreadHint="0"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Delete_Inicial_Tablas"
+      DTS:DTSID="{AD34E0AF-3CD9-42F6-905C-DC9B8D5F7716}"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{7E0FDA1D-137A-46D2-BCC8-C401E9873B15}"
+          SQLTask:SqlStatementSource="/* Inicializaci�n de tablas */&#xA;delete from ArticuloColores&#xA;delete from articulos&#xA;delete from CategoriaAtributo&#xA;delete from CategoriaTalles&#xA;delete from talles" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Importacion_Articulos a BD"
+      DTS:ExecutableType="SSIS.Pipeline.3"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Importacion_Articulos a BD"
+      DTS:DTSID="{5DF46B91-250F-4B36-AA04-285D5F9896B7}"
+      DTS:Description="Tarea Flujo de datos"
+      DTS:CreationName="SSIS.Pipeline.3">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Importacion_Articulos a BD\Destino de OLE DB"
+              name="Destino de OLE DB"
+              componentClassID="{4ADA7EAA-136C-4215-8098-D7A7C27FC0D1}"
+              description="Destino de OLE DB"
+              usesDispositions="true"
+              version="4"
+              contactInfo="Destino de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4">
+              <properties>
+                <property
+                  name="CommandTimeout"
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito.">0</property>
+                <property
+                  name="OpenRowset"
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas.">[ArticulosCob]</property>
+                <property
+                  name="OpenRowsetVariable"
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."></property>
+                <property
+                  name="SqlCommand"
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  name="DefaultCodePage"
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos.">1252</property>
+                <property
+                  name="AlwaysUseDefaultCodePage"
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir caracteres.">false</property>
+                <property
+                  name="AccessMode"
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  typeConverter="AccessMode">3</property>
+                <property
+                  name="FastLoadKeepIdentity"
+                  dataType="System.Boolean"
+                  description="Indica si los valores proporcionados para columnas de identidad se van a copiar al destino. Si es False, los valores de las columnas de identidad se generan automáticamente en el destino. Sólo se aplica si está activada la carga rápida.">false</property>
+                <property
+                  name="FastLoadKeepNulls"
+                  dataType="System.Boolean"
+                  description="Indica si las columnas que contienen NULL tendrán NULL insertado en el destino. Si es False, las columnas que contienen NULL tendrán sus valores predeterminados insertados en el destino. Sólo se aplica si está activada la carga rápida.">false</property>
+                <property
+                  name="FastLoadOptions"
+                  dataType="System.String"
+                  description="Especifica opciones para usar con la carga rápida. Sólo se aplica si está activada la carga rápida.">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  name="FastLoadMaxInsertCommitSize"
+                  dataType="System.Int32"
+                  description="Especifica cuándo se emiten confirmaciones durante la inserción de datos. El valor 0 especifica que se emitirá una confirmación al final de la inserción de datos. Sólo se aplica si está activada la carga rápida.">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Importacion_Articulos a BD\Destino de OLE DB.Connections[OleDbConnection]"
+                  name="OleDbConnection"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  connectionManagerID="Package.ConnectionManagers[CESAR-PC.Phoenix.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[CESAR-PC.Phoenix.sa]" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Importacion_Articulos a BD\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]"
+                  name="Entrada de destino de OLE DB"
+                  hasSideEffects="true"
+                  errorOrTruncationOperation="Insertar"
+                  errorRowDisposition="FailComponent">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Importacion_Articulos a BD\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Codigo]"
+                      lineageId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Codigo]"
+                      externalMetadataColumnId="Package\Importacion_Articulos a BD\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Codigo]"
+                      cachedName="Codigo"
+                      cachedDataType="wstr"
+                      cachedLength="255" />
+                    <inputColumn
+                      refId="Package\Importacion_Articulos a BD\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Proveedor]"
+                      lineageId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Proveedor]"
+                      externalMetadataColumnId="Package\Importacion_Articulos a BD\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Proveedor]"
+                      cachedName="Proveedor"
+                      cachedDataType="wstr"
+                      cachedLength="255" />
+                    <inputColumn
+                      refId="Package\Importacion_Articulos a BD\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Rubro]"
+                      lineageId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Rubro]"
+                      externalMetadataColumnId="Package\Importacion_Articulos a BD\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Rubro]"
+                      cachedName="Rubro"
+                      cachedDataType="wstr"
+                      cachedLength="255" />
+                    <inputColumn
+                      refId="Package\Importacion_Articulos a BD\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Subrubro]"
+                      lineageId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Subrubro]"
+                      externalMetadataColumnId="Package\Importacion_Articulos a BD\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Subrubro]"
+                      cachedName="Subrubro"
+                      cachedDataType="wstr"
+                      cachedLength="255" />
+                    <inputColumn
+                      refId="Package\Importacion_Articulos a BD\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Descripcion larga]"
+                      lineageId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Descripcion larga]"
+                      externalMetadataColumnId="Package\Importacion_Articulos a BD\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Descripcion larga]"
+                      cachedName="Descripcion larga"
+                      cachedDataType="wstr"
+                      cachedLength="255" />
+                    <inputColumn
+                      refId="Package\Importacion_Articulos a BD\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Descripcion corta]"
+                      lineageId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Descripcion corta]"
+                      externalMetadataColumnId="Package\Importacion_Articulos a BD\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Descripcion corta]"
+                      cachedName="Descripcion corta"
+                      cachedDataType="wstr"
+                      cachedLength="255" />
+                    <inputColumn
+                      refId="Package\Importacion_Articulos a BD\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Costo]"
+                      lineageId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Costo]"
+                      externalMetadataColumnId="Package\Importacion_Articulos a BD\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Costo]"
+                      cachedName="Costo"
+                      cachedDataType="r8" />
+                    <inputColumn
+                      refId="Package\Importacion_Articulos a BD\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Bonif# 1]"
+                      lineageId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Bonif# 1]"
+                      externalMetadataColumnId="Package\Importacion_Articulos a BD\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Bonif# 1]"
+                      cachedName="Bonif# 1"
+                      cachedDataType="r8" />
+                    <inputColumn
+                      refId="Package\Importacion_Articulos a BD\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Bonif# 2]"
+                      lineageId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Bonif# 2]"
+                      externalMetadataColumnId="Package\Importacion_Articulos a BD\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Bonif# 2]"
+                      cachedName="Bonif# 2"
+                      cachedDataType="r8" />
+                    <inputColumn
+                      refId="Package\Importacion_Articulos a BD\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Bonif# 3]"
+                      lineageId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Bonif# 3]"
+                      externalMetadataColumnId="Package\Importacion_Articulos a BD\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Bonif# 3]"
+                      cachedName="Bonif# 3"
+                      cachedDataType="r8" />
+                    <inputColumn
+                      refId="Package\Importacion_Articulos a BD\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Precio]"
+                      lineageId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Precio]"
+                      externalMetadataColumnId="Package\Importacion_Articulos a BD\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Precio]"
+                      cachedName="Precio"
+                      cachedDataType="r8" />
+                    <inputColumn
+                      refId="Package\Importacion_Articulos a BD\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Precio Anterior]"
+                      lineageId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Precio Anterior]"
+                      externalMetadataColumnId="Package\Importacion_Articulos a BD\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Precio Anterior]"
+                      cachedName="Precio Anterior"
+                      cachedDataType="r8" />
+                    <inputColumn
+                      refId="Package\Importacion_Articulos a BD\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Utilidad]"
+                      lineageId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Utilidad]"
+                      externalMetadataColumnId="Package\Importacion_Articulos a BD\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Utilidad]"
+                      cachedName="Utilidad"
+                      cachedDataType="r8" />
+                    <inputColumn
+                      refId="Package\Importacion_Articulos a BD\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Cod# Alternativo]"
+                      lineageId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Cod# Alternativo]"
+                      externalMetadataColumnId="Package\Importacion_Articulos a BD\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Cod# Alternativo]"
+                      cachedName="Cod# Alternativo"
+                      cachedDataType="wstr"
+                      cachedLength="255" />
+                    <inputColumn
+                      refId="Package\Importacion_Articulos a BD\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Fecha Precio]"
+                      lineageId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Fecha Precio]"
+                      externalMetadataColumnId="Package\Importacion_Articulos a BD\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Fecha Precio]"
+                      cachedName="Fecha Precio"
+                      cachedDataType="r8" />
+                    <inputColumn
+                      refId="Package\Importacion_Articulos a BD\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Estado]"
+                      lineageId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Estado]"
+                      externalMetadataColumnId="Package\Importacion_Articulos a BD\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Estado]"
+                      cachedName="Estado"
+                      cachedDataType="wstr"
+                      cachedLength="255" />
+                    <inputColumn
+                      refId="Package\Importacion_Articulos a BD\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Fecha alta]"
+                      lineageId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Fecha alta]"
+                      externalMetadataColumnId="Package\Importacion_Articulos a BD\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Fecha alta]"
+                      cachedName="Fecha alta"
+                      cachedDataType="r8" />
+                    <inputColumn
+                      refId="Package\Importacion_Articulos a BD\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Leyenda exp#]"
+                      lineageId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Leyenda exp#]"
+                      externalMetadataColumnId="Package\Importacion_Articulos a BD\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Leyenda exp#]"
+                      cachedName="Leyenda exp#"
+                      cachedDataType="wstr"
+                      cachedLength="255" />
+                    <inputColumn
+                      refId="Package\Importacion_Articulos a BD\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Fecha ult# Ingreso]"
+                      lineageId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Fecha ult# Ingreso]"
+                      externalMetadataColumnId="Package\Importacion_Articulos a BD\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Fecha ult# Ingreso]"
+                      cachedName="Fecha ult# Ingreso"
+                      cachedDataType="r8" />
+                    <inputColumn
+                      refId="Package\Importacion_Articulos a BD\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Ult# Cant# Ingresada]"
+                      lineageId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Ult# Cant# Ingresada]"
+                      externalMetadataColumnId="Package\Importacion_Articulos a BD\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Ult# Cant# Ingresada]"
+                      cachedName="Ult# Cant# Ingresada"
+                      cachedDataType="r8" />
+                    <inputColumn
+                      refId="Package\Importacion_Articulos a BD\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Stock minimo]"
+                      lineageId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Stock minimo]"
+                      externalMetadataColumnId="Package\Importacion_Articulos a BD\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Stock minimo]"
+                      cachedName="Stock minimo"
+                      cachedDataType="r8" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Importacion_Articulos a BD\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Codigo]"
+                      name="Codigo"
+                      dataType="wstr"
+                      length="255" />
+                    <externalMetadataColumn
+                      refId="Package\Importacion_Articulos a BD\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Proveedor]"
+                      name="Proveedor"
+                      dataType="wstr"
+                      length="255" />
+                    <externalMetadataColumn
+                      refId="Package\Importacion_Articulos a BD\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Rubro]"
+                      name="Rubro"
+                      dataType="wstr"
+                      length="255" />
+                    <externalMetadataColumn
+                      refId="Package\Importacion_Articulos a BD\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Subrubro]"
+                      name="Subrubro"
+                      dataType="wstr"
+                      length="255" />
+                    <externalMetadataColumn
+                      refId="Package\Importacion_Articulos a BD\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Descripcion larga]"
+                      name="Descripcion larga"
+                      dataType="wstr"
+                      length="255" />
+                    <externalMetadataColumn
+                      refId="Package\Importacion_Articulos a BD\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Descripcion corta]"
+                      name="Descripcion corta"
+                      dataType="wstr"
+                      length="255" />
+                    <externalMetadataColumn
+                      refId="Package\Importacion_Articulos a BD\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Costo]"
+                      name="Costo"
+                      dataType="r8" />
+                    <externalMetadataColumn
+                      refId="Package\Importacion_Articulos a BD\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Bonif# 1]"
+                      name="Bonif# 1"
+                      dataType="r8" />
+                    <externalMetadataColumn
+                      refId="Package\Importacion_Articulos a BD\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Bonif# 2]"
+                      name="Bonif# 2"
+                      dataType="r8" />
+                    <externalMetadataColumn
+                      refId="Package\Importacion_Articulos a BD\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Bonif# 3]"
+                      name="Bonif# 3"
+                      dataType="r8" />
+                    <externalMetadataColumn
+                      refId="Package\Importacion_Articulos a BD\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Precio]"
+                      name="Precio"
+                      dataType="r8" />
+                    <externalMetadataColumn
+                      refId="Package\Importacion_Articulos a BD\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Precio Anterior]"
+                      name="Precio Anterior"
+                      dataType="r8" />
+                    <externalMetadataColumn
+                      refId="Package\Importacion_Articulos a BD\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Utilidad]"
+                      name="Utilidad"
+                      dataType="r8" />
+                    <externalMetadataColumn
+                      refId="Package\Importacion_Articulos a BD\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Cod# Alternativo]"
+                      name="Cod# Alternativo"
+                      dataType="wstr"
+                      length="255" />
+                    <externalMetadataColumn
+                      refId="Package\Importacion_Articulos a BD\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Fecha Precio]"
+                      name="Fecha Precio"
+                      dataType="r8" />
+                    <externalMetadataColumn
+                      refId="Package\Importacion_Articulos a BD\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Estado]"
+                      name="Estado"
+                      dataType="wstr"
+                      length="255" />
+                    <externalMetadataColumn
+                      refId="Package\Importacion_Articulos a BD\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Fecha alta]"
+                      name="Fecha alta"
+                      dataType="r8" />
+                    <externalMetadataColumn
+                      refId="Package\Importacion_Articulos a BD\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Leyenda exp#]"
+                      name="Leyenda exp#"
+                      dataType="wstr"
+                      length="255" />
+                    <externalMetadataColumn
+                      refId="Package\Importacion_Articulos a BD\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Fecha ult# Ingreso]"
+                      name="Fecha ult# Ingreso"
+                      dataType="r8" />
+                    <externalMetadataColumn
+                      refId="Package\Importacion_Articulos a BD\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Ult# Cant# Ingresada]"
+                      name="Ult# Cant# Ingresada"
+                      dataType="r8" />
+                    <externalMetadataColumn
+                      refId="Package\Importacion_Articulos a BD\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Stock minimo]"
+                      name="Stock minimo"
+                      dataType="r8" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Importacion_Articulos a BD\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB]"
+                  name="Salida de error de destino de OLE DB"
+                  exclusionGroup="1"
+                  synchronousInputId="Package\Importacion_Articulos a BD\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]"
+                  isErrorOut="true">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Importacion_Articulos a BD\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      lineageId="Package\Importacion_Articulos a BD\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Importacion_Articulos a BD\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      lineageId="Package\Importacion_Articulos a BD\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Importacion_Articulos a BD\Origen de Excel"
+              name="Origen de Excel"
+              componentClassID="{8C084929-27D1-479F-9641-ABB7CDADF1AC}"
+              description="Origen de Excel"
+              usesDispositions="true"
+              version="1"
+              contactInfo="Origen de Excel;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1">
+              <properties>
+                <property
+                  name="CommandTimeout"
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito.">0</property>
+                <property
+                  name="OpenRowset"
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas.">ArticulosCob$</property>
+                <property
+                  name="OpenRowsetVariable"
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."></property>
+                <property
+                  name="SqlCommand"
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  name="SqlCommandVariable"
+                  dataType="System.String"
+                  description="Variable que contiene el comando SQL para ejecutar."></property>
+                <property
+                  name="AccessMode"
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  typeConverter="AccessMode">0</property>
+                <property
+                  name="ParameterMapping"
+                  dataType="System.String"
+                  description="La asignación de parámetros del comando SQL a variables."></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Importacion_Articulos a BD\Origen de Excel.Connections[OleDbConnection]"
+                  name="OleDbConnection"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  connectionManagerID="Package.ConnectionManagers[Administrador de conexiones con Excel 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[Administrador de conexiones con Excel 1]" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel]"
+                  name="Salida de origen de Excel">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Codigo]"
+                      name="Codigo"
+                      lineageId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Codigo]"
+                      length="255"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[Codigo]" />
+                    <outputColumn
+                      refId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Proveedor]"
+                      name="Proveedor"
+                      lineageId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Proveedor]"
+                      length="255"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[Proveedor]" />
+                    <outputColumn
+                      refId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Rubro]"
+                      name="Rubro"
+                      lineageId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Rubro]"
+                      length="255"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[Rubro]" />
+                    <outputColumn
+                      refId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Subrubro]"
+                      name="Subrubro"
+                      lineageId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Subrubro]"
+                      length="255"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[Subrubro]" />
+                    <outputColumn
+                      refId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Descripcion larga]"
+                      name="Descripcion larga"
+                      lineageId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Descripcion larga]"
+                      length="255"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[Descripcion larga]" />
+                    <outputColumn
+                      refId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Descripcion corta]"
+                      name="Descripcion corta"
+                      lineageId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Descripcion corta]"
+                      length="255"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[Descripcion corta]" />
+                    <outputColumn
+                      refId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Costo]"
+                      name="Costo"
+                      lineageId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Costo]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[Costo]" />
+                    <outputColumn
+                      refId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Bonif# 1]"
+                      name="Bonif# 1"
+                      lineageId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Bonif# 1]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[Bonif# 1]" />
+                    <outputColumn
+                      refId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Bonif# 2]"
+                      name="Bonif# 2"
+                      lineageId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Bonif# 2]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[Bonif# 2]" />
+                    <outputColumn
+                      refId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Bonif# 3]"
+                      name="Bonif# 3"
+                      lineageId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Bonif# 3]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[Bonif# 3]" />
+                    <outputColumn
+                      refId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Precio]"
+                      name="Precio"
+                      lineageId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Precio]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[Precio]" />
+                    <outputColumn
+                      refId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Precio Anterior]"
+                      name="Precio Anterior"
+                      lineageId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Precio Anterior]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[Precio Anterior]" />
+                    <outputColumn
+                      refId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Utilidad]"
+                      name="Utilidad"
+                      lineageId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Utilidad]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[Utilidad]" />
+                    <outputColumn
+                      refId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Cod# Alternativo]"
+                      name="Cod# Alternativo"
+                      lineageId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Cod# Alternativo]"
+                      length="255"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[Cod# Alternativo]" />
+                    <outputColumn
+                      refId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Fecha Precio]"
+                      name="Fecha Precio"
+                      lineageId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Fecha Precio]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[Fecha Precio]" />
+                    <outputColumn
+                      refId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Estado]"
+                      name="Estado"
+                      lineageId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Estado]"
+                      length="255"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[Estado]" />
+                    <outputColumn
+                      refId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Fecha alta]"
+                      name="Fecha alta"
+                      lineageId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Fecha alta]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[Fecha alta]" />
+                    <outputColumn
+                      refId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Leyenda exp#]"
+                      name="Leyenda exp#"
+                      lineageId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Leyenda exp#]"
+                      length="255"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[Leyenda exp#]" />
+                    <outputColumn
+                      refId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Fecha ult# Ingreso]"
+                      name="Fecha ult# Ingreso"
+                      lineageId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Fecha ult# Ingreso]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[Fecha ult# Ingreso]" />
+                    <outputColumn
+                      refId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Ult# Cant# Ingresada]"
+                      name="Ult# Cant# Ingresada"
+                      lineageId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Ult# Cant# Ingresada]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[Ult# Cant# Ingresada]" />
+                    <outputColumn
+                      refId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Stock minimo]"
+                      name="Stock minimo"
+                      lineageId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Stock minimo]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[Stock minimo]" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[Codigo]"
+                      name="Codigo"
+                      dataType="wstr"
+                      length="255" />
+                    <externalMetadataColumn
+                      refId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[Proveedor]"
+                      name="Proveedor"
+                      dataType="wstr"
+                      length="255" />
+                    <externalMetadataColumn
+                      refId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[Rubro]"
+                      name="Rubro"
+                      dataType="wstr"
+                      length="255" />
+                    <externalMetadataColumn
+                      refId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[Subrubro]"
+                      name="Subrubro"
+                      dataType="wstr"
+                      length="255" />
+                    <externalMetadataColumn
+                      refId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[Descripcion larga]"
+                      name="Descripcion larga"
+                      dataType="wstr"
+                      length="255" />
+                    <externalMetadataColumn
+                      refId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[Descripcion corta]"
+                      name="Descripcion corta"
+                      dataType="wstr"
+                      length="255" />
+                    <externalMetadataColumn
+                      refId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[Costo]"
+                      name="Costo"
+                      dataType="r8" />
+                    <externalMetadataColumn
+                      refId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[Bonif# 1]"
+                      name="Bonif# 1"
+                      dataType="r8" />
+                    <externalMetadataColumn
+                      refId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[Bonif# 2]"
+                      name="Bonif# 2"
+                      dataType="r8" />
+                    <externalMetadataColumn
+                      refId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[Bonif# 3]"
+                      name="Bonif# 3"
+                      dataType="r8" />
+                    <externalMetadataColumn
+                      refId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[Precio]"
+                      name="Precio"
+                      dataType="r8" />
+                    <externalMetadataColumn
+                      refId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[Precio Anterior]"
+                      name="Precio Anterior"
+                      dataType="r8" />
+                    <externalMetadataColumn
+                      refId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[Utilidad]"
+                      name="Utilidad"
+                      dataType="r8" />
+                    <externalMetadataColumn
+                      refId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[Cod# Alternativo]"
+                      name="Cod# Alternativo"
+                      dataType="wstr"
+                      length="255" />
+                    <externalMetadataColumn
+                      refId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[Fecha Precio]"
+                      name="Fecha Precio"
+                      dataType="r8" />
+                    <externalMetadataColumn
+                      refId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[Estado]"
+                      name="Estado"
+                      dataType="wstr"
+                      length="255" />
+                    <externalMetadataColumn
+                      refId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[Fecha alta]"
+                      name="Fecha alta"
+                      dataType="r8" />
+                    <externalMetadataColumn
+                      refId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[Leyenda exp#]"
+                      name="Leyenda exp#"
+                      dataType="wstr"
+                      length="255" />
+                    <externalMetadataColumn
+                      refId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[Fecha ult# Ingreso]"
+                      name="Fecha ult# Ingreso"
+                      dataType="r8" />
+                    <externalMetadataColumn
+                      refId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[Ult# Cant# Ingresada]"
+                      name="Ult# Cant# Ingresada"
+                      dataType="r8" />
+                    <externalMetadataColumn
+                      refId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[Stock minimo]"
+                      name="Stock minimo"
+                      dataType="r8" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de error de origen de Excel]"
+                  name="Salida de error de origen de Excel"
+                  isErrorOut="true">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[Codigo]"
+                      name="Codigo"
+                      lineageId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[Codigo]"
+                      length="255"
+                      dataType="wstr" />
+                    <outputColumn
+                      refId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[Proveedor]"
+                      name="Proveedor"
+                      lineageId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[Proveedor]"
+                      length="255"
+                      dataType="wstr" />
+                    <outputColumn
+                      refId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[Rubro]"
+                      name="Rubro"
+                      lineageId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[Rubro]"
+                      length="255"
+                      dataType="wstr" />
+                    <outputColumn
+                      refId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[Subrubro]"
+                      name="Subrubro"
+                      lineageId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[Subrubro]"
+                      length="255"
+                      dataType="wstr" />
+                    <outputColumn
+                      refId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[Descripcion larga]"
+                      name="Descripcion larga"
+                      lineageId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[Descripcion larga]"
+                      length="255"
+                      dataType="wstr" />
+                    <outputColumn
+                      refId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[Descripcion corta]"
+                      name="Descripcion corta"
+                      lineageId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[Descripcion corta]"
+                      length="255"
+                      dataType="wstr" />
+                    <outputColumn
+                      refId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[Costo]"
+                      name="Costo"
+                      lineageId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[Costo]"
+                      dataType="r8" />
+                    <outputColumn
+                      refId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[Bonif# 1]"
+                      name="Bonif# 1"
+                      lineageId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[Bonif# 1]"
+                      dataType="r8" />
+                    <outputColumn
+                      refId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[Bonif# 2]"
+                      name="Bonif# 2"
+                      lineageId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[Bonif# 2]"
+                      dataType="r8" />
+                    <outputColumn
+                      refId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[Bonif# 3]"
+                      name="Bonif# 3"
+                      lineageId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[Bonif# 3]"
+                      dataType="r8" />
+                    <outputColumn
+                      refId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[Precio]"
+                      name="Precio"
+                      lineageId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[Precio]"
+                      dataType="r8" />
+                    <outputColumn
+                      refId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[Precio Anterior]"
+                      name="Precio Anterior"
+                      lineageId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[Precio Anterior]"
+                      dataType="r8" />
+                    <outputColumn
+                      refId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[Utilidad]"
+                      name="Utilidad"
+                      lineageId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[Utilidad]"
+                      dataType="r8" />
+                    <outputColumn
+                      refId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[Cod# Alternativo]"
+                      name="Cod# Alternativo"
+                      lineageId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[Cod# Alternativo]"
+                      length="255"
+                      dataType="wstr" />
+                    <outputColumn
+                      refId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[Fecha Precio]"
+                      name="Fecha Precio"
+                      lineageId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[Fecha Precio]"
+                      dataType="r8" />
+                    <outputColumn
+                      refId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[Estado]"
+                      name="Estado"
+                      lineageId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[Estado]"
+                      length="255"
+                      dataType="wstr" />
+                    <outputColumn
+                      refId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[Fecha alta]"
+                      name="Fecha alta"
+                      lineageId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[Fecha alta]"
+                      dataType="r8" />
+                    <outputColumn
+                      refId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[Leyenda exp#]"
+                      name="Leyenda exp#"
+                      lineageId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[Leyenda exp#]"
+                      length="255"
+                      dataType="wstr" />
+                    <outputColumn
+                      refId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[Fecha ult# Ingreso]"
+                      name="Fecha ult# Ingreso"
+                      lineageId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[Fecha ult# Ingreso]"
+                      dataType="r8" />
+                    <outputColumn
+                      refId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[Ult# Cant# Ingresada]"
+                      name="Ult# Cant# Ingresada"
+                      lineageId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[Ult# Cant# Ingresada]"
+                      dataType="r8" />
+                    <outputColumn
+                      refId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[Stock minimo]"
+                      name="Stock minimo"
+                      lineageId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[Stock minimo]"
+                      dataType="r8" />
+                    <outputColumn
+                      refId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      lineageId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[ErrorCode]"
+                      dataType="i4"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      lineageId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[ErrorColumn]"
+                      dataType="i4"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Importacion_Articulos a BD.Paths[Salida de origen de Excel]"
+              name="Salida de origen de Excel"
+              startId="Package\Importacion_Articulos a BD\Origen de Excel.Outputs[Salida de origen de Excel]"
+              endId="Package\Importacion_Articulos a BD\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Importacion_Rubros_SubRubros"
+      DTS:ExecutableType="SSIS.Pipeline.3"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Importacion_Rubros_SubRubros"
+      DTS:DTSID="{BFD318E5-D39A-46F6-B0F2-EA8AD03BEDE2}"
+      DTS:Description="Tarea Flujo de datos"
+      DTS:CreationName="SSIS.Pipeline.3">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Importacion_Rubros_SubRubros\Destino de OLE DB"
+              name="Destino de OLE DB"
+              componentClassID="{4ADA7EAA-136C-4215-8098-D7A7C27FC0D1}"
+              description="Destino de OLE DB"
+              usesDispositions="true"
+              version="4"
+              contactInfo="Destino de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4">
+              <properties>
+                <property
+                  name="CommandTimeout"
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito.">0</property>
+                <property
+                  name="OpenRowset"
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas.">[RubrosSubRubrosCob]</property>
+                <property
+                  name="OpenRowsetVariable"
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."></property>
+                <property
+                  name="SqlCommand"
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  name="DefaultCodePage"
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos.">1252</property>
+                <property
+                  name="AlwaysUseDefaultCodePage"
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir caracteres.">false</property>
+                <property
+                  name="AccessMode"
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  typeConverter="AccessMode">3</property>
+                <property
+                  name="FastLoadKeepIdentity"
+                  dataType="System.Boolean"
+                  description="Indica si los valores proporcionados para columnas de identidad se van a copiar al destino. Si es False, los valores de las columnas de identidad se generan automáticamente en el destino. Sólo se aplica si está activada la carga rápida.">false</property>
+                <property
+                  name="FastLoadKeepNulls"
+                  dataType="System.Boolean"
+                  description="Indica si las columnas que contienen NULL tendrán NULL insertado en el destino. Si es False, las columnas que contienen NULL tendrán sus valores predeterminados insertados en el destino. Sólo se aplica si está activada la carga rápida.">false</property>
+                <property
+                  name="FastLoadOptions"
+                  dataType="System.String"
+                  description="Especifica opciones para usar con la carga rápida. Sólo se aplica si está activada la carga rápida.">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  name="FastLoadMaxInsertCommitSize"
+                  dataType="System.Int32"
+                  description="Especifica cuándo se emiten confirmaciones durante la inserción de datos. El valor 0 especifica que se emitirá una confirmación al final de la inserción de datos. Sólo se aplica si está activada la carga rápida.">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Importacion_Rubros_SubRubros\Destino de OLE DB.Connections[OleDbConnection]"
+                  name="OleDbConnection"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  connectionManagerID="Package.ConnectionManagers[CESAR-PC.Phoenix.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[CESAR-PC.Phoenix.sa]" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Importacion_Rubros_SubRubros\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]"
+                  name="Entrada de destino de OLE DB"
+                  hasSideEffects="true"
+                  errorOrTruncationOperation="Insertar"
+                  errorRowDisposition="FailComponent">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Importacion_Rubros_SubRubros\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Codigo]"
+                      lineageId="Package\Importacion_Rubros_SubRubros\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Codigo]"
+                      externalMetadataColumnId="Package\Importacion_Rubros_SubRubros\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Codigo]"
+                      cachedName="Codigo"
+                      cachedDataType="r8" />
+                    <inputColumn
+                      refId="Package\Importacion_Rubros_SubRubros\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Descripcion]"
+                      lineageId="Package\Importacion_Rubros_SubRubros\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Descripcion]"
+                      externalMetadataColumnId="Package\Importacion_Rubros_SubRubros\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Descripcion]"
+                      cachedName="Descripcion"
+                      cachedDataType="wstr"
+                      cachedLength="255" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Importacion_Rubros_SubRubros\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Codigo]"
+                      name="Codigo"
+                      dataType="r8" />
+                    <externalMetadataColumn
+                      refId="Package\Importacion_Rubros_SubRubros\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Descripcion]"
+                      name="Descripcion"
+                      dataType="wstr"
+                      length="255" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Importacion_Rubros_SubRubros\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB]"
+                  name="Salida de error de destino de OLE DB"
+                  exclusionGroup="1"
+                  synchronousInputId="Package\Importacion_Rubros_SubRubros\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]"
+                  isErrorOut="true">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Importacion_Rubros_SubRubros\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      lineageId="Package\Importacion_Rubros_SubRubros\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Importacion_Rubros_SubRubros\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      lineageId="Package\Importacion_Rubros_SubRubros\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Importacion_Rubros_SubRubros\Origen de Excel"
+              name="Origen de Excel"
+              componentClassID="{8C084929-27D1-479F-9641-ABB7CDADF1AC}"
+              description="Origen de Excel"
+              usesDispositions="true"
+              version="1"
+              contactInfo="Origen de Excel;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1">
+              <properties>
+                <property
+                  name="CommandTimeout"
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito.">0</property>
+                <property
+                  name="OpenRowset"
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas.">'Rubro-Sub-Rubro$'</property>
+                <property
+                  name="OpenRowsetVariable"
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."></property>
+                <property
+                  name="SqlCommand"
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  name="SqlCommandVariable"
+                  dataType="System.String"
+                  description="Variable que contiene el comando SQL para ejecutar."></property>
+                <property
+                  name="AccessMode"
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  typeConverter="AccessMode">0</property>
+                <property
+                  name="ParameterMapping"
+                  dataType="System.String"
+                  description="La asignación de parámetros del comando SQL a variables."></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Importacion_Rubros_SubRubros\Origen de Excel.Connections[OleDbConnection]"
+                  name="OleDbConnection"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  connectionManagerID="Package.ConnectionManagers[Administrador de conexiones con Excel 2]"
+                  connectionManagerRefId="Package.ConnectionManagers[Administrador de conexiones con Excel 2]" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Importacion_Rubros_SubRubros\Origen de Excel.Outputs[Salida de origen de Excel]"
+                  name="Salida de origen de Excel">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Importacion_Rubros_SubRubros\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Codigo]"
+                      name="Codigo"
+                      lineageId="Package\Importacion_Rubros_SubRubros\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Codigo]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Importacion_Rubros_SubRubros\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[Codigo]" />
+                    <outputColumn
+                      refId="Package\Importacion_Rubros_SubRubros\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Descripcion]"
+                      name="Descripcion"
+                      lineageId="Package\Importacion_Rubros_SubRubros\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Descripcion]"
+                      length="255"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Importacion_Rubros_SubRubros\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[Descripcion]" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Importacion_Rubros_SubRubros\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[Codigo]"
+                      name="Codigo"
+                      dataType="r8" />
+                    <externalMetadataColumn
+                      refId="Package\Importacion_Rubros_SubRubros\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[Descripcion]"
+                      name="Descripcion"
+                      dataType="wstr"
+                      length="255" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Importacion_Rubros_SubRubros\Origen de Excel.Outputs[Salida de error de origen de Excel]"
+                  name="Salida de error de origen de Excel"
+                  isErrorOut="true">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Importacion_Rubros_SubRubros\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[Codigo]"
+                      name="Codigo"
+                      lineageId="Package\Importacion_Rubros_SubRubros\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[Codigo]"
+                      dataType="r8" />
+                    <outputColumn
+                      refId="Package\Importacion_Rubros_SubRubros\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[Descripcion]"
+                      name="Descripcion"
+                      lineageId="Package\Importacion_Rubros_SubRubros\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[Descripcion]"
+                      length="255"
+                      dataType="wstr" />
+                    <outputColumn
+                      refId="Package\Importacion_Rubros_SubRubros\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      lineageId="Package\Importacion_Rubros_SubRubros\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[ErrorCode]"
+                      dataType="i4"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Importacion_Rubros_SubRubros\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      lineageId="Package\Importacion_Rubros_SubRubros\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[ErrorColumn]"
+                      dataType="i4"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Importacion_Rubros_SubRubros.Paths[Salida de origen de Excel]"
+              name="Salida de origen de Excel"
+              startId="Package\Importacion_Rubros_SubRubros\Origen de Excel.Outputs[Salida de origen de Excel]"
+              endId="Package\Importacion_Rubros_SubRubros\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\importar_ProvinciasARG"
+      DTS:ExecutableType="SSIS.Pipeline.3"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="importar_ProvinciasARG"
+      DTS:DTSID="{F214631B-2365-4CC1-A7B9-FDBE7C38F6EE}"
+      DTS:Description="Tarea Flujo de datos"
+      DTS:CreationName="SSIS.Pipeline.3">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\importar_ProvinciasARG\Destino de OLE DB"
+              name="Destino de OLE DB"
+              componentClassID="{4ADA7EAA-136C-4215-8098-D7A7C27FC0D1}"
+              description="Destino de OLE DB"
+              usesDispositions="true"
+              version="4"
+              contactInfo="Destino de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4">
+              <properties>
+                <property
+                  name="CommandTimeout"
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito.">0</property>
+                <property
+                  name="OpenRowset"
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas.">[dbo].[Provincias]</property>
+                <property
+                  name="OpenRowsetVariable"
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."></property>
+                <property
+                  name="SqlCommand"
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  name="DefaultCodePage"
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos.">1252</property>
+                <property
+                  name="AlwaysUseDefaultCodePage"
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir caracteres.">false</property>
+                <property
+                  name="AccessMode"
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  typeConverter="AccessMode">3</property>
+                <property
+                  name="FastLoadKeepIdentity"
+                  dataType="System.Boolean"
+                  description="Indica si los valores proporcionados para columnas de identidad se van a copiar al destino. Si es False, los valores de las columnas de identidad se generan automáticamente en el destino. Sólo se aplica si está activada la carga rápida.">false</property>
+                <property
+                  name="FastLoadKeepNulls"
+                  dataType="System.Boolean"
+                  description="Indica si las columnas que contienen NULL tendrán NULL insertado en el destino. Si es False, las columnas que contienen NULL tendrán sus valores predeterminados insertados en el destino. Sólo se aplica si está activada la carga rápida.">false</property>
+                <property
+                  name="FastLoadOptions"
+                  dataType="System.String"
+                  description="Especifica opciones para usar con la carga rápida. Sólo se aplica si está activada la carga rápida.">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  name="FastLoadMaxInsertCommitSize"
+                  dataType="System.Int32"
+                  description="Especifica cuándo se emiten confirmaciones durante la inserción de datos. El valor 0 especifica que se emitirá una confirmación al final de la inserción de datos. Sólo se aplica si está activada la carga rápida.">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\importar_ProvinciasARG\Destino de OLE DB.Connections[OleDbConnection]"
+                  name="OleDbConnection"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  connectionManagerID="Package.ConnectionManagers[CESAR-PC.Phoenix.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[CESAR-PC.Phoenix.sa]" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\importar_ProvinciasARG\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]"
+                  name="Entrada de destino de OLE DB"
+                  hasSideEffects="true"
+                  errorOrTruncationOperation="Insertar"
+                  errorRowDisposition="FailComponent">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\importar_ProvinciasARG\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Descripcion]"
+                      lineageId="Package\importar_ProvinciasARG\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Descripcion]"
+                      externalMetadataColumnId="Package\importar_ProvinciasARG\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Descripcion]"
+                      cachedName="Descripcion"
+                      cachedDataType="wstr"
+                      cachedLength="255" />
+                    <inputColumn
+                      refId="Package\importar_ProvinciasARG\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Codigo]"
+                      lineageId="Package\importar_ProvinciasARG\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Codigo]"
+                      externalMetadataColumnId="Package\importar_ProvinciasARG\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Codigo]"
+                      cachedName="Codigo"
+                      cachedDataType="wstr"
+                      cachedLength="255" />
+                    <inputColumn
+                      refId="Package\importar_ProvinciasARG\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[PaisId]"
+                      lineageId="Package\importar_ProvinciasARG\Origen de Excel.Outputs[Salida de origen de Excel].Columns[PaisId]"
+                      externalMetadataColumnId="Package\importar_ProvinciasARG\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[PaisId]"
+                      cachedName="PaisId"
+                      cachedDataType="wstr"
+                      cachedLength="255" />
+                    <inputColumn
+                      refId="Package\importar_ProvinciasARG\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[FechaAlta]"
+                      lineageId="Package\importar_ProvinciasARG\Origen de Excel.Outputs[Salida de origen de Excel].Columns[FechaAlta]"
+                      externalMetadataColumnId="Package\importar_ProvinciasARG\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[FechaAlta]"
+                      cachedName="FechaAlta"
+                      cachedDataType="wstr"
+                      cachedLength="255" />
+                    <inputColumn
+                      refId="Package\importar_ProvinciasARG\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[UsuarioAlta]"
+                      lineageId="Package\importar_ProvinciasARG\Origen de Excel.Outputs[Salida de origen de Excel].Columns[UsuarioAlta]"
+                      externalMetadataColumnId="Package\importar_ProvinciasARG\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[UsuarioAlta]"
+                      cachedName="UsuarioAlta"
+                      cachedDataType="wstr"
+                      cachedLength="255" />
+                    <inputColumn
+                      refId="Package\importar_ProvinciasARG\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].Columns[Estado]"
+                      lineageId="Package\importar_ProvinciasARG\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Estado]"
+                      externalMetadataColumnId="Package\importar_ProvinciasARG\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Estado]"
+                      cachedName="Estado"
+                      cachedDataType="r8" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\importar_ProvinciasARG\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Id]"
+                      name="Id"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      refId="Package\importar_ProvinciasARG\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Codigo]"
+                      name="Codigo"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      refId="Package\importar_ProvinciasARG\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Descripcion]"
+                      name="Descripcion"
+                      dataType="nText" />
+                    <externalMetadataColumn
+                      refId="Package\importar_ProvinciasARG\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[PaisId]"
+                      name="PaisId"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      refId="Package\importar_ProvinciasARG\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[Estado]"
+                      name="Estado"
+                      dataType="i4" />
+                    <externalMetadataColumn
+                      refId="Package\importar_ProvinciasARG\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[FechaAlta]"
+                      name="FechaAlta"
+                      dataType="dbTimeStamp" />
+                    <externalMetadataColumn
+                      refId="Package\importar_ProvinciasARG\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[UsuarioAlta]"
+                      name="UsuarioAlta"
+                      dataType="wstr"
+                      length="256" />
+                    <externalMetadataColumn
+                      refId="Package\importar_ProvinciasARG\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[FechaModificacion]"
+                      name="FechaModificacion"
+                      dataType="dbTimeStamp" />
+                    <externalMetadataColumn
+                      refId="Package\importar_ProvinciasARG\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[UsuarioModificacion]"
+                      name="UsuarioModificacion"
+                      dataType="wstr"
+                      length="256" />
+                    <externalMetadataColumn
+                      refId="Package\importar_ProvinciasARG\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[FechaBaja]"
+                      name="FechaBaja"
+                      dataType="dbTimeStamp" />
+                    <externalMetadataColumn
+                      refId="Package\importar_ProvinciasARG\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[UsuarioBaja]"
+                      name="UsuarioBaja"
+                      dataType="wstr"
+                      length="256" />
+                    <externalMetadataColumn
+                      refId="Package\importar_ProvinciasARG\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[FechaAutorizacion]"
+                      name="FechaAutorizacion"
+                      dataType="dbTimeStamp" />
+                    <externalMetadataColumn
+                      refId="Package\importar_ProvinciasARG\Destino de OLE DB.Inputs[Entrada de destino de OLE DB].ExternalColumns[UsuarioAutorizacion]"
+                      name="UsuarioAutorizacion"
+                      dataType="wstr"
+                      length="256" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\importar_ProvinciasARG\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB]"
+                  name="Salida de error de destino de OLE DB"
+                  exclusionGroup="1"
+                  synchronousInputId="Package\importar_ProvinciasARG\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]"
+                  isErrorOut="true">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\importar_ProvinciasARG\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      lineageId="Package\importar_ProvinciasARG\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\importar_ProvinciasARG\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      lineageId="Package\importar_ProvinciasARG\Destino de OLE DB.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\importar_ProvinciasARG\Origen de Excel"
+              name="Origen de Excel"
+              componentClassID="{8C084929-27D1-479F-9641-ABB7CDADF1AC}"
+              description="Origen de Excel"
+              usesDispositions="true"
+              version="1"
+              contactInfo="Origen de Excel;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1">
+              <properties>
+                <property
+                  name="CommandTimeout"
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito.">0</property>
+                <property
+                  name="OpenRowset"
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas.">ProvinciasARG$</property>
+                <property
+                  name="OpenRowsetVariable"
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."></property>
+                <property
+                  name="SqlCommand"
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  name="SqlCommandVariable"
+                  dataType="System.String"
+                  description="Variable que contiene el comando SQL para ejecutar."></property>
+                <property
+                  name="AccessMode"
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  typeConverter="AccessMode">0</property>
+                <property
+                  name="ParameterMapping"
+                  dataType="System.String"
+                  description="La asignación de parámetros del comando SQL a variables."></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\importar_ProvinciasARG\Origen de Excel.Connections[OleDbConnection]"
+                  name="OleDbConnection"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  connectionManagerID="Package.ConnectionManagers[Administrador de conexiones con Excel 4]"
+                  connectionManagerRefId="Package.ConnectionManagers[Administrador de conexiones con Excel 4]" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\importar_ProvinciasARG\Origen de Excel.Outputs[Salida de origen de Excel]"
+                  name="Salida de origen de Excel">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\importar_ProvinciasARG\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Descripcion]"
+                      name="Descripcion"
+                      lineageId="Package\importar_ProvinciasARG\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Descripcion]"
+                      length="255"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\importar_ProvinciasARG\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[Descripcion]" />
+                    <outputColumn
+                      refId="Package\importar_ProvinciasARG\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Codigo]"
+                      name="Codigo"
+                      lineageId="Package\importar_ProvinciasARG\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Codigo]"
+                      length="255"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\importar_ProvinciasARG\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[Codigo]" />
+                    <outputColumn
+                      refId="Package\importar_ProvinciasARG\Origen de Excel.Outputs[Salida de origen de Excel].Columns[PaisId]"
+                      name="PaisId"
+                      lineageId="Package\importar_ProvinciasARG\Origen de Excel.Outputs[Salida de origen de Excel].Columns[PaisId]"
+                      length="255"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\importar_ProvinciasARG\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[PaisId]" />
+                    <outputColumn
+                      refId="Package\importar_ProvinciasARG\Origen de Excel.Outputs[Salida de origen de Excel].Columns[FechaAlta]"
+                      name="FechaAlta"
+                      lineageId="Package\importar_ProvinciasARG\Origen de Excel.Outputs[Salida de origen de Excel].Columns[FechaAlta]"
+                      length="255"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\importar_ProvinciasARG\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[FechaAlta]" />
+                    <outputColumn
+                      refId="Package\importar_ProvinciasARG\Origen de Excel.Outputs[Salida de origen de Excel].Columns[UsuarioAlta]"
+                      name="UsuarioAlta"
+                      lineageId="Package\importar_ProvinciasARG\Origen de Excel.Outputs[Salida de origen de Excel].Columns[UsuarioAlta]"
+                      length="255"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\importar_ProvinciasARG\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[UsuarioAlta]" />
+                    <outputColumn
+                      refId="Package\importar_ProvinciasARG\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Estado]"
+                      name="Estado"
+                      lineageId="Package\importar_ProvinciasARG\Origen de Excel.Outputs[Salida de origen de Excel].Columns[Estado]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      truncationRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\importar_ProvinciasARG\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[Estado]" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\importar_ProvinciasARG\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[Descripcion]"
+                      name="Descripcion"
+                      dataType="wstr"
+                      length="255" />
+                    <externalMetadataColumn
+                      refId="Package\importar_ProvinciasARG\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[Codigo]"
+                      name="Codigo"
+                      dataType="wstr"
+                      length="255" />
+                    <externalMetadataColumn
+                      refId="Package\importar_ProvinciasARG\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[PaisId]"
+                      name="PaisId"
+                      dataType="wstr"
+                      length="255" />
+                    <externalMetadataColumn
+                      refId="Package\importar_ProvinciasARG\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[FechaAlta]"
+                      name="FechaAlta"
+                      dataType="wstr"
+                      length="255" />
+                    <externalMetadataColumn
+                      refId="Package\importar_ProvinciasARG\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[UsuarioAlta]"
+                      name="UsuarioAlta"
+                      dataType="wstr"
+                      length="255" />
+                    <externalMetadataColumn
+                      refId="Package\importar_ProvinciasARG\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[Estado]"
+                      name="Estado"
+                      dataType="r8" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\importar_ProvinciasARG\Origen de Excel.Outputs[Salida de error de origen de Excel]"
+                  name="Salida de error de origen de Excel"
+                  isErrorOut="true">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\importar_ProvinciasARG\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[Descripcion]"
+                      name="Descripcion"
+                      lineageId="Package\importar_ProvinciasARG\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[Descripcion]"
+                      length="255"
+                      dataType="wstr" />
+                    <outputColumn
+                      refId="Package\importar_ProvinciasARG\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[Codigo]"
+                      name="Codigo"
+                      lineageId="Package\importar_ProvinciasARG\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[Codigo]"
+                      length="255"
+                      dataType="wstr" />
+                    <outputColumn
+                      refId="Package\importar_ProvinciasARG\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[PaisId]"
+                      name="PaisId"
+                      lineageId="Package\importar_ProvinciasARG\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[PaisId]"
+                      length="255"
+                      dataType="wstr" />
+                    <outputColumn
+                      refId="Package\importar_ProvinciasARG\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[FechaAlta]"
+                      name="FechaAlta"
+                      lineageId="Package\importar_ProvinciasARG\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[FechaAlta]"
+                      length="255"
+                      dataType="wstr" />
+                    <outputColumn
+                      refId="Package\importar_ProvinciasARG\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[UsuarioAlta]"
+                      name="UsuarioAlta"
+                      lineageId="Package\importar_ProvinciasARG\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[UsuarioAlta]"
+                      length="255"
+                      dataType="wstr" />
+                    <outputColumn
+                      refId="Package\importar_ProvinciasARG\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[Estado]"
+                      name="Estado"
+                      lineageId="Package\importar_ProvinciasARG\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[Estado]"
+                      dataType="r8" />
+                    <outputColumn
+                      refId="Package\importar_ProvinciasARG\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      lineageId="Package\importar_ProvinciasARG\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[ErrorCode]"
+                      dataType="i4"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\importar_ProvinciasARG\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      lineageId="Package\importar_ProvinciasARG\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[ErrorColumn]"
+                      dataType="i4"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\importar_ProvinciasARG.Paths[Salida de origen de Excel]"
+              name="Salida de origen de Excel"
+              startId="Package\importar_ProvinciasARG\Origen de Excel.Outputs[Salida de origen de Excel]"
+              endId="Package\importar_ProvinciasARG\Destino de OLE DB.Inputs[Entrada de destino de OLE DB]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción]"
+      DTS:From="Package\Importacion_Articulos a BD"
+      DTS:To="Package\Delete_Inicial_Tablas"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción"
+      DTS:DTSID="{50423F00-30CA-49D5-A84D-7512438B208A}"
+      DTS:CreationName="" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción 1]"
+      DTS:From="Package\Delete_Inicial_Tablas"
+      DTS:To="Package\Alta_Talles"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción 1"
+      DTS:DTSID="{2208A9C8-92AF-40FF-87B6-0D729BF2EDB6}"
+      DTS:CreationName="" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción 2]"
+      DTS:From="Package\Delete_Inicial_Tablas"
+      DTS:To="Package\Alta_CategoriaAtributos"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción 2"
+      DTS:DTSID="{9A26C03F-E92D-4FC6-A5FA-DC036DE3EC58}"
+      DTS:CreationName="" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción 3]"
+      DTS:From="Package\Delete_Inicial_Tablas"
+      DTS:To="Package\Alta_Categoria_Talles"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción 3"
+      DTS:DTSID="{401B6770-D064-4D19-A3B1-1C5CBEBA208F}"
+      DTS:CreationName="" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción 4]"
+      DTS:From="Package\Importacion_Articulos a BD"
+      DTS:To="Package\Importacion_Rubros_SubRubros"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción 4"
+      DTS:DTSID="{3B2A5338-C2FE-4789-A9B9-7C75D39BB89C}"
+      DTS:CreationName="" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción 5]"
+      DTS:From="Package\Delete_Inicial_Tablas"
+      DTS:To="Package\Altra_Temporadas"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción 5"
+      DTS:DTSID="{55B323B7-EC66-4B16-A68E-7E8F86E39E3C}"
+      DTS:CreationName="" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción 6]"
+      DTS:From="Package\completar_excel_provincias"
+      DTS:To="Package\importar_ProvinciasARG"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción 6"
+      DTS:DTSID="{2923C31B-FBE3-41AD-B263-3F62818B35EC}"
+      DTS:CreationName="" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción 7]"
+      DTS:From="Package\Importacion_Rubros_SubRubros"
+      DTS:To="Package\completar_excel_provincias"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción 7"
+      DTS:DTSID="{E8685082-B387-49A4-922E-8EFD4DD07CF7}"
+      DTS:CreationName="" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<Objects
+  Version="sql11">
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="179,42"
+          Id="Package\Alta_Categoria_Talles"
+          TopLeft="79,193" />
+        <NodeLayout
+          Size="189,42"
+          Id="Package\Alta_CategoriaAtributos"
+          TopLeft="415,199" />
+        <NodeLayout
+          Size="129,42"
+          Id="Package\Alta_Talles"
+          TopLeft="270,197" />
+        <NodeLayout
+          Size="164,42"
+          Id="Package\Altra_Temporadas"
+          TopLeft="618,205" />
+        <NodeLayout
+          Size="178,42"
+          Id="Package\Delete_Inicial_Tablas"
+          TopLeft="153,118" />
+        <NodeLayout
+          Size="206,42"
+          Id="Package\Importacion_Articulos a BD"
+          TopLeft="139,20" />
+        <NodeLayout
+          Size="230,42"
+          Id="Package\Importacion_Rubros_SubRubros"
+          TopLeft="387,18" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción]"
+          TopLeft="242,62">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,56"
+              Start="0,0"
+              End="0,48.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,48.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción 1]"
+          TopLeft="270.333333333333,160">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="64.1666666666667,37"
+              Start="0,0"
+              End="64.1666666666667,29.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,10.9977728285078" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,10.9977728285078"
+                    Point2="0,14.9977728285078"
+                    Point3="4,14.9977728285078" />
+                  <mssgle:LineSegment
+                    End="60.1666666666667,14.9977728285078" />
+                  <mssgle:CubicBezierSegment
+                    Point1="60.1666666666667,14.9977728285078"
+                    Point2="64.1666666666667,14.9977728285078"
+                    Point3="64.1666666666667,18.9977728285078" />
+                  <mssgle:LineSegment
+                    End="64.1666666666667,29.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción 2]"
+          TopLeft="284.5,160">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="225,39"
+              Start="0,0"
+              End="225,31.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,9.38376383763838" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,9.38376383763838"
+                    Point2="0,13.3837638376384"
+                    Point3="4,13.3837638376384" />
+                  <mssgle:LineSegment
+                    End="221,13.3837638376384" />
+                  <mssgle:CubicBezierSegment
+                    Point1="221,13.3837638376384"
+                    Point2="225,13.3837638376384"
+                    Point3="225,17.3837638376384" />
+                  <mssgle:LineSegment
+                    End="225,31.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción 3]"
+          TopLeft="242,160">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-73.5,33"
+              Start="0,0"
+              End="-73.5,25.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,12.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,12.5"
+                    Point2="0,16.5"
+                    Point3="-4,16.5" />
+                  <mssgle:LineSegment
+                    End="-69.5,16.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-69.5,16.5"
+                    Point2="-73.5,16.5"
+                    Point3="-73.5,20.5" />
+                  <mssgle:LineSegment
+                    End="-73.5,25.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción 4]"
+          TopLeft="345,40">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="42,0"
+              Start="0,0"
+              End="34.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="34.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción 5]"
+          TopLeft="293,160">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="407,45"
+              Start="0,0"
+              End="407,37.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,9.46456692913386" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,9.46456692913386"
+                    Point2="0,13.4645669291339"
+                    Point3="4,13.4645669291339" />
+                  <mssgle:LineSegment
+                    End="403,13.4645669291339" />
+                  <mssgle:CubicBezierSegment
+                    Point1="403,13.4645669291339"
+                    Point2="407,13.4645669291339"
+                    Point3="407,17.4645669291339" />
+                  <mssgle:LineSegment
+                    End="407,37.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="207,42"
+          Id="Package\completar_excel_provincias"
+          TopLeft="696,26" />
+        <NodeLayout
+          Size="191,42"
+          Id="Package\importar_ProvinciasARG"
+          TopLeft="782,110" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción 6]"
+          TopLeft="799.5,68">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="78,42"
+              Start="0,0"
+              End="78,34.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17"
+                    Point2="0,21"
+                    Point3="4,21" />
+                  <mssgle:LineSegment
+                    End="74,21" />
+                  <mssgle:CubicBezierSegment
+                    Point1="74,21"
+                    Point2="78,21"
+                    Point3="78,25" />
+                  <mssgle:LineSegment
+                    End="78,34.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción 7]"
+          TopLeft="617,39">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="79,8"
+              Start="0,0"
+              End="71.5,8">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="35.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="35.5,0"
+                    Point2="39.5,0"
+                    Point3="39.5,4" />
+                  <mssgle:LineSegment
+                    End="39.5,4" />
+                  <mssgle:CubicBezierSegment
+                    Point1="39.5,4"
+                    Point2="39.5,8"
+                    Point3="43.5,8" />
+                  <mssgle:LineSegment
+                    End="71.5,8" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Importacion_Articulos a BD">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="152,42"
+          Id="Package\Importacion_Articulos a BD\Origen de Excel"
+          TopLeft="228,130" />
+        <NodeLayout
+          Size="167,42"
+          Id="Package\Importacion_Articulos a BD\Destino de OLE DB"
+          TopLeft="501,129" />
+        <EdgeLayout
+          Id="Package\Importacion_Articulos a BD.Paths[Salida de origen de Excel]"
+          TopLeft="380,150.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="121,0"
+              Start="0,0"
+              End="113.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="113.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Importacion_Articulos a BD\Destino de OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Importacion_Articulos a BD\Origen de Excel">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Importacion_Rubros_SubRubros">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="152,42"
+          Id="Package\Importacion_Rubros_SubRubros\Origen de Excel"
+          TopLeft="417,114" />
+        <NodeLayout
+          Size="167,42"
+          Id="Package\Importacion_Rubros_SubRubros\Destino de OLE DB"
+          TopLeft="747,141" />
+        <EdgeLayout
+          Id="Package\Importacion_Rubros_SubRubros.Paths[Salida de origen de Excel]"
+          TopLeft="569,135">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="178,27"
+              Start="0,0"
+              End="170.5,27">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="85,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="85,0"
+                    Point2="89,0"
+                    Point3="89,4" />
+                  <mssgle:LineSegment
+                    End="89,23" />
+                  <mssgle:CubicBezierSegment
+                    Point1="89,23"
+                    Point2="89,27"
+                    Point3="93,27" />
+                  <mssgle:LineSegment
+                    End="170.5,27" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Importacion_Rubros_SubRubros\Destino de OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Importacion_Rubros_SubRubros\Origen de Excel">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\completar_excel_provincias">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="280,42"
+          Id="Package\completar_excel_provincias\Obtener_datos_pais_fechaAlta_UusarioAlta"
+          TopLeft="71,30" />
+        <NodeLayout
+          Size="262,42"
+          Id="Package\completar_excel_provincias\Completar datos en excel de provincias"
+          TopLeft="69,113" />
+        <EdgeLayout
+          Id="Package\completar_excel_provincias.Paths[Salida de origen de OLE DB]"
+          TopLeft="211,72">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-11,41"
+              Start="0,0"
+              End="-11,33.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.5"
+                    Point2="0,20.5"
+                    Point3="-4,20.5" />
+                  <mssgle:LineSegment
+                    End="-7,20.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-7,20.5"
+                    Point2="-11,20.5"
+                    Point3="-11,24.5" />
+                  <mssgle:LineSegment
+                    End="-11,33.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\completar_excel_provincias\Obtener_datos_pais_fechaAlta_UusarioAlta">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\completar_excel_provincias\Completar datos en excel de provincias">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\importar_ProvinciasARG">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="152,42"
+          Id="Package\importar_ProvinciasARG\Origen de Excel"
+          TopLeft="117,70" />
+        <NodeLayout
+          Size="167,42"
+          Id="Package\importar_ProvinciasARG\Destino de OLE DB"
+          TopLeft="342,77" />
+        <EdgeLayout
+          Id="Package\importar_ProvinciasARG.Paths[Salida de origen de Excel]"
+          TopLeft="269,94.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="73,0"
+              Start="0,0"
+              End="65.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="65.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\importar_ProvinciasARG\Origen de Excel">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\importar_ProvinciasARG\Destino de OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
