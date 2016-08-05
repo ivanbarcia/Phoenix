@@ -1,0 +1,24 @@
+/*
+Proceso para el ETL
+
+Migrar ArticulosCob
+Migrar Rubros
+
+Alta Colores
+Alta Categoria Talles
+Alta Talles
+Alta CategoriaAtributo
+Alta CondicionIVA
+Alta Paises
+Alta Provincias
+Alta Localidades
+Alta Temporadas
+Alta UnidadesMedida
+
+Alta proveedoresFake
+Alta Insumos
+Alta Insumos Sobre Rubros
+Trigger Articulos
+
+
+*/
