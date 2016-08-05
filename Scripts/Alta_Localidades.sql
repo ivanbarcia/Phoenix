@@ -6048,7 +6048,7 @@ INSERT INTO #temp_localidades (id,departamento_id,nombre) VALUES(5438,572,'YANIM
 INSERT INTO #temp_localidades (id,departamento_id,nombre) VALUES(5439,571,'YERBA BUENA');
 SET @provinciaid = (select id from provincias where codigo ='CABA')
 insert into Localidades (Codigo,Descripcion,ProvinciaId,Estado,FechaAlta,UsuarioAlta)
-select substring(ltrim(rtrim(#temp_localidades.nombre)),0,8),#temp_localidades.nombre,#temp_departamentos.provincia_id,1,GETDATE(),'ADMIN'
+select substring(ltrim(rtrim(#temp_localidades.nombre)),0,8),#temp_localidades.nombre,#temp_departamentos.provincia_id,1,GETDATE(),'SQL Init'
 from #temp_departamentos
 inner join #temp_localidades
 on #temp_departamentos.id = #temp_localidades.departamento_id
@@ -6057,7 +6057,7 @@ where
 
 SET @provinciaid = (select id from provincias where codigo ='CATA')
 insert into Localidades (Codigo,Descripcion,ProvinciaId,Estado,FechaAlta,UsuarioAlta)
-select substring(ltrim(rtrim(#temp_localidades.nombre)),0,8),#temp_localidades.nombre,#temp_departamentos.provincia_id,1,GETDATE(),'ADMIN'
+select substring(ltrim(rtrim(#temp_localidades.nombre)),0,8),#temp_localidades.nombre,#temp_departamentos.provincia_id,1,GETDATE(),'SQL Init'
 from #temp_departamentos
 inner join #temp_localidades
 on #temp_departamentos.id = #temp_localidades.departamento_id
@@ -6065,7 +6065,7 @@ where
  #temp_departamentos.provincia_id =@provinciaid
  SET @provinciaid = (select id from provincias where codigo ='CHA')
 insert into Localidades (Codigo,Descripcion,ProvinciaId,Estado,FechaAlta,UsuarioAlta)
-select substring(ltrim(rtrim(#temp_localidades.nombre)),0,8),#temp_localidades.nombre,#temp_departamentos.provincia_id,1,GETDATE(),'ADMIN'
+select substring(ltrim(rtrim(#temp_localidades.nombre)),0,8),#temp_localidades.nombre,#temp_departamentos.provincia_id,1,GETDATE(),'SQL Init'
 from #temp_departamentos
 inner join #temp_localidades
 on #temp_departamentos.id = #temp_localidades.departamento_id
@@ -6073,7 +6073,7 @@ where
  #temp_departamentos.provincia_id =@provinciaid
  SET @provinciaid = (select id from provincias where codigo ='CHU')
 insert into Localidades (Codigo,Descripcion,ProvinciaId,Estado,FechaAlta,UsuarioAlta)
-select substring(ltrim(rtrim(#temp_localidades.nombre)),0,8),#temp_localidades.nombre,#temp_departamentos.provincia_id,1,GETDATE(),'ADMIN'
+select substring(ltrim(rtrim(#temp_localidades.nombre)),0,8),#temp_localidades.nombre,#temp_departamentos.provincia_id,1,GETDATE(),'SQL Init'
 from #temp_departamentos
 inner join #temp_localidades
 on #temp_departamentos.id = #temp_localidades.departamento_id
@@ -6081,7 +6081,7 @@ where
  #temp_departamentos.provincia_id =@provinciaid
  SET @provinciaid = (select id from provincias where codigo ='COR')
 insert into Localidades (Codigo,Descripcion,ProvinciaId,Estado,FechaAlta,UsuarioAlta)
-select substring(ltrim(rtrim(#temp_localidades.nombre)),0,8),#temp_localidades.nombre,#temp_departamentos.provincia_id,1,GETDATE(),'ADMIN'
+select substring(ltrim(rtrim(#temp_localidades.nombre)),0,8),#temp_localidades.nombre,#temp_departamentos.provincia_id,1,GETDATE(),'SQL Init'
 from #temp_departamentos
 inner join #temp_localidades
 on #temp_departamentos.id = #temp_localidades.departamento_id
@@ -6089,7 +6089,7 @@ where
  #temp_departamentos.provincia_id =@provinciaid
  SET @provinciaid = (select id from provincias where codigo ='CORR')
 insert into Localidades (Codigo,Descripcion,ProvinciaId,Estado,FechaAlta,UsuarioAlta)
-select substring(ltrim(rtrim(#temp_localidades.nombre)),0,8),#temp_localidades.nombre,#temp_departamentos.provincia_id,1,GETDATE(),'ADMIN'
+select substring(ltrim(rtrim(#temp_localidades.nombre)),0,8),#temp_localidades.nombre,#temp_departamentos.provincia_id,1,GETDATE(),'SQL Init'
 from #temp_departamentos
 inner join #temp_localidades
 on #temp_departamentos.id = #temp_localidades.departamento_id
@@ -6097,7 +6097,7 @@ where
  #temp_departamentos.provincia_id =@provinciaid
  SET @provinciaid = (select id from provincias where codigo ='ERIOS')
 insert into Localidades (Codigo,Descripcion,ProvinciaId,Estado,FechaAlta,UsuarioAlta)
-select substring(ltrim(rtrim(#temp_localidades.nombre)),0,8),#temp_localidades.nombre,#temp_departamentos.provincia_id,1,GETDATE(),'ADMIN'
+select substring(ltrim(rtrim(#temp_localidades.nombre)),0,8),#temp_localidades.nombre,#temp_departamentos.provincia_id,1,GETDATE(),'SQL Init'
 from #temp_departamentos
 inner join #temp_localidades
 on #temp_departamentos.id = #temp_localidades.departamento_id
@@ -6105,7 +6105,7 @@ where
  #temp_departamentos.provincia_id =@provinciaid
  SET @provinciaid = (select id from provincias where codigo ='FOR')
 insert into Localidades (Codigo,Descripcion,ProvinciaId,Estado,FechaAlta,UsuarioAlta)
-select substring(ltrim(rtrim(#temp_localidades.nombre)),0,8),#temp_localidades.nombre,#temp_departamentos.provincia_id,1,GETDATE(),'ADMIN'
+select substring(ltrim(rtrim(#temp_localidades.nombre)),0,8),#temp_localidades.nombre,#temp_departamentos.provincia_id,1,GETDATE(),'SQL Init'
 from #temp_departamentos
 inner join #temp_localidades
 on #temp_departamentos.id = #temp_localidades.departamento_id
@@ -6113,7 +6113,7 @@ where
  #temp_departamentos.provincia_id =@provinciaid
  SET @provinciaid = (select id from provincias where codigo ='JUJ')
 insert into Localidades (Codigo,Descripcion,ProvinciaId,Estado,FechaAlta,UsuarioAlta)
-select substring(ltrim(rtrim(#temp_localidades.nombre)),0,8),#temp_localidades.nombre,#temp_departamentos.provincia_id,1,GETDATE(),'ADMIN'
+select substring(ltrim(rtrim(#temp_localidades.nombre)),0,8),#temp_localidades.nombre,#temp_departamentos.provincia_id,1,GETDATE(),'SQL Init'
 from #temp_departamentos
 inner join #temp_localidades
 on #temp_departamentos.id = #temp_localidades.departamento_id
@@ -6121,7 +6121,7 @@ where
  #temp_departamentos.provincia_id =@provinciaid
  SET @provinciaid = (select id from provincias where codigo ='LAPAMP')
 insert into Localidades (Codigo,Descripcion,ProvinciaId,Estado,FechaAlta,UsuarioAlta)
-select substring(ltrim(rtrim(#temp_localidades.nombre)),0,8),#temp_localidades.nombre,#temp_departamentos.provincia_id,1,GETDATE(),'ADMIN'
+select substring(ltrim(rtrim(#temp_localidades.nombre)),0,8),#temp_localidades.nombre,#temp_departamentos.provincia_id,1,GETDATE(),'SQL Init'
 from #temp_departamentos
 inner join #temp_localidades
 on #temp_departamentos.id = #temp_localidades.departamento_id
@@ -6129,7 +6129,7 @@ where
  #temp_departamentos.provincia_id =@provinciaid
  SET @provinciaid = (select id from provincias where codigo ='LARIO')
 insert into Localidades (Codigo,Descripcion,ProvinciaId,Estado,FechaAlta,UsuarioAlta)
-select substring(ltrim(rtrim(#temp_localidades.nombre)),0,8),#temp_localidades.nombre,#temp_departamentos.provincia_id,1,GETDATE(),'ADMIN'
+select substring(ltrim(rtrim(#temp_localidades.nombre)),0,8),#temp_localidades.nombre,#temp_departamentos.provincia_id,1,GETDATE(),'SQL Init'
 from #temp_departamentos
 inner join #temp_localidades
 on #temp_departamentos.id = #temp_localidades.departamento_id
@@ -6137,7 +6137,7 @@ where
  #temp_departamentos.provincia_id =@provinciaid
  SET @provinciaid = (select id from provincias where codigo ='MEN')
 insert into Localidades (Codigo,Descripcion,ProvinciaId,Estado,FechaAlta,UsuarioAlta)
-select substring(ltrim(rtrim(#temp_localidades.nombre)),0,8),#temp_localidades.nombre,#temp_departamentos.provincia_id,1,GETDATE(),'ADMIN'
+select substring(ltrim(rtrim(#temp_localidades.nombre)),0,8),#temp_localidades.nombre,#temp_departamentos.provincia_id,1,GETDATE(),'SQL Init'
 from #temp_departamentos
 inner join #temp_localidades
 on #temp_departamentos.id = #temp_localidades.departamento_id
@@ -6145,7 +6145,7 @@ where
  #temp_departamentos.provincia_id =@provinciaid
  SET @provinciaid = (select id from provincias where codigo ='MIS')
 insert into Localidades (Codigo,Descripcion,ProvinciaId,Estado,FechaAlta,UsuarioAlta)
-select substring(ltrim(rtrim(#temp_localidades.nombre)),0,8),#temp_localidades.nombre,#temp_departamentos.provincia_id,1,GETDATE(),'ADMIN'
+select substring(ltrim(rtrim(#temp_localidades.nombre)),0,8),#temp_localidades.nombre,#temp_departamentos.provincia_id,1,GETDATE(),'SQL Init'
 from #temp_departamentos
 inner join #temp_localidades
 on #temp_departamentos.id = #temp_localidades.departamento_id
@@ -6153,7 +6153,7 @@ where
  #temp_departamentos.provincia_id =@provinciaid
  SET @provinciaid = (select id from provincias where codigo ='NEU')
 insert into Localidades (Codigo,Descripcion,ProvinciaId,Estado,FechaAlta,UsuarioAlta)
-select substring(ltrim(rtrim(#temp_localidades.nombre)),0,8),#temp_localidades.nombre,#temp_departamentos.provincia_id,1,GETDATE(),'ADMIN'
+select substring(ltrim(rtrim(#temp_localidades.nombre)),0,8),#temp_localidades.nombre,#temp_departamentos.provincia_id,1,GETDATE(),'SQL Init'
 from #temp_departamentos
 inner join #temp_localidades
 on #temp_departamentos.id = #temp_localidades.departamento_id
@@ -6161,7 +6161,7 @@ where
  #temp_departamentos.provincia_id =@provinciaid
  SET @provinciaid = (select id from provincias where codigo ='RNEGRO')
 insert into Localidades (Codigo,Descripcion,ProvinciaId,Estado,FechaAlta,UsuarioAlta)
-select substring(ltrim(rtrim(#temp_localidades.nombre)),0,8),#temp_localidades.nombre,#temp_departamentos.provincia_id,1,GETDATE(),'ADMIN'
+select substring(ltrim(rtrim(#temp_localidades.nombre)),0,8),#temp_localidades.nombre,#temp_departamentos.provincia_id,1,GETDATE(),'SQL Init'
 from #temp_departamentos
 inner join #temp_localidades
 on #temp_departamentos.id = #temp_localidades.departamento_id
@@ -6169,7 +6169,7 @@ where
  #temp_departamentos.provincia_id =@provinciaid
  SET @provinciaid = (select id from provincias where codigo ='SAL')
 insert into Localidades (Codigo,Descripcion,ProvinciaId,Estado,FechaAlta,UsuarioAlta)
-select substring(ltrim(rtrim(#temp_localidades.nombre)),0,8),#temp_localidades.nombre,#temp_departamentos.provincia_id,1,GETDATE(),'ADMIN'
+select substring(ltrim(rtrim(#temp_localidades.nombre)),0,8),#temp_localidades.nombre,#temp_departamentos.provincia_id,1,GETDATE(),'SQL Init'
 from #temp_departamentos
 inner join #temp_localidades
 on #temp_departamentos.id = #temp_localidades.departamento_id
@@ -6177,7 +6177,7 @@ where
  #temp_departamentos.provincia_id =@provinciaid
  SET @provinciaid = (select id from provincias where codigo ='SANJ')
 insert into Localidades (Codigo,Descripcion,ProvinciaId,Estado,FechaAlta,UsuarioAlta)
-select substring(ltrim(rtrim(#temp_localidades.nombre)),0,8),#temp_localidades.nombre,#temp_departamentos.provincia_id,1,GETDATE(),'ADMIN'
+select substring(ltrim(rtrim(#temp_localidades.nombre)),0,8),#temp_localidades.nombre,#temp_departamentos.provincia_id,1,GETDATE(),'SQL Init'
 from #temp_departamentos
 inner join #temp_localidades
 on #temp_departamentos.id = #temp_localidades.departamento_id
@@ -6185,7 +6185,7 @@ where
  #temp_departamentos.provincia_id =@provinciaid
  SET @provinciaid = (select id from provincias where codigo ='SANL')
 insert into Localidades (Codigo,Descripcion,ProvinciaId,Estado,FechaAlta,UsuarioAlta)
-select substring(ltrim(rtrim(#temp_localidades.nombre)),0,8),#temp_localidades.nombre,#temp_departamentos.provincia_id,1,GETDATE(),'ADMIN'
+select substring(ltrim(rtrim(#temp_localidades.nombre)),0,8),#temp_localidades.nombre,#temp_departamentos.provincia_id,1,GETDATE(),'SQL Init'
 from #temp_departamentos
 inner join #temp_localidades
 on #temp_departamentos.id = #temp_localidades.departamento_id
@@ -6193,7 +6193,7 @@ where
  #temp_departamentos.provincia_id =@provinciaid
  SET @provinciaid = (select id from provincias where codigo ='SANTAC')
 insert into Localidades (Codigo,Descripcion,ProvinciaId,Estado,FechaAlta,UsuarioAlta)
-select substring(ltrim(rtrim(#temp_localidades.nombre)),0,8),#temp_localidades.nombre,#temp_departamentos.provincia_id,1,GETDATE(),'ADMIN'
+select substring(ltrim(rtrim(#temp_localidades.nombre)),0,8),#temp_localidades.nombre,#temp_departamentos.provincia_id,1,GETDATE(),'SQL Init'
 from #temp_departamentos
 inner join #temp_localidades
 on #temp_departamentos.id = #temp_localidades.departamento_id
@@ -6201,7 +6201,7 @@ where
  #temp_departamentos.provincia_id =@provinciaid
  SET @provinciaid = (select id from provincias where codigo ='SANTAF')
 insert into Localidades (Codigo,Descripcion,ProvinciaId,Estado,FechaAlta,UsuarioAlta)
-select substring(ltrim(rtrim(#temp_localidades.nombre)),0,8),#temp_localidades.nombre,#temp_departamentos.provincia_id,1,GETDATE(),'ADMIN'
+select substring(ltrim(rtrim(#temp_localidades.nombre)),0,8),#temp_localidades.nombre,#temp_departamentos.provincia_id,1,GETDATE(),'SQL Init'
 from #temp_departamentos
 inner join #temp_localidades
 on #temp_departamentos.id = #temp_localidades.departamento_id
@@ -6209,7 +6209,7 @@ where
  #temp_departamentos.provincia_id =@provinciaid
  SET @provinciaid = (select id from provincias where codigo ='SGOEST')
 insert into Localidades (Codigo,Descripcion,ProvinciaId,Estado,FechaAlta,UsuarioAlta)
-select substring(ltrim(rtrim(#temp_localidades.nombre)),0,8),#temp_localidades.nombre,#temp_departamentos.provincia_id,1,GETDATE(),'ADMIN'
+select substring(ltrim(rtrim(#temp_localidades.nombre)),0,8),#temp_localidades.nombre,#temp_departamentos.provincia_id,1,GETDATE(),'SQL Init'
 from #temp_departamentos
 inner join #temp_localidades
 on #temp_departamentos.id = #temp_localidades.departamento_id
@@ -6217,7 +6217,7 @@ where
  #temp_departamentos.provincia_id =@provinciaid
  SET @provinciaid = (select id from provincias where codigo ='TFUEGO')
 insert into Localidades (Codigo,Descripcion,ProvinciaId,Estado,FechaAlta,UsuarioAlta)
-select substring(ltrim(rtrim(#temp_localidades.nombre)),0,8),#temp_localidades.nombre,#temp_departamentos.provincia_id,1,GETDATE(),'ADMIN'
+select substring(ltrim(rtrim(#temp_localidades.nombre)),0,8),#temp_localidades.nombre,#temp_departamentos.provincia_id,1,GETDATE(),'SQL Init'
 from #temp_departamentos
 inner join #temp_localidades
 on #temp_departamentos.id = #temp_localidades.departamento_id   
@@ -6225,15 +6225,14 @@ where
  #temp_departamentos.provincia_id =@provinciaid
  SET @provinciaid = (select id from provincias where codigo ='TUC')
 insert into Localidades (Codigo,Descripcion,ProvinciaId,Estado,FechaAlta,UsuarioAlta)
-select substring(ltrim(rtrim(#temp_localidades.nombre)),0,8),#temp_localidades.nombre,#temp_departamentos.provincia_id,1,GETDATE(),'ADMIN'
+select substring(ltrim(rtrim(#temp_localidades.nombre)),0,8),#temp_localidades.nombre,#temp_departamentos.provincia_id,1,GETDATE(),'SQL Init'
 from #temp_departamentos
 inner join #temp_localidades
 on #temp_departamentos.id = #temp_localidades.departamento_id
 where
  #temp_departamentos.provincia_id =@provinciaid
-
-insert into localidades (codigo,descripcion,ProvinciaId,estado,FechaAlta,UsuarioAlta)
-select 'CAPFED','CAPITAL FEDERAL',provincias.Id,1,getdate(),'Admin'
+ insert into localidades (codigo,descripcion,ProvinciaId,estado,FechaAlta,UsuarioAlta)
+select 'CAPFED','CAPITAL FEDERAL',provincias.Id,1,getdate(),'SQL Init'
 from Provincias
 where Codigo ='CABA' 
 DROP TABLE #temp_departamentos
