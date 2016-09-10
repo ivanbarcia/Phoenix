@@ -27,7 +27,7 @@ WHILE @@FETCH_STATUS = 0
 									and Descripcion like '%'+@subdesc2+'%' 
 									and Descripcion like '%'+@subdesc3+'%') = 0 /* Verifico que no exista en insumos alguno parecido*/
 			BEGIN
-				set @colorId = (select top 1 id from Colores where Descripcion = @Color)
+				set @colorId = (select id from Colores where Descripcion = @Color and PadreId is not null)
 				set @TempId = (select top 1 id from Temporadas where codigo = @temporada)
 				
 				if (select count(*) from insumos where descripcion = @TipoMaterial + ' ' + @Material and colorID = @colorid) =0 /*Verifico que no exista ya en insumos con el mismo color*/

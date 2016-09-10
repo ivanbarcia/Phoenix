@@ -1,39 +1,5 @@
-create table #_temp_rubros
-(
-	codigoRubro	varchar(250)  COLLATE SQL_Latin1_General_CP1_CI_AS	,
-	colorId		int											,
-	TempId		int											,
-	MaterialId	int
-)
-insert into #_temp_rubros (codigoRubro,colorId,TempId,MaterialId)
-(
-select rubros.CodTexto as CodigoRubro,colores.id as ColorId,temporadas.id as TempId,insumos.Id as InsumoId from rubros
-left join colores
-on rubros.color = colores.Descripcion
-and colores.PadreId <>  0
-LEFT join temporadas 
-on rubros.Temporada = temporadas.codigo
-LEFT join insumos
-on rubros.[Tipo Material] + ' ' + rubros.Material = insumos.Descripcion
-and colores.id = insumos.colorid 
-and insumos.EsMaterial = 1
-)
-GO
-DECLARE @ColorId int = (select id from colores where Descripcion = 'SD' and PadreId = 0)
-DECLARE @TempId int = (select id from Temporadas where codigo = 'SD')
-DECLARE @MaterialId int = (select id from insumos where codigo = 'SD')
-UPDATE #_temp_rubros
-SET colorId = @ColorId
-where colorid is null
-UPDATE #_temp_rubros
-SET TempId = @TempId
-where TempId is null
-UPDATE #_temp_rubros
-SET MaterialId = @MaterialId
-where MaterialId is null
-GO
-
-
+IF OBJECT_ID('tempdb..#_temp_rubros') IS NOT NULL
+	DROP TABLE #_temp_rubros
 DECLARE @Codigo varchar(250) = ''
 DECLARE @Descripcion varchar(250) = ''
 DECLARE @Precio float = 0
@@ -42,30 +8,73 @@ DECLARE @Bonif1 float = 0
 DECLARE @Bonif2 float = 0
 DECLARE @Utilidad float = 0
 DECLARE @Rubro varchar(250) = ''
+DECLARE @SubRubro varchar(250) = ''
 DECLARE @Proveedor varchar(50) = ''
 DECLARE @ColorId int = null
 DECLARE @MaterialId int = null
 DECLARE @TempId int = null
 DECLARE @Talle varchar(255) = ''
-DECLARE @TalleId int = null
+DECLARE @TalleId int = null 
 DECLARE @CatTalle int = null
 DECLARE @ArtProv varchar(255) = ''
 DECLARE @ArtCod varchar(255) = ''
-DECLARE @VarAux int = null
+DECLARE @VarAux varchar(250) = ''
 DECLARE @CodArtAux varchar(255) = ''
 DECLARE @PadreId int = null
 DECLARE @ProveedorId int = null
 
-DECLARE articulos_cob_cursor CURSOR FOR  
-SELECT codigo,[Descripcion larga],precio,costo,[Bonif# 1],[Bonif# 2],Utilidad,Rubro,Proveedor,CodTalleInterno,ArtProv,ArtCod
+DECLARE articulos_cob_cursor CURSOR FOR
+
+SELECT codigo,[Descripcion larga],precio,costo,[Bonif# 1],[Bonif# 2],Utilidad,Rubro,SubRubro,Proveedor,CodTalleInterno,ArtProv,ArtCod
 FROM articuloscob  
-WHERE Procesado = 0 
-order by Codigo
+WHERE Procesado = 0
+order by ArtProv,ArtCod,ArtTalle
+	create table #_temp_rubros
+				(
+					codigoRubro	varchar(250)  COLLATE SQL_Latin1_General_CP1_CI_AS	,
+					TempId		int													,
+					TempCod		varchar(250)										,
+					MaterialId	int													,
+					MatCod		varchar(250)										,
+					ColorId		int													,
+					ColDesc		varchar(250)										
+				)
+	insert into #_temp_rubros (codigoRubro,TempId,TempCod,MaterialId,MatCod,ColorId,ColDesc)
+				(
+					select 
+							rubros.CodTexto as CodigoRubro			,
+							temporadas.id as TempId					,
+							Temporadas.Codigo as TempCod			,
+							insumos.Id as InsumoId					,
+							Insumos.Codigo as MatCod				,
+							colores.Id								,
+							colores.Descripcion	
+					from rubros
+					left join colores
+					on rubros.color = colores.Descripcion
+					and colores.PadreId is not null
+					LEFT join temporadas  
+					on rubros.Temporada = temporadas.codigo
+					left join insumos
+					on rubros.[Tipo Material] + ' ' + rubros.Material = insumos.Descripcion
+					and	insumos.EsMaterial = 1
+					and colores.id = insumos.ColorId
+				)
+	
+	SET @TempId = (select id from Temporadas where codigo = 'SD')
+	SET @MaterialId = (select id from insumos where codigo = 'SD')
+	UPDATE #_temp_rubros
+	SET TempId = @TempId,TempCod = 'SD'
+	where TempId is null
+	UPDATE #_temp_rubros
+	SET MaterialId = @MaterialId,MatCod = 'SD'
+	where MaterialId is null
+	
 OPEN articulos_cob_cursor;  
-FETCH NEXT FROM articulos_cob_cursor into  @Codigo,@Descripcion,@Precio,@Costo,@Bonif1,@Bonif2,@Utilidad,@Rubro,@Proveedor,@Talle,@ArtProv,@ArtCod;
+FETCH NEXT FROM articulos_cob_cursor into  @Codigo,@Descripcion,@Precio,@Costo,@Bonif1,@Bonif2,@Utilidad,@Rubro,@SubRubro,@Proveedor,@Talle,@ArtProv,@ArtCod;
 WHILE @@FETCH_STATUS = 0  
 	BEGIN  
-		if @Talle <> '' or @Talle is not null
+		if @Talle <> '' or @Talle is null
 			begin
 				set @TalleId = (select id from talles where Codigo = @Talle)
 			end
@@ -73,77 +82,54 @@ WHILE @@FETCH_STATUS = 0
 			begin
 				set @TalleId = null
 			end
-		set @ColorId = (select colorId from #_temp_rubros where codigoRubro  = @Rubro)
+		
 		set @MaterialId = (select MaterialId from #_temp_rubros where codigoRubro = @Rubro)
 		set @TempId = (select TempId from #_temp_rubros where codigoRubro = @Rubro) 
 		set @ProveedorId = (select id from proveedores where codigo = @Proveedor)
 		
-	/*	if (select (len(@codigo) - len(replace(@codigo, '/', ''))) / len('/') ) = 2 /* Verifico si tengo 2 baras*/
+		if (select count(*) from #_temp_rubros where MatCod= 'SD' and codigoRubro = @Rubro)> 0
 			begin
-				set @VarAux = Len(@ArtCod)-2
-				set @CodArtAux = (select substring(@ArtCod,1,@VarAux))
-				if (select count(*) from articulos where codigo = @ArtProv + '/'+ @CodArtAux) = 1
-					begin
-						set @PadreId = (select id from Articulos where codigo = @ArtProv + '/'+ @CodArtAux)
-					end
-				else
-					begin
-					end
+				set @MaterialId = (select MaterialId from #_temp_rubros where codigoRubro = @SubRubro)
 			end
-		print @codigo		
-		*/
-		insert into Articulos
-				(
-					Codigo				,
-					Descripcion			,
-					TalleId				,
-					ProveedorId			,
-					RequiereAutorizacion,
-					Liquidacion			,
-					Precio				,
-					Costo				,
-					CostoFijo1			,
-					CostoFijo2			,
-					CostoFijo3			,
-					Bonificacion1		,
-					Bonificacion2		,
-					MargenUtilitad		,
-					TemporadaId			,
-					ColorId				,
-					MaterialId			,
-					Estado				,
-					FechaAlta			,
-					UsuarioAlta
-				)
-		select
-				@Codigo					,
-				@Descripcion			,
-				@TalleId				,
-				@ProveedorId			,
-				0						, /*Requiere Autorización*/
-				0						, /*Se Encuentra en liquidación*/
-				@Precio					,
-				@Costo					,
-				0						, /*Costo Fijo 1*/
-				0						, /*Costo Fijo 2*/
-				0						, /*Costo Fijo 3*/
-				@Bonif1					,
-				@Bonif2					,
-				@Utilidad				,
-				@TempId					,
-				@ColorId				,
-				@MaterialId				,
-				1						, /*Estado*/
-				getdate()				,
-				'SQL Init'
-	 If @@ERROR = 0
-		begin
-			update articuloscob
-					set procesado = 1
-					where codigo = @Codigo
-		end
-	  FETCH NEXT FROM articulos_cob_cursor into  @Codigo,@Descripcion,@Precio,@Costo,@Bonif1,@Bonif2,@Utilidad,@Rubro,@Proveedor,@Talle,@ArtProv,@ArtCod;
+		if (select count(*) from #_temp_rubros where TempCod= 'SD' and codigoRubro = @Rubro)> 0
+			begin
+				set @TempId = (select TempId from #_temp_rubros where codigoRubro = @SubRubro)
+			end
+	    if @TempId is null
+			SET @TempId = (select id from Temporadas where codigo = 'SD')
+		if @MaterialId is null
+			SET @MaterialId = (select id from insumos where codigo = 'SD')
+	
+		EXEC SP_ASIGNO_PADRE
+			@Codigo					,
+			@ProveedorId			,
+			@ArtProv				,
+			@TalleId				,
+			@Descripcion			,
+			@Precio					,
+			@Costo					,
+			@Bonif1					,
+			@Bonif2					,
+			@TempId					,
+			@MaterialId				,
+			@PadreId = @PadreId output
+		
+		EXEC SP_INSERT_ARTICULOS 
+					@Codigo			,
+					@Descripcion	,
+					@TalleId		,
+					@ProveedorId 	,
+					@Precio			,
+					@Costo			,
+					@Bonif1			,
+					@Bonif2			,
+					@TempId			,
+					@MaterialId		,
+					@PadreId
+		
+	  FETCH NEXT FROM articulos_cob_cursor into  @Codigo,@Descripcion,@Precio,@Costo,@Bonif1,@Bonif2,@Utilidad,@Rubro,@SubRubro,@Proveedor,@Talle,@ArtProv,@ArtCod;
 	END;  
 CLOSE articulos_cob_cursor;  
 DEALLOCATE articulos_cob_cursor;  
 GO  
+
