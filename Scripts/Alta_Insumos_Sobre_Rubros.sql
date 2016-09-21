@@ -16,7 +16,6 @@ DECLARE @TempId int = null
 DECLARE colores_cursor CURSOR FOR  
 SELECT [Tipo Material],material,color,subdesc1,SubDesc2,SubDesc3,Temporada    
 FROM rubros  
-WHERE color <> 'SD'  
 order by [Tipo Material],[Material]
 OPEN colores_cursor;  
 FETCH NEXT FROM colores_cursor into  @tipoMaterial,@Material,@Color,@subdesc1,@subdesc2,@subdesc3,@temporada;  
@@ -55,6 +54,4 @@ WHILE @@FETCH_STATUS = 0
 	END;  
 CLOSE colores_cursor;  
 DEALLOCATE colores_cursor;  
-GO  
-
-
+GO

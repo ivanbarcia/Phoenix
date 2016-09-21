@@ -4,7 +4,7 @@
 */
 DECLARE @TempId int= (select id from temporadas where codigo = 'SD')
 DECLARE @UNIDADMEDIDAID int= (select id from UnidadesMedida where codigo = 'UNI')
-
+select * from articuloscob where rubro = 5002 and subrubro = 3500
 insert into insumos (codigo,Descripcion,EsMaterial,UnidadMedidaId,StockMinimo,ProveedorId,Precio,TemporadaId,Estado,FechaAlta,UsuarioAlta)
 select articuloscob.codigo,articuloscob.[Descripcion larga],0,@UNIDADMEDIDAID,0,proveedores.id,articuloscob.Precio,@TempId,1,getdate(),'SQL Init' from articuloscob
 inner join proveedores on
@@ -133,7 +133,6 @@ GO
 */
 DECLARE @id_color int = null
 DECLARE @descripcion varchar(250) = ''
-DECLARE @VarAux int = null
 
 DECLARE insumos_colores_cursor CURSOR FOR  
 SELECT id,descripcion
@@ -144,14 +143,17 @@ OPEN insumos_colores_cursor;
 FETCH NEXT FROM insumos_colores_cursor into @id_color,@descripcion;  
 WHILE @@FETCH_STATUS = 0  
 	BEGIN  
-		if (select count(*) from insumos where esmaterial = 1 and colorid is null and descripcion like '%' + @descripcion + '%') > 0
+		if (select count(*) from insumos where esmaterial = 1 and colorid is null)> 0
 			BEGIN
-				UPDATE insumos 
-				SET colorId = @id_color
-				where 
-						esmaterial = 1 
-				and		colorid is null 
-				and		descripcion like '%' + @descripcion + '%'
+				if (select count(*) from insumos where esmaterial = 1 and colorid is null and descripcion like '%' + @descripcion + '%')> 0
+					BEGIN
+						UPDATE insumos 
+						SET colorId = @id_color
+						where 
+								esmaterial = 1 
+						and		colorid is null 
+						and		descripcion like '%' + @descripcion + '%'
+					END
 			END
 		FETCH NEXT FROM insumos_colores_cursor into @id_color,@descripcion;  
 	END;  
@@ -159,3 +161,36 @@ CLOSE insumos_colores_cursor;
 DEALLOCATE insumos_colores_cursor;  
 GO  
 
+/*
+Le quitamos el color en la desripción a los insumos que vinieron del sistema.
+*/
+DECLARE @id int = null
+DECLARE @ColorId int = null
+DECLARE @Descripcion varchar(250) = ''
+DECLARE @ColorDescrip varchar(250) =''
+
+DECLARE insumos_colores_descripcion_cursor CURSOR FOR  
+SELECT id,ColorId,Descripcion
+FROM insumos
+WHERE
+	EsMaterial = 1
+and	ColorId is not null
+
+OPEN insumos_colores_descripcion_cursor;  
+FETCH NEXT FROM insumos_colores_descripcion_cursor into @Id,@ColorId,@Descripcion
+WHILE @@FETCH_STATUS = 0  
+	BEGIN  
+		SET @ColorDescrip = (select descripcion from colores where id = @ColorId)
+		if (@ColorDescrip <> '')
+			BEGIN
+				SET @Descripcion = (SELECT REPLACE(@Descripcion,@ColorDescrip,''))
+				
+				UPDATE insumos
+				set Descripcion = @Descripcion
+				where id = @id
+			END
+		FETCH NEXT FROM insumos_colores_descripcion_cursor into @Id,@ColorId,@Descripcion
+	END;  
+CLOSE insumos_colores_descripcion_cursor;  
+DEALLOCATE insumos_colores_descripcion_cursor;  
+GO  

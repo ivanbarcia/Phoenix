@@ -1,3 +1,0 @@
-A arreglar en DB
-
-Tabla categoriaatributos -> me deja cargar mas de un registro con mismo talleid y categoriatalleid
