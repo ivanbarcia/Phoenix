@@ -6235,5 +6235,25 @@ where
 select 'CAPFED','CAPITAL FEDERAL',provincias.Id,1,getdate(),'SQL Init'
 from Provincias
 where Codigo ='CABA' 
+insert into localidades (codigo,descripcion,ProvinciaId,estado,FechaAlta,UsuarioAlta)
+select 'SDCABA','SIN DEFINIR CABA',provincias.Id,1,getdate(),'SQL Init'
+from Provincias
+where Codigo ='CABA' 
 DROP TABLE #temp_departamentos
 DROP TABLE #temp_localidades
+
+SET @provinciaid = (select id from provincias where codigo ='SDEEUU')
+insert into Localidades (Codigo,Descripcion,ProvinciaId,Estado,FechaAlta,UsuarioAlta)
+select 'LAX','LOS ANGELES',@provinciaid,1,GETDATE(),'SQL Init'
+
+SET @provinciaid = (select id from provincias where codigo ='SDCHI')
+insert into Localidades (Codigo,Descripcion,ProvinciaId,Estado,FechaAlta,UsuarioAlta)
+select 'IGRE','IGREJINHA',@provinciaid,1,GETDATE(),'SQL Init'
+insert into Localidades (Codigo,Descripcion,ProvinciaId,Estado,FechaAlta,UsuarioAlta)
+select 'SHWE','SHUANGYU WENZHOU',@provinciaid,1,GETDATE(),'SQL Init'
+insert into Localidades (Codigo,Descripcion,ProvinciaId,Estado,FechaAlta,UsuarioAlta)
+select 'HUDI','HUADU DISTRICT',@provinciaid,1,GETDATE(),'SQL Init'
+insert into Localidades (Codigo,Descripcion,ProvinciaId,Estado,FechaAlta,UsuarioAlta)
+select 'HNK','HONG KONG',@provinciaid,1,GETDATE(),'SQL Init'
+insert into Localidades (Codigo,Descripcion,ProvinciaId,Estado,FechaAlta,UsuarioAlta)
+select 'HEAN','HEFEI ANHUI',@provinciaid,1,GETDATE(),'SQL Init'

@@ -73,4 +73,3 @@ group by rubros.color,colores.id
 )
 
 
-

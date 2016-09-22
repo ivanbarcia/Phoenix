@@ -1,5 +1,9 @@
 insert into paises (Codigo,Descripcion,estado,FechaAlta)
 values('ARG','ARGENTINA',1,GETDATE())
+insert into paises (Codigo,Descripcion,estado,FechaAlta)
+values('CHI','CHINA',1,GETDATE())
+insert into paises (Codigo,Descripcion,estado,FechaAlta)
+values('EEUU','ESTADOS UNIDOS',1,GETDATE())
 /*
 Afganistán
 Akrotiri

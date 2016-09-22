@@ -1,5 +1,5 @@
 DECLARE @UNIDADMEDIDAID int= (select id from UnidadesMedida where codigo = 'MTS')
-DECLARE @proveedor int = (select id from Proveedores where codigo = '000Z')
+DECLARE @proveedor int = (select id from Proveedores where codigo = 'SD')
 DECLARE @codigoInsumo int = 1
 DECLARE @Material varchar(250) = ''
 DECLARE @TipoMaterial varchar(250) = ''
@@ -36,15 +36,18 @@ WHILE @@FETCH_STATUS = 0
 							BEGIN
 								set @CodColor = @CodColor  +1
 								insert into insumos (Codigo,Descripcion,EsMaterial,UnidadMedidaId,ProveedorId,Estado,FechaAlta,UsuarioAlta,StockMinimo,ColorId,TemporadaId,Precio)
-								(select 'ZZZ/'+ CAST(@codigoInsumo as varchar(250)) +'/' +CAST(@CodColor as varchar(250)),@TipoMaterial + ' '+ @Material,1,@UNIDADMEDIDAID,@proveedor,1,getdate(),'SQLInit',0,@colorId,@TempId,0)
+								(select 'ZZZ/'+ CAST(@codigoInsumo as varchar(250)) +CAST(@CodColor as varchar(250)),@TipoMaterial + ' '+ @Material,1,@UNIDADMEDIDAID,@proveedor,1,getdate(),'SQLInit',0,@colorId,@TempId,0)
 							END
 						ELSE
 							BEGIN
-								set @codigoInsumo = @codigoInsumo + 1 
-								insert into insumos (Codigo,Descripcion,EsMaterial,UnidadMedidaId,ProveedorId,Estado,FechaAlta,UsuarioAlta,StockMinimo,ColorId,TemporadaId,Precio)
-								(select 'ZZZ/'+ CAST(@codigoInsumo as varchar(250)),@TipoMaterial + ' '+ @Material,1,@UNIDADMEDIDAID,@proveedor,1,getdate(),'SQLInit',0,@colorId,@TempId,0)
+								if (@TipoMaterial <> '' and @Material <>'')
+									BEGIN
+										set @codigoInsumo = @codigoInsumo + 1 
+										insert into insumos (Codigo,Descripcion,EsMaterial,UnidadMedidaId,ProveedorId,Estado,FechaAlta,UsuarioAlta,StockMinimo,ColorId,TemporadaId,Precio)
+										(select 'ZZZ/'+ CAST(@codigoInsumo as varchar(250)),@TipoMaterial + ' '+ @Material,1,@UNIDADMEDIDAID,@proveedor,1,getdate(),'SQLInit',0,@colorId,@TempId,0)
 						
-								set @CodColor = 0
+										set @CodColor = 0
+									END
 							END
 					END
 			END

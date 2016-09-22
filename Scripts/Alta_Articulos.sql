@@ -74,62 +74,80 @@ OPEN articulos_cob_cursor;
 FETCH NEXT FROM articulos_cob_cursor into  @Codigo,@Descripcion,@Precio,@Costo,@Bonif1,@Bonif2,@Utilidad,@Rubro,@SubRubro,@Proveedor,@Talle,@ArtProv,@ArtCod;
 WHILE @@FETCH_STATUS = 0  
 	BEGIN  
-		if @Talle <> '' or @Talle is null
-			begin
-				set @TalleId = (select id from talles where Codigo = @Talle)
-			end
-		else 
-			begin
-				set @TalleId = null
-			end
+		BEGIN TRY
+				if @Talle <> '' or @Talle is null
+					begin
+						set @TalleId = (select id from talles where Codigo = @Talle)
+					end
+				else 
+					begin
+						set @TalleId = null
+					end
 		
-		set @MaterialId = (select MaterialId from #_temp_rubros where codigoRubro = @Rubro)
-		set @TempId = (select TempId from #_temp_rubros where codigoRubro = @Rubro) 
-		set @ProveedorId = (select id from proveedores where codigo = @Proveedor)
+				set @MaterialId = (select MaterialId from #_temp_rubros where codigoRubro = @Rubro)
+				set @TempId = (select TempId from #_temp_rubros where codigoRubro = @Rubro) 
 		
-		if (select count(*) from #_temp_rubros where MatCod= 'SD' and codigoRubro = @Rubro)> 0
-			begin
-				set @MaterialId = (select MaterialId from #_temp_rubros where codigoRubro = @SubRubro)
-			end
-		if (select count(*) from #_temp_rubros where TempCod= 'SD' and codigoRubro = @Rubro)> 0
-			begin
-				set @TempId = (select TempId from #_temp_rubros where codigoRubro = @SubRubro)
-			end
-	    if @TempId is null
-			SET @TempId = (select id from Temporadas where codigo = 'SD')
-		if @MaterialId is null
-			SET @MaterialId = (select id from insumos where codigo = 'SD')
+		
+				if (select count(*) from #_temp_rubros where MatCod= 'SD' and codigoRubro = @Rubro)> 0
+					begin
+						set @MaterialId = (select MaterialId from #_temp_rubros where codigoRubro = @SubRubro)
+					end
+				if (select count(*) from #_temp_rubros where TempCod= 'SD' and codigoRubro = @Rubro)> 0
+					begin
+						set @TempId = (select TempId from #_temp_rubros where codigoRubro = @SubRubro)
+					end
+				if @TempId is null
+					SET @TempId = (select id from Temporadas where codigo = 'SD')
+				if @MaterialId is null
+					SET @MaterialId = (select id from insumos where codigo = 'SD')
 	
-		EXEC SP_ASIGNO_PADRE
-			@Codigo					,
-			@ProveedorId			,
-			@ArtProv				,
-			@TalleId				,
-			@Descripcion			,
-			@Precio					,
-			@Costo					,
-			@Bonif1					,
-			@Bonif2					,
-			@TempId					,
-			@MaterialId				,
-			@PadreId = @PadreId output
+				EXEC SP_ASIGNO_PROVEEDOR
+						@Proveedor							,
+						@ProveedorId = @ProveedorId OUTPUT
+			
+				EXEC SP_ASIGNO_PADRE
+					@Codigo					,
+					@ProveedorId			,
+					@ArtProv				,
+					@TalleId				,
+					@Descripcion			,
+					@Precio					,
+					@Costo					,
+					@Bonif1					,
+					@Bonif2					,
+					@TempId					,
+					@MaterialId				,
+					@PadreId = @PadreId output
 		
-		EXEC SP_INSERT_ARTICULOS 
-					@Codigo			,
-					@Descripcion	,
-					@TalleId		,
-					@ProveedorId 	,
-					@Precio			,
-					@Costo			,
-					@Bonif1			,
-					@Bonif2			,
-					@TempId			,
-					@MaterialId		,
-					@PadreId
+				EXEC SP_INSERT_ARTICULOS 
+							@Codigo			,
+							@Descripcion	,
+							@TalleId		,
+							@ProveedorId 	,
+							@Precio			,
+							@Costo			,
+							@Bonif1			,
+							@Bonif2			,
+							@TempId			,
+							@MaterialId		,
+							@PadreId
 		
-	  FETCH NEXT FROM articulos_cob_cursor into  @Codigo,@Descripcion,@Precio,@Costo,@Bonif1,@Bonif2,@Utilidad,@Rubro,@SubRubro,@Proveedor,@Talle,@ArtProv,@ArtCod;
+			  FETCH NEXT FROM articulos_cob_cursor into  @Codigo,@Descripcion,@Precio,@Costo,@Bonif1,@Bonif2,@Utilidad,@Rubro,@SubRubro,@Proveedor,@Talle,@ArtProv,@ArtCod;
+		END TRY
+		BEGIN CATCH
+			EXECUTE usp_GetErrorInfo @Codigo,@Proveedor,@PadreId;
+		END CATCH
 	END;  
 CLOSE articulos_cob_cursor;  
 DEALLOCATE articulos_cob_cursor;  
-GO  
+GO 
 
+/*
+DELETE ARTICULOS
+UPDATE ARTICULOSCOB
+SET PROCESADO = 0
+WHERE ARTPROV < '99'
+ORDER BY ARTPROV
+*/
+
+--SELECT * FROM ARTICULOS WHERE PROVEEDORID = 7416

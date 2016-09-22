@@ -4,88 +4,211 @@
 */
 DECLARE @TempId int= (select id from temporadas where codigo = 'SD')
 DECLARE @UNIDADMEDIDAID int= (select id from UnidadesMedida where codigo = 'UNI')
-select * from articuloscob where rubro = 5002 and subrubro = 3500
 insert into insumos (codigo,Descripcion,EsMaterial,UnidadMedidaId,StockMinimo,ProveedorId,Precio,TemporadaId,Estado,FechaAlta,UsuarioAlta)
-select articuloscob.codigo,articuloscob.[Descripcion larga],0,@UNIDADMEDIDAID,0,proveedores.id,articuloscob.Precio,@TempId,1,getdate(),'SQL Init' from articuloscob
+select articuloscob.codigo,articuloscob.[Descripcion larga],0,@UNIDADMEDIDAID,0,proveedores.id,articuloscob.Precio,@TempId,1,getdate(),'SQL Init' 
+from articuloscob
+inner join proveedoresCOB on
+(
+	articuloscob.Proveedor = proveedoresCOB.CodDepo1
+OR	articuloscob.Proveedor = proveedoresCOB.CodDepo2
+OR	articuloscob.Proveedor = proveedoresCOB.CodDepo3
+OR	articuloscob.Proveedor = proveedoresCOB.CodDepo4
+OR	articuloscob.Proveedor = proveedoresCOB.CodDepo5
+)
 inner join proveedores on
-articuloscob.Proveedor = proveedores.Codigo
+proveedorescob.codigo = proveedores.codigo
 where articuloscob.rubro = 5002 and articuloscob.Subrubro = 3500
-                     
-update articuloscob
-set procesado = 1
-where rubro = 5002 and Subrubro = 3500
+
+update artcob
+set artcob.procesado = 1
+from articuloscob as artcob
+inner join proveedoresCOB on
+(
+	artcob.Proveedor = proveedoresCOB.CodDepo1
+OR	artcob.Proveedor = proveedoresCOB.CodDepo2
+OR	artcob.Proveedor = proveedoresCOB.CodDepo3
+OR	artcob.Proveedor = proveedoresCOB.CodDepo4
+OR	artcob.Proveedor = proveedoresCOB.CodDepo5
+)
+inner join proveedores on
+proveedorescob.codigo = proveedores.codigo
+where artcob.rubro = 5002 and artcob.Subrubro = 3500
+
 /*
 	RUBRO 5002 HERRAJES
 		SUBRUBRO = 500 CINTURONES DAMA
 */
 SET @UNIDADMEDIDAID  = (select id from UnidadesMedida where codigo = 'UNI')
 insert into insumos (codigo,Descripcion,EsMaterial,UnidadMedidaId,StockMinimo,ProveedorId,Precio,TemporadaId,Estado,FechaAlta,UsuarioAlta)
-select articuloscob.codigo,articuloscob.[Descripcion larga],0,@UNIDADMEDIDAID,0,proveedores.id,articuloscob.Precio,@TempId,1,getdate(),'SQL Init' from articuloscob
+select articuloscob.codigo,articuloscob.[Descripcion larga],0,@UNIDADMEDIDAID,0,proveedores.id,articuloscob.Precio,@TempId,1,getdate(),'SQL Init'
+from articuloscob
+inner join proveedoresCOB on
+(
+	articuloscob.Proveedor = proveedoresCOB.CodDepo1
+OR	articuloscob.Proveedor = proveedoresCOB.CodDepo2
+OR	articuloscob.Proveedor = proveedoresCOB.CodDepo3
+OR	articuloscob.Proveedor = proveedoresCOB.CodDepo4
+OR	articuloscob.Proveedor = proveedoresCOB.CodDepo5
+)
 inner join proveedores on
-articuloscob.Proveedor = proveedores.Codigo
+proveedorescob.codigo = proveedores.codigo
 where articuloscob.rubro = 5002 and articuloscob.Subrubro = 500
                                
-update articuloscob
-set procesado = 1
-where rubro = 5002 and Subrubro = 500
+
+update artcob
+set artcob.procesado = 1
+from articuloscob as artcob
+inner join proveedoresCOB on
+(
+	artcob.Proveedor = proveedoresCOB.CodDepo1
+OR	artcob.Proveedor = proveedoresCOB.CodDepo2
+OR	artcob.Proveedor = proveedoresCOB.CodDepo3
+OR	artcob.Proveedor = proveedoresCOB.CodDepo4
+OR	artcob.Proveedor = proveedoresCOB.CodDepo5
+)
+inner join proveedores on
+proveedorescob.codigo = proveedores.codigo
+where artcob.rubro = 5002 and artcob.Subrubro = 500
 
 /*
 	Rubro 2500 Articulos de vidriera // Por error de carga se contempla el 250
 */
 set @UNIDADMEDIDAID = (select id from UnidadesMedida where codigo = 'UNI')
 insert into insumos (codigo,Descripcion,EsMaterial,UnidadMedidaId,StockMinimo,ProveedorId,Precio,TemporadaId,Estado,FechaAlta,UsuarioAlta)
-select articuloscob.codigo,articuloscob.[Descripcion larga],0,@UNIDADMEDIDAID,0,proveedores.id,articuloscob.Precio,@TempId,1,getdate(),'SQL Init' from articuloscob
+select articuloscob.codigo,articuloscob.[Descripcion larga],0,@UNIDADMEDIDAID,0,proveedores.id,articuloscob.Precio,@TempId,1,getdate(),'SQL Init' 
+from articuloscob
+inner join proveedoresCOB on
+(
+	articuloscob.Proveedor = proveedoresCOB.CodDepo1
+OR	articuloscob.Proveedor = proveedoresCOB.CodDepo2
+OR	articuloscob.Proveedor = proveedoresCOB.CodDepo3
+OR	articuloscob.Proveedor = proveedoresCOB.CodDepo4
+OR	articuloscob.Proveedor = proveedoresCOB.CodDepo5
+)
 inner join proveedores on
-articuloscob.Proveedor = proveedores.Codigo
+proveedorescob.codigo = proveedores.codigo
 where articuloscob.rubro = 2500 /*or articuloscob.rubro = 250 */
 
-update articuloscob
-set procesado = 1
-where rubro = 2500
+
+update artcob
+set artcob.procesado = 1
+from articuloscob as artcob
+inner join proveedoresCOB on
+(
+	artcob.Proveedor = proveedoresCOB.CodDepo1
+OR	artcob.Proveedor = proveedoresCOB.CodDepo2
+OR	artcob.Proveedor = proveedoresCOB.CodDepo3
+OR	artcob.Proveedor = proveedoresCOB.CodDepo4
+OR	artcob.Proveedor = proveedoresCOB.CodDepo5
+)
+inner join proveedores on
+proveedorescob.codigo = proveedores.codigo
+where artcob.rubro = 2500
 /*
 	Rubro 5000 Telas Sinteticas
 	Rubro 5001 Cueros
 */
 SET @UNIDADMEDIDAID = (select id from UnidadesMedida where codigo = 'MTS')
 insert into insumos (codigo,Descripcion,EsMaterial,UnidadMedidaId,StockMinimo,ProveedorId,Precio,TemporadaId,Estado,FechaAlta,UsuarioAlta)
-select articuloscob.codigo,articuloscob.[Descripcion larga],1,@UNIDADMEDIDAID,0,proveedores.id,articuloscob.Precio,@TempId,1,getdate(),'SQL Init' from articuloscob
+select articuloscob.codigo,articuloscob.[Descripcion larga],1,@UNIDADMEDIDAID,0,proveedores.id,articuloscob.Precio,@TempId,1,getdate(),'SQL Init' 
+from articuloscob
+inner join proveedoresCOB on
+(
+	articuloscob.Proveedor = proveedoresCOB.CodDepo1
+OR	articuloscob.Proveedor = proveedoresCOB.CodDepo2
+OR	articuloscob.Proveedor = proveedoresCOB.CodDepo3
+OR	articuloscob.Proveedor = proveedoresCOB.CodDepo4
+OR	articuloscob.Proveedor = proveedoresCOB.CodDepo5
+)
 inner join proveedores on
-articuloscob.Proveedor = proveedores.Codigo
+proveedorescob.codigo = proveedores.codigo
 where articuloscob.rubro = 5000 or articuloscob.rubro = 5001
 
-update articuloscob
-set procesado = 1
-where rubro = 5000 or rubro = 5001
+
+update artcob
+set artcob.procesado = 1
+from articuloscob as artcob
+inner join proveedoresCOB on
+(
+	artcob.Proveedor = proveedoresCOB.CodDepo1
+OR	artcob.Proveedor = proveedoresCOB.CodDepo2
+OR	artcob.Proveedor = proveedoresCOB.CodDepo3
+OR	artcob.Proveedor = proveedoresCOB.CodDepo4
+OR	artcob.Proveedor = proveedoresCOB.CodDepo5
+)
+inner join proveedores on
+proveedorescob.codigo = proveedores.codigo
+where artcob.rubro = 5000 or artcob.rubro = 5001
 
 /*
 	Rubro 3030 Perfumes
 */
 SET @UNIDADMEDIDAID = (select id from UnidadesMedida where codigo = 'UNI')
 insert into insumos (codigo,Descripcion,EsMaterial,UnidadMedidaId,StockMinimo,ProveedorId,Precio,TemporadaId,Estado,FechaAlta,UsuarioAlta)
-select articuloscob.codigo,articuloscob.[Descripcion larga],0,@UNIDADMEDIDAID,0,proveedores.id,articuloscob.Precio,@TempId,1,getdate(),'SQL Init' from articuloscob
+select articuloscob.codigo,articuloscob.[Descripcion larga],0,@UNIDADMEDIDAID,0,proveedores.id,articuloscob.Precio,@TempId,1,getdate(),'SQL Init' 
+from articuloscob
+inner join proveedoresCOB on
+(
+	articuloscob.Proveedor = proveedoresCOB.CodDepo1
+OR	articuloscob.Proveedor = proveedoresCOB.CodDepo2
+OR	articuloscob.Proveedor = proveedoresCOB.CodDepo3
+OR	articuloscob.Proveedor = proveedoresCOB.CodDepo4
+OR	articuloscob.Proveedor = proveedoresCOB.CodDepo5
+)
 inner join proveedores on
-articuloscob.Proveedor = proveedores.Codigo
+proveedorescob.codigo = proveedores.codigo
 where articuloscob.rubro = 3030
 
-update articuloscob
-set procesado = 1
-where rubro = 3030
+update artcob
+set artcob.procesado = 1
+from articuloscob as artcob
+inner join proveedoresCOB on
+(
+	artcob.Proveedor = proveedoresCOB.CodDepo1
+OR	artcob.Proveedor = proveedoresCOB.CodDepo2
+OR	artcob.Proveedor = proveedoresCOB.CodDepo3
+OR	artcob.Proveedor = proveedoresCOB.CodDepo4
+OR	artcob.Proveedor = proveedoresCOB.CodDepo5
+)
+inner join proveedores on
+proveedorescob.codigo = proveedores.codigo
+where artcob.rubro = 3030
 
 /*
 	Acá se procesan los insumos restantes que no entraban en las categorias anteriores
 */
 SET @UNIDADMEDIDAID = (select id from UnidadesMedida where codigo = 'UNI')
 insert into insumos (codigo,Descripcion,EsMaterial,UnidadMedidaId,StockMinimo,ProveedorId,Precio,TemporadaId,Estado,FechaAlta,UsuarioAlta)
-select articuloscob.codigo,articuloscob.[Descripcion larga],0,@UNIDADMEDIDAID,0,proveedores.id,articuloscob.Precio,@TempId,1,getdate(),'SQL Init' from articuloscob
+select articuloscob.codigo,articuloscob.[Descripcion larga],0,@UNIDADMEDIDAID,0,proveedores.id,articuloscob.Precio,@TempId,1,getdate(),'SQL Init' 
+from articuloscob
+inner join proveedoresCOB on
+(
+	articuloscob.Proveedor = proveedoresCOB.CodDepo1
+OR	articuloscob.Proveedor = proveedoresCOB.CodDepo2
+OR	articuloscob.Proveedor = proveedoresCOB.CodDepo3
+OR	articuloscob.Proveedor = proveedoresCOB.CodDepo4
+OR	articuloscob.Proveedor = proveedoresCOB.CodDepo5
+)
 inner join proveedores on
-articuloscob.Proveedor = proveedores.Codigo
+proveedorescob.codigo = proveedores.codigo
 where articuloscob.Procesado = 0
 and ArticulosCob.ArtProv between 'Z' and 'ZZZ'
 
-update articuloscob
-set procesado = 1
-where articuloscob.Procesado = 0
-and ArticulosCob.ArtProv between 'Z' and 'ZZZ'
+update artcob
+set artcob.procesado = 1
+from articuloscob as artcob
+inner join proveedoresCOB on
+(
+	artcob.Proveedor = proveedoresCOB.CodDepo1
+OR	artcob.Proveedor = proveedoresCOB.CodDepo2
+OR	artcob.Proveedor = proveedoresCOB.CodDepo3
+OR	artcob.Proveedor = proveedoresCOB.CodDepo4
+OR	artcob.Proveedor = proveedoresCOB.CodDepo5
+)
+inner join proveedores on
+proveedorescob.codigo = proveedores.codigo
+where artcob.Procesado = 0
+and artcob.ArtProv between 'Z' and 'ZZZ'
 
 /*
 	Acá se procesan los insumos bolsas
@@ -93,14 +216,34 @@ and ArticulosCob.ArtProv between 'Z' and 'ZZZ'
 
 SET @UNIDADMEDIDAID = (select id from UnidadesMedida where codigo = 'UNI')
 insert into insumos (codigo,Descripcion,EsMaterial,UnidadMedidaId,StockMinimo,ProveedorId,Precio,TemporadaId,Estado,FechaAlta,UsuarioAlta)
-select articuloscob.codigo,articuloscob.[Descripcion larga],0,@UNIDADMEDIDAID,0,proveedores.id,articuloscob.Precio,@TempId,1,getdate(),'SQL Init' from articuloscob
+select articuloscob.codigo,articuloscob.[Descripcion larga],0,@UNIDADMEDIDAID,0,proveedores.id,articuloscob.Precio,@TempId,1,getdate(),'SQL Init' 
+from articuloscob
+inner join proveedoresCOB on
+(
+	articuloscob.Proveedor = proveedoresCOB.CodDepo1
+OR	articuloscob.Proveedor = proveedoresCOB.CodDepo2
+OR	articuloscob.Proveedor = proveedoresCOB.CodDepo3
+OR	articuloscob.Proveedor = proveedoresCOB.CodDepo4
+OR	articuloscob.Proveedor = proveedoresCOB.CodDepo5
+)
 inner join proveedores on
-articuloscob.Proveedor = proveedores.Codigo
+proveedorescob.codigo = proveedores.codigo
 where ArticulosCob.ArtProv between 'W' and 'X'
 
-update articuloscob
-set procesado = 1
-where ArticulosCob.ArtProv between 'W' and 'X'
+update artcob
+set artcob.procesado = 1
+from articuloscob as artcob
+inner join proveedoresCOB on
+(
+	artcob.Proveedor = proveedoresCOB.CodDepo1
+OR	artcob.Proveedor = proveedoresCOB.CodDepo2
+OR	artcob.Proveedor = proveedoresCOB.CodDepo3
+OR	artcob.Proveedor = proveedoresCOB.CodDepo4
+OR	artcob.Proveedor = proveedoresCOB.CodDepo5
+)
+inner join proveedores on
+proveedorescob.codigo = proveedores.codigo
+where artcob.ArtProv between 'W' and 'X'
 
 /*
 	Acá se da de alta el insumo sin definir
