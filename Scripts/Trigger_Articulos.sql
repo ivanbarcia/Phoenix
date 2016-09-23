@@ -1,3 +1,5 @@
+IF OBJECT_ID('dbo.Articulos_His', 'U') IS NOT NULL 
+  DROP TABLE dbo.Articulos_His;
 CREATE TABLE [dbo].[Articulos_His](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[Id_Art] [int] NOT NULL,

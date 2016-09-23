@@ -1,3 +1,5 @@
+IF OBJECT_ID('dbo.Insumos_His', 'U') IS NOT NULL 
+  DROP TABLE dbo.Insumos_His;
 CREATE TABLE [dbo].[Insumos_His](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[IdInsumo] [int] NOT NULL,

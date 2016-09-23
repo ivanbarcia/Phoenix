@@ -1,3 +1,5 @@
+IF OBJECT_ID('dbo.Proveedores_His', 'U') IS NOT NULL 
+  DROP TABLE dbo.Proveedores_His;
 CREATE TABLE [dbo].[Proveedores_His](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[IdProv] [int] NOT NULL,
