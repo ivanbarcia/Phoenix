@@ -141,15 +141,18 @@ WHILE @@FETCH_STATUS = 0
 CLOSE articulos_cob_cursor;  
 DEALLOCATE articulos_cob_cursor;  
 GO 
+UPDATE articulos 
+set descripcion = REPLACE(descripcion,' ','/')
+where descripcion like '%'+  ' '+  '%'
 
-/*
-DELETE ARTICULOS
-UPDATE ARTICULOSCOB
-SET PROCESADO = 0
-WHERE ARTPROV < '99'
-ORDER BY ARTPROV
-*/
+UPDATE articulos 
+set descripcion = REPLACE(descripcion,'.','/')
+where descripcion like '%'+  '.'+  '%'
 
---SELECT * FROM ARTICULOS WHERE PROVEEDORID = 7416
+UPDATE articulos 
+set descripcion = REPLACE(descripcion,'BASE/','ZAPATO/BASE/')
+where descripcion like 'BASE/'+  '%'
 
-
+UPDATE articulos 
+set descripcion = REPLACE(descripcion,'FONDO/','ZAPATO/FONDO/')
+where descripcion like 'FONDO/'+  '%'

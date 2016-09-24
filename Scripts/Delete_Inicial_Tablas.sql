@@ -39,5 +39,7 @@ delete from Paises
 delete from CondicionesIVA
 delete from Cuentas
 delete from retenciones
+delete from Atributos
+delete from ArticuloAtributos
 
 

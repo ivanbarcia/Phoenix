@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">CESAR-PC</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAArOJ5/ychhkKYQ8AY5DQe1gAAAAACAAAAAAAQZgAAAAEAACAAAACHf+A/uFblgabGiwDAOak6QRqAx3SLjYqNbG5OsWPl/gAAAAAOgAAAAAIAACAAAAC72JExT53zelLg65fUv2o8PEB8SnRl+fpJHLkOuidL6pAAAAANkcjTWovi7aEhTR2F/S5hZbSS+IdEJ8d4n+bwrHrYgDyjYO3qm34XJVCkDid1uNlkNOdiONVaotMdB3XTMmQg19GFywjzvm9S1bbTdoRo1G5cmkpAbMFAzbFKVT5MpXgwpQ9VPnq9hyVgBTjhWmOJ576dhBuHhPHMrrqUvul5gL7obODfTxhd/ExCaX5KmRBAAAAAjq04OoG9bLWaKXhHFtv8HDjarrjN0FZ1QostJQS+3SPN2Dkw3XUqat4ZsbwKlqEUa1gvN3K/QwAn7ImEZ5+xBg==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAArOJ5/ychhkKYQ8AY5DQe1gAAAAACAAAAAAAQZgAAAAEAACAAAAAmz88o/7//8K4BSvgagsCIlYnRrUA9dtWXcTJYSn9umwAAAAAOgAAAAAIAACAAAACoEzSwpVlLP64x1ZzlXZ0ASV/0dyAOMYAMvlxW9bnlCpAAAACLsTjKzLYUDasvojugRKlNu9AZw+3eKAm992U1gcw4CCf5KM3SGqaFH3svJL8JaKClRxVulmtppx7p2WCDqPv2yQuxXsiKggKap6vc36g5AXo/BMxu3mDdcV2nvRhxiaaysrRZDuVi3HKogx5qrCp9HOtOkxkLidcUPga6Fh30m8WeGfHj5l3Ce2cTZh2wvsNAAAAAHEU1gA/l9SLsVdv0as9Sz98BWlxXTa+4kVDe3L3ZtYLSvs3fr82AJKExPlxKI25TUNj0/jGiEqwPWRyj8CmTNQ==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -42,10 +42,10 @@
                 <SSIS:Property SSIS:Name="Name">Package</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">84</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">93</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{C95E4A5F-1276-4F4F-87E7-A24E4AC11535}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{80CA921D-7081-49E7-B198-1E0A2CAFB4A6}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">6</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -766,6 +766,21 @@
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Value">C:\Users\cesar\Documents\SABAR\Phoenix\Scripts\Alta_Articulos.sql</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.Alta_Atributos.sql.ConnectionString">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">C:\Users\cesar\Documents\SABAR\Phoenix\Scripts\Alta_Atributos.sql</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
