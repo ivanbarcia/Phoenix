@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="95"
-  DTS:VersionGUID="{E66120A6-4C81-4D37-B2E3-6414363814B7}">
+  DTS:VersionBuild="96"
+  DTS:VersionGUID="{C8294344-70F3-4802-9DC8-4B9F7872F8AD}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
@@ -267,7 +267,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAArOJ5/ychhkKYQ8AY5DQe1gAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADrBzhqIdKaQfQnnFP+HZM/f1b9cBJ2p4pPAEc6QZX2fgAAAAAOgAAAAAIAACAAAADmJnwAojEYfjmftIWP6wkBiLtSzUJHwzA5xOv7h4mg7xAAAABhPikgbwNRBuf/95DcZUcHQAAAAK7k2B0b1hPz3Z/BHFj4Wa/h9ecHeVlWE/7d19xPbpjt5i/ub154CkWkS+QsXNhIG2+hzcZWzL30ee58H8tMJjE</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAiK8d5BsEvke08t/2BTFgIQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACHzudKvuhHOeHSwWJ4AeUHusuGamRh+y5J2V0lRIc+DAAAAAAOgAAAAAIAACAAAADurTe3KzF11pbjdif9C6pvzoc3edR2BYvuaftnqmSxFxAAAABGLVw6ztN0aTZwIm1Hh+SKQAAAAE9KvCD7h34cZ2HbhLrPxbz62SWED4Bwar+m2r4Hcdtx3aPEcC8Tc6MW5tckiLZGlwpUvgWQHR6wrDSKpJtQD0k</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -282,7 +282,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAArOJ5/ychhkKYQ8AY5DQe1gAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABC8D4Ok5fc6Du4ZG5HuXA73fPhFmzPoC09bId5tXZClAAAAAAOgAAAAAIAACAAAAB2TEpyOXkPYq93ku1EH2wy1Uxz6NevNVzAcRUE0xRHEBAAAAAFsJZTZpl/Q0CYv4XZXIylQAAAACbM4FqDICx/ZDZwuFaK6czkYUzQoonFqZV18WAr9mAoeM8OClHz1zu09hNOmX4lDpX5oI0Nd+SqGlM5BxJFBAk</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAiK8d5BsEvke08t/2BTFgIQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC43x5C1Oa3uc0HuQ8TsGlZbqM5MskxO7h1yCxl5N1QsgAAAAAOgAAAAAIAACAAAAA7vPHZ64jhV45RJILDgfPQ8Rkzm0rptkWyvs9Vll5yUBAAAADvIo6swzNLte3ZDBlLTvweQAAAAGTH6+7xARH/crCEmWYhsh+rh605JyKwIKYADhC6paZXPsmncrlw7gVQZJf6Hx+Ew8zGsc1rlZnJYohVC2EKi3s</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -307,7 +307,7 @@
           <DTS:Password
             DTS:Name="PWD"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAArOJ5/ychhkKYQ8AY5DQe1gAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAJYGePH/E6Qv2gbfB5FAsebImaIVoDh/TraqI4n7VwBgAAAAAOgAAAAAIAACAAAAABPido3xXOZXErmSlX/zrcFw4kJSjGNkgMtGXXrVXBgBAAAABFEZcEEfF0URj1dBIpu0TAQAAAACxNz4D1cEYp4YeJxlW+JgS96l3iWzBCiwt0Zl6F3eOBUAREratPJ56RrLndEfer5yzNP9IjHYhtIinlUJSeEpg</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAiK8d5BsEvke08t/2BTFgIQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAB9WDGyzC8SM/+Enbet39FUFFMdwOFAMB19Wlz0oeMuPwAAAAAOgAAAAAIAACAAAAAItDCK/kNIWcG0kqH0YygXpoCqMPiEJp1YT0BHjlnh1xAAAABZQQM+7y+8Ae7Ov8ytDi3fQAAAAGi2rINfmlUSqxBTW0vbGmZUs9/YWDYrYxZD4xztptvSr5Ms88kBQhSJgw8YlYbsZappnSeG8gbrLSDchfoXhyc</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -2100,9 +2100,9 @@
         </EdgeLayout>
         <ContainerLayout
           HeaderHeight="43"
-          IsExpanded="True"
+          IsExpanded="False"
           PanelSize="618,1135"
-          Size="618,1178"
+          Size="618,43"
           Id="Package\Alta Articulos"
           TopLeft="30.9393939393938,6893.22727272727" />
       </GraphLayout>
