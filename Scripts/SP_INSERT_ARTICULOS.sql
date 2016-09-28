@@ -32,7 +32,7 @@ BEGIN TRY
 							CostoFijo3			,
 							Bonificacion1		,
 							Bonificacion2		,
-							MargenUtilitad		,
+							MargenUtilidad		,
 							TemporadaId			,
 							MaterialId			,
 							Estado				,
