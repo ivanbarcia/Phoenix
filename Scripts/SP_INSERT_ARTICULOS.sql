@@ -75,4 +75,3 @@ BEGIN CATCH
 	EXECUTE usp_GetErrorInfo @Codigo,@Descripcion,@PadreId;
 END CATCH
 GO
-

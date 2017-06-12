@@ -56,7 +56,7 @@ begin
 		select 
 					Id						,
 					Codigo					,
-					RazonSocial				,
+					'',--RazonSocial				,
 					CUIT					,
 					Domicilio				,
 					DomicilioFiscal			,
@@ -105,7 +105,7 @@ begin
 		select 
 					Id						,
 					Codigo					,
-					RazonSocial				,
+					'',--RazonSocial				,
 					CUIT					,
 					Domicilio				,
 					DomicilioFiscal			,
@@ -154,7 +154,7 @@ begin
 		select 
 					Id						,
 					Codigo					,
-					RazonSocial				,
+					'',--RazonSocial				,
 					CUIT					,
 					Domicilio				,
 					DomicilioFiscal			,
@@ -193,3 +193,4 @@ begin
 				deleted
 	end
 end
+

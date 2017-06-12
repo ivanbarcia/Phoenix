@@ -30,6 +30,7 @@ values ('Mini Bag',@PadreId,1,GETDATE(),'SQL Init')
 insert into Atributos (Descripcion,PadreId,Estado,FechaAlta,UsuarioAlta)
 values ('Gondola',@PadreId,1,GETDATE(),'SQL Init')
 
+SET @PadreId = null
 insert into Atributos (Descripcion,PadreId,Estado,FechaAlta,UsuarioAlta)
 values ('Calzado',@PadreId,1,GETDATE(),'SQL Init')
 
@@ -107,7 +108,7 @@ values ('Hombre',@PadreId,1,GETDATE(),'SQL Init')
 insert into Atributos (Descripcion,PadreId,Estado,FechaAlta,UsuarioAlta)
 values ('Mujer',@PadreId,1,GETDATE(),'SQL Init')
 
-
+SET @PadreId = null
 insert into Atributos (Descripcion,PadreId,Estado,FechaAlta,UsuarioAlta)
 values ('Equipaje',@PadreId,1,GETDATE(),'SQL Init')
 
@@ -142,7 +143,6 @@ insert into Atributos (Descripcion,PadreId,Estado,FechaAlta,UsuarioAlta)
 values ('Prenda',@PadreId,1,GETDATE(),'SQL Init')
 
 SET @PadreId = (select id from Atributos where Descripcion = 'Prenda')
-
 
 insert into Atributos (Descripcion,PadreId,Estado,FechaAlta,UsuarioAlta)
 values ('Tapado',@PadreId,1,GETDATE(),'SQL Init')

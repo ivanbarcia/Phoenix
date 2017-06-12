@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">CESAR-PC</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAArOJ5/ychhkKYQ8AY5DQe1gAAAAACAAAAAAAQZgAAAAEAACAAAAAmz88o/7//8K4BSvgagsCIlYnRrUA9dtWXcTJYSn9umwAAAAAOgAAAAAIAACAAAACoEzSwpVlLP64x1ZzlXZ0ASV/0dyAOMYAMvlxW9bnlCpAAAACLsTjKzLYUDasvojugRKlNu9AZw+3eKAm992U1gcw4CCf5KM3SGqaFH3svJL8JaKClRxVulmtppx7p2WCDqPv2yQuxXsiKggKap6vc36g5AXo/BMxu3mDdcV2nvRhxiaaysrRZDuVi3HKogx5qrCp9HOtOkxkLidcUPga6Fh30m8WeGfHj5l3Ce2cTZh2wvsNAAAAAHEU1gA/l9SLsVdv0as9Sz98BWlxXTa+4kVDe3L3ZtYLSvs3fr82AJKExPlxKI25TUNj0/jGiEqwPWRyj8CmTNQ==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAXEOJmWPCyUGG3tBsPVN2IAAAAAACAAAAAAAQZgAAAAEAACAAAAAXQeNR3iR5EWtDgPzyJzi9ucJlwhvmDGIhj1KT1hVUBQAAAAAOgAAAAAIAACAAAAAW3gjaLyxMsjQTilDBLe+uy1K5lmHmcOZ39W7+FpSHsZAAAACDP33mhs3fFV71zGtNScbo+2CYTOleMltbCsT15so8dHkTWFQ1HwStbI2ii4fugkseAnIbhcYrMXeaXxAm5T1wLiKA3bpaRN7B3tWxq770A9CxvFbOCMsnSTWKKAZiAYuHJwyjuubHbbmt1j4IYxtK4O4w+tRtTn2Rhq0Tk6TtQggEq29J0l6OPW0lGsoBE71AAAAAd1RCD/UrOaSqKnkC5/scQYz1xwLAtOy/RQ1zpye6HZVguVfZMd9+MN376ajFcXFQA202gVGiUzZjKGjDD6VpBQ==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -42,10 +42,10 @@
                 <SSIS:Property SSIS:Name="Name">Package</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">93</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">117</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{80CA921D-7081-49E7-B198-1E0A2CAFB4A6}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{9974CEAB-1293-4C33-B1EC-9615E4114FB6}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">6</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -769,6 +769,21 @@
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.Alta_Articulos_Atributos.sql.ConnectionString">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">C:\Users\cesar\Documents\SABAR\Phoenix\Scripts\Alta_Articulos_Atributos.sql</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
                 <SSIS:Parameter SSIS:Name="CM.Alta_Atributos.sql.ConnectionString">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
@@ -1305,6 +1320,36 @@
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.SP_ASIGNO_PROVEEDOR.sql.ConnectionString">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">C:\Users\cesar\Documents\SABAR\Phoenix\Scripts\SP_ASIGNO_PROVEEDOR.sql</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.SP_Extraer_Archivo_Remitos.sql.ConnectionString">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">C:\Users\cesar\Documents\SABAR\Phoenix\Scripts\SP_Extraer_Archivo_Remitos.sql</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
                 <SSIS:Parameter SSIS:Name="CM.SP_INSERT_ARTICULOS.sql.ConnectionString">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
@@ -1317,6 +1362,21 @@
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Value">C:\Users\cesar\Documents\SABAR\Phoenix\Scripts\SP_INSERT_ARTICULOS.sql</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.SP_Quitar_color_descripcion_insumos.sql.ConnectionString">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">C:\Users\cesar\Documents\SABAR\Phoenix\Scripts\SP_Quitar_color_descripcion_insumos.sql</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>

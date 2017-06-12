@@ -48,7 +48,7 @@ order by ArtProv,ArtCod,ArtTalle
 							insumos.Id as InsumoId					,
 							Insumos.Codigo as MatCod				,
 							colores.Id								,
-							colores.Descripcion	
+							colores.Descripcion
 					from rubros
 					left join colores
 					on rubros.color = colores.Descripcion
@@ -69,7 +69,7 @@ order by ArtProv,ArtCod,ArtTalle
 	UPDATE #_temp_rubros
 	SET MaterialId = @MaterialId,MatCod = 'SD'
 	where MaterialId is null
-	
+
 OPEN articulos_cob_cursor;  
 FETCH NEXT FROM articulos_cob_cursor into  @Codigo,@Descripcion,@Precio,@Costo,@Bonif1,@Bonif2,@Utilidad,@Rubro,@SubRubro,@Proveedor,@Talle,@ArtProv,@ArtCod;
 WHILE @@FETCH_STATUS = 0  
@@ -87,8 +87,7 @@ WHILE @@FETCH_STATUS = 0
 				set @MaterialId = (select MaterialId from #_temp_rubros where codigoRubro = @Rubro)
 				set @TempId = (select TempId from #_temp_rubros where codigoRubro = @Rubro) 
 		
-		
-				if (select count(*) from #_temp_rubros where MatCod= 'SD' and codigoRubro = @Rubro)> 0
+				if (select count(*) from #_temp_rubros where MatCod= 'SD' and codigoRubro =@Rubro)> 0
 					begin
 						set @MaterialId = (select MaterialId from #_temp_rubros where codigoRubro = @SubRubro)
 					end
@@ -156,3 +155,5 @@ where descripcion like 'BASE/'+  '%'
 UPDATE articulos 
 set descripcion = REPLACE(descripcion,'FONDO/','ZAPATO/FONDO/')
 where descripcion like 'FONDO/'+  '%'
+
+

@@ -24,6 +24,8 @@ IF OBJECT_ID ('tr_proveedores_his_UPDATE', 'TR') IS NOT NULL
 IF OBJECT_ID ('tr_proveedores_his_DELETE', 'TR') IS NOT NULL  
   DROP TRIGGER tr_proveedores_his_DELETE;  
 
+delete from Imagenes
+delete from ArticuloInsumo
 delete from articulos
 delete from insumos
 delete from Proveedores

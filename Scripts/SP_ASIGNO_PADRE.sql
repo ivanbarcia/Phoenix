@@ -73,7 +73,7 @@ if @CantCar > 1
 											CostoFijo3			,
 											Bonificacion1		,
 											Bonificacion2		,
-											MargenUtilitad		,
+											MargenUtilidad		,
 											TemporadaId			,
 											MaterialId			,
 											Estado				,

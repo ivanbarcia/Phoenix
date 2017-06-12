@@ -38,6 +38,7 @@ where artcob.rubro = 5002 and artcob.Subrubro = 3500
 	RUBRO 5002 HERRAJES
 		SUBRUBRO = 500 CINTURONES DAMA
 */
+
 SET @UNIDADMEDIDAID  = (select id from UnidadesMedida where codigo = 'UNI')
 insert into insumos (codigo,Descripcion,EsMaterial,UnidadMedidaId,StockMinimo,ProveedorId,Precio,TemporadaId,Estado,FechaAlta,UsuarioAlta)
 select articuloscob.codigo,articuloscob.[Descripcion larga],0,@UNIDADMEDIDAID,0,proveedores.id,articuloscob.Precio,@TempId,1,getdate(),'SQL Init'
@@ -73,6 +74,7 @@ where artcob.rubro = 5002 and artcob.Subrubro = 500
 /*
 	Rubro 2500 Articulos de vidriera // Por error de carga se contempla el 250
 */
+
 set @UNIDADMEDIDAID = (select id from UnidadesMedida where codigo = 'UNI')
 insert into insumos (codigo,Descripcion,EsMaterial,UnidadMedidaId,StockMinimo,ProveedorId,Precio,TemporadaId,Estado,FechaAlta,UsuarioAlta)
 select articuloscob.codigo,articuloscob.[Descripcion larga],0,@UNIDADMEDIDAID,0,proveedores.id,articuloscob.Precio,@TempId,1,getdate(),'SQL Init' 
@@ -124,7 +126,6 @@ inner join proveedores on
 proveedorescob.codigo = proveedores.codigo
 where articuloscob.rubro = 5000 or articuloscob.rubro = 5001
 
-
 update artcob
 set artcob.procesado = 1
 from articuloscob as artcob
@@ -140,9 +141,17 @@ inner join proveedores on
 proveedorescob.codigo = proveedores.codigo
 where artcob.rubro = 5000 or artcob.rubro = 5001
 
+/*ELIMINO REPETIDOS*/
+DELETE I1
+FROM INSUMOS I1, INSUMOS I2
+WHERE I1.Descripcion = I2.Descripcion
+AND I1.id < I2.id;
+
+
 /*
 	Rubro 3030 Perfumes
 */
+
 SET @UNIDADMEDIDAID = (select id from UnidadesMedida where codigo = 'UNI')
 insert into insumos (codigo,Descripcion,EsMaterial,UnidadMedidaId,StockMinimo,ProveedorId,Precio,TemporadaId,Estado,FechaAlta,UsuarioAlta)
 select articuloscob.codigo,articuloscob.[Descripcion larga],0,@UNIDADMEDIDAID,0,proveedores.id,articuloscob.Precio,@TempId,1,getdate(),'SQL Init' 
@@ -177,6 +186,7 @@ where artcob.rubro = 3030
 /*
 	Acá se procesan los insumos restantes que no entraban en las categorias anteriores
 */
+
 SET @UNIDADMEDIDAID = (select id from UnidadesMedida where codigo = 'UNI')
 insert into insumos (codigo,Descripcion,EsMaterial,UnidadMedidaId,StockMinimo,ProveedorId,Precio,TemporadaId,Estado,FechaAlta,UsuarioAlta)
 select articuloscob.codigo,articuloscob.[Descripcion larga],0,@UNIDADMEDIDAID,0,proveedores.id,articuloscob.Precio,@TempId,1,getdate(),'SQL Init' 
@@ -304,36 +314,3 @@ CLOSE insumos_colores_cursor;
 DEALLOCATE insumos_colores_cursor;  
 GO  
 
-/*
-Le quitamos el color en la desripción a los insumos que vinieron del sistema.
-*/
-DECLARE @id int = null
-DECLARE @ColorId int = null
-DECLARE @Descripcion varchar(250) = ''
-DECLARE @ColorDescrip varchar(250) =''
-
-DECLARE insumos_colores_descripcion_cursor CURSOR FOR  
-SELECT id,ColorId,Descripcion
-FROM insumos
-WHERE
-	EsMaterial = 1
-and	ColorId is not null
-
-OPEN insumos_colores_descripcion_cursor;  
-FETCH NEXT FROM insumos_colores_descripcion_cursor into @Id,@ColorId,@Descripcion
-WHILE @@FETCH_STATUS = 0  
-	BEGIN  
-		SET @ColorDescrip = (select descripcion from colores where id = @ColorId)
-		if (@ColorDescrip <> '')
-			BEGIN
-				SET @Descripcion = (SELECT REPLACE(@Descripcion,@ColorDescrip,''))
-				
-				UPDATE insumos
-				set Descripcion = @Descripcion
-				where id = @id
-			END
-		FETCH NEXT FROM insumos_colores_descripcion_cursor into @Id,@ColorId,@Descripcion
-	END;  
-CLOSE insumos_colores_descripcion_cursor;  
-DEALLOCATE insumos_colores_descripcion_cursor;  
-GO  

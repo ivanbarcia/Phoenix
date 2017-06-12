@@ -86,7 +86,7 @@ WHILE @@FETCH_STATUS = 0
 					INSERT INTO Proveedores
 						(
 							Codigo					,
-							RazonSocial				,
+							Descripcion,--RazonSocial				,
 							CUIT					,
 							DomicilioFiscal			,
 							CodigoPostal			,
@@ -153,7 +153,7 @@ GO
 INSERT INTO Proveedores
 (
 	Codigo					,
-	RazonSocial				,
+	Descripcion,--RazonSocial				,
 	CUIT					,
 	DomicilioFiscal			,
 	CodigoPostal			,
