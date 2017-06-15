@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="117"
-  DTS:VersionGUID="{9974CEAB-1293-4C33-B1EC-9615E4114FB6}">
+  DTS:VersionBuild="124"
+  DTS:VersionGUID="{C1E49F84-7687-4021-B82E-C910F56AE726}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
@@ -267,7 +267,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAXEOJmWPCyUGG3tBsPVN2IAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAALSs0lPIOuVBUdodGDmVgruKGULdh7k/lJzw+TxC8SDQAAAAAOgAAAAAIAACAAAADchuV8gR29Ubau+JGKIBVJWDoH811lsPK1iQWFh/fFphAAAADIy75h4fJ+7d0E/NT40vWbQAAAAO6OsZsw1WIy9HStPW/zCgplecTXAWZTXksjYcM96t6p0GANUcu30eW98pah8QmMnNLyPtPEgpSv+p7x1XzXnKA</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAXEOJmWPCyUGG3tBsPVN2IAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADwGLFVJqz4Gp/vD8ICxsr9yvg07r2GdHJn8Ja7f7Z9WwAAAAAOgAAAAAIAACAAAADZBrCH46gJ2ZqZ7Hx94jOfJJM3DLTXno6/c0/LAu7nNhAAAAAt2GtDy5vuResOpOXaHjMjQAAAAF2abb0Pa5Kbyd3AnsA7JdQ8EEprv/14q2ZNcn9e7F4t8NOgEKas8s4FthKi8cikmcfaW88vQdljINNLp4isqRU</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -282,7 +282,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAXEOJmWPCyUGG3tBsPVN2IAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADKOpIT1BySblVytIpIoOw1G9pEGhmjsTEUKAU3/EEcnwAAAAAOgAAAAAIAACAAAAA3RTaEPT1WROAXKvHdZiu2LJX+OxViG3HUCmoxBUkWVRAAAADPqdXBUxJKo/mZxm8JQ76GQAAAACDLwIZp0JnJCgSEt+PzYfxrdIPMISVGUDYCxqWsBvtOWfEnI9N8cpOmMDGWpzuoBatgcNIouKNJUZNG7Y+VJz8</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAXEOJmWPCyUGG3tBsPVN2IAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABUtSAnmZH7Lru6Ojl9hlQnV7f3T8hQS26+1pXyrIYVZwAAAAAOgAAAAAIAACAAAADQGojDmrg8v+Ym+bWXHCm9fbJhzrdHQc3FZQ5evg3pNRAAAAATgLC1bbQCfnpS/qf1EdhgQAAAAEaAygSZGWHX7LKHkOkmEpfY+6sYmVFJe5uv1j+eQJKH5cZXQ8Ts3AjDUO6fSh0N9Djq9+pjZjgOogN3/SUH6K0</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -307,7 +307,7 @@
           <DTS:Password
             DTS:Name="PWD"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAXEOJmWPCyUGG3tBsPVN2IAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABAlvYncAE/1heDFzBuVYAXHk6AeEOZA6z1nX7TGYGHrwAAAAAOgAAAAAIAACAAAAAchzFOw+xBLwwcVKHUGPXBOx2V0hXPJgaOHm68FMefiRAAAABIQkFJWL2jXybpcPix9iTKQAAAAGMh3N1/hXpNgilEJmiqLNkMYqDsN/6G467bk1QotsY51TJfev0/lUQJ7p33boPjdzjIppwmXU1xpciav4oSVZY</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAXEOJmWPCyUGG3tBsPVN2IAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAoAZBILA868CB4k8+Uigt9duqQmR+YIoprmnrUm3j77wAAAAAOgAAAAAIAACAAAAB/gOY1O8xUzNVuL2LSxDnPEYxiz3CWzZGDxa0jHQlfSBAAAAB44Pmw7pTvR8vH0dcSDbhZQAAAAIv2rAVSskoKMxxIjCaJreMzGJS996iIPP3njrfyEPSTVQDueiTMPJb0K6nEZKfpbs4op3Va0tmGlm1VyTc8RSw</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -424,6 +424,172 @@
       DTS:ObjectName="Alta Articulos">
       <DTS:Variables />
       <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Alta Articulos\AltaArticulos"
+          DTS:CreationName="STOCK:SEQUENCE"
+          DTS:Description="Contenedor de secuencias"
+          DTS:DTSID="{DD869247-1096-4566-852D-E3EC0F541B62}"
+          DTS:ExecutableType="STOCK:SEQUENCE"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="AltaArticulos">
+          <DTS:Variables />
+          <DTS:Executables>
+            <DTS:Executable
+              DTS:refId="Package\Alta Articulos\AltaArticulos\Alta_ArticuloAtributos"
+              DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+              DTS:Description="Tarea Ejecutar SQL"
+              DTS:DTSID="{FFC96809-F83D-4752-BD0D-9F3C70B3F9D5}"
+              DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Alta_ArticuloAtributos"
+              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+              DTS:ThreadHint="1">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{7E0FDA1D-137A-46D2-BCC8-C401E9873B15}"
+                  SQLTask:SqlStmtSourceType="FileConnection"
+                  SQLTask:SqlStatementSource="Alta_Articulos_Atributos.sql" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              </DTS:ObjectData>
+            </DTS:Executable>
+            <DTS:Executable
+              DTS:refId="Package\Alta Articulos\AltaArticulos\Alta_Articulos"
+              DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+              DTS:Description="Tarea Ejecutar SQL"
+              DTS:DTSID="{fa913c54-d782-4d15-9d9e-d992445d94d0}"
+              DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Alta_Articulos"
+              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+              DTS:ThreadHint="1">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{7E0FDA1D-137A-46D2-BCC8-C401E9873B15}"
+                  SQLTask:SqlStmtSourceType="FileConnection"
+                  SQLTask:SqlStatementSource="Alta_Articulos.sql" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              </DTS:ObjectData>
+            </DTS:Executable>
+          </DTS:Executables>
+          <DTS:PrecedenceConstraints>
+            <DTS:PrecedenceConstraint
+              DTS:refId="Package\Alta Articulos\AltaArticulos.PrecedenceConstraints[Restricción]"
+              DTS:CreationName=""
+              DTS:DTSID="{DDB06AB7-D28E-4EAA-9234-A9FE9E3FDC00}"
+              DTS:From="Package\Alta Articulos\AltaArticulos\Alta_Articulos"
+              DTS:LogicalAnd="True"
+              DTS:ObjectName="Restricción"
+              DTS:To="Package\Alta Articulos\AltaArticulos\Alta_ArticuloAtributos" />
+          </DTS:PrecedenceConstraints>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Alta Articulos\AltaInsumos"
+          DTS:CreationName="STOCK:SEQUENCE"
+          DTS:Description="Contenedor de secuencias"
+          DTS:DTSID="{78839F1E-3538-4F87-AC99-5EF13A54B153}"
+          DTS:ExecutableType="STOCK:SEQUENCE"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="AltaInsumos">
+          <DTS:Variables />
+          <DTS:Executables>
+            <DTS:Executable
+              DTS:refId="Package\Alta Articulos\AltaInsumos\Alta_Insumos"
+              DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+              DTS:Description="Tarea Ejecutar SQL"
+              DTS:DTSID="{2a4ef00d-a07e-4971-b2f1-ab5019b91c8b}"
+              DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Alta_Insumos"
+              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+              DTS:ThreadHint="1">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{7E0FDA1D-137A-46D2-BCC8-C401E9873B15}"
+                  SQLTask:SqlStmtSourceType="FileConnection"
+                  SQLTask:SqlStatementSource="Alta_Insumos.sql" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              </DTS:ObjectData>
+            </DTS:Executable>
+            <DTS:Executable
+              DTS:refId="Package\Alta Articulos\AltaInsumos\Alta_Insumos_Sobre_Rubros"
+              DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+              DTS:Description="Tarea Ejecutar SQL"
+              DTS:DTSID="{23DD4CF6-0746-4EBF-B921-AD1699191F1A}"
+              DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Alta_Insumos_Sobre_Rubros"
+              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+              DTS:ThreadHint="1">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{7E0FDA1D-137A-46D2-BCC8-C401E9873B15}"
+                  SQLTask:SqlStmtSourceType="FileConnection"
+                  SQLTask:SqlStatementSource="Alta_Insumos_Sobre_Rubros.sql" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              </DTS:ObjectData>
+            </DTS:Executable>
+            <DTS:Executable
+              DTS:refId="Package\Alta Articulos\AltaInsumos\Exec SP_Quitar_color_descripcion_insumos"
+              DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+              DTS:Description="Tarea Ejecutar SQL"
+              DTS:DTSID="{539E8E2B-C47E-4853-8D90-0D33C5CC6E27}"
+              DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Exec SP_Quitar_color_descripcion_insumos"
+              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+              DTS:ThreadHint="1">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{7E0FDA1D-137A-46D2-BCC8-C401E9873B15}"
+                  SQLTask:SqlStatementSource="EXEC SP_Quitar_color_descripcion_insumos" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              </DTS:ObjectData>
+            </DTS:Executable>
+            <DTS:Executable
+              DTS:refId="Package\Alta Articulos\AltaInsumos\EXEC SP_Quitar_color_descripcion_insumos"
+              DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+              DTS:Description="Tarea Ejecutar SQL"
+              DTS:DTSID="{8C27C8DA-919C-467B-8B8D-790C94FF73BC}"
+              DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="EXEC SP_Quitar_color_descripcion_insumos"
+              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+              DTS:ThreadHint="1">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{7E0FDA1D-137A-46D2-BCC8-C401E9873B15}"
+                  SQLTask:SqlStatementSource="EXEC SP_Quitar_color_descripcion_insumos" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              </DTS:ObjectData>
+            </DTS:Executable>
+          </DTS:Executables>
+          <DTS:PrecedenceConstraints>
+            <DTS:PrecedenceConstraint
+              DTS:refId="Package\Alta Articulos\AltaInsumos.PrecedenceConstraints[Restricción]"
+              DTS:CreationName=""
+              DTS:DTSID="{462E7C7E-FEC9-4651-BDE2-F8A62F090E3F}"
+              DTS:From="Package\Alta Articulos\AltaInsumos\Alta_Insumos"
+              DTS:LogicalAnd="True"
+              DTS:ObjectName="Restricción"
+              DTS:To="Package\Alta Articulos\AltaInsumos\EXEC SP_Quitar_color_descripcion_insumos" />
+            <DTS:PrecedenceConstraint
+              DTS:refId="Package\Alta Articulos\AltaInsumos.PrecedenceConstraints[Restricción 1]"
+              DTS:CreationName=""
+              DTS:DTSID="{2952C8AA-CC53-4CBD-BEC1-2E30A19AE3C3}"
+              DTS:From="Package\Alta Articulos\AltaInsumos\EXEC SP_Quitar_color_descripcion_insumos"
+              DTS:LogicalAnd="True"
+              DTS:ObjectName="Restricción 1"
+              DTS:To="Package\Alta Articulos\AltaInsumos\Alta_Insumos_Sobre_Rubros" />
+            <DTS:PrecedenceConstraint
+              DTS:refId="Package\Alta Articulos\AltaInsumos.PrecedenceConstraints[Restricción 2]"
+              DTS:CreationName=""
+              DTS:DTSID="{43748DD2-FE9B-4392-AA0F-69E284442202}"
+              DTS:From="Package\Alta Articulos\AltaInsumos\Alta_Insumos_Sobre_Rubros"
+              DTS:LogicalAnd="True"
+              DTS:ObjectName="Restricción 2"
+              DTS:To="Package\Alta Articulos\AltaInsumos\Exec SP_Quitar_color_descripcion_insumos" />
+          </DTS:PrecedenceConstraints>
+        </DTS:Executable>
         <DTS:Executable
           DTS:refId="Package\Alta Articulos\Create SP"
           DTS:CreationName="STOCK:SEQUENCE"
@@ -762,42 +928,6 @@
           <DTS:Variables />
           <DTS:Executables>
             <DTS:Executable
-              DTS:refId="Package\Alta Articulos\InsertsABM\Alta_ArticuloAtributos"
-              DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
-              DTS:Description="Tarea Ejecutar SQL"
-              DTS:DTSID="{FFC96809-F83D-4752-BD0D-9F3C70B3F9D5}"
-              DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
-              DTS:LocaleID="-1"
-              DTS:ObjectName="Alta_ArticuloAtributos"
-              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="1">
-              <DTS:Variables />
-              <DTS:ObjectData>
-                <SQLTask:SqlTaskData
-                  SQLTask:Connection="{7E0FDA1D-137A-46D2-BCC8-C401E9873B15}"
-                  SQLTask:SqlStmtSourceType="FileConnection"
-                  SQLTask:SqlStatementSource="Alta_Articulos_Atributos.sql" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-              </DTS:ObjectData>
-            </DTS:Executable>
-            <DTS:Executable
-              DTS:refId="Package\Alta Articulos\InsertsABM\Alta_Articulos"
-              DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
-              DTS:Description="Tarea Ejecutar SQL"
-              DTS:DTSID="{fa913c54-d782-4d15-9d9e-d992445d94d0}"
-              DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
-              DTS:LocaleID="-1"
-              DTS:ObjectName="Alta_Articulos"
-              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="1">
-              <DTS:Variables />
-              <DTS:ObjectData>
-                <SQLTask:SqlTaskData
-                  SQLTask:Connection="{7E0FDA1D-137A-46D2-BCC8-C401E9873B15}"
-                  SQLTask:SqlStmtSourceType="FileConnection"
-                  SQLTask:SqlStatementSource="Alta_Articulos.sql" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-              </DTS:ObjectData>
-            </DTS:Executable>
-            <DTS:Executable
               DTS:refId="Package\Alta Articulos\InsertsABM\Alta_Atributos"
               DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
               DTS:Description="Tarea Ejecutar SQL"
@@ -904,42 +1034,6 @@
                   SQLTask:Connection="{7E0FDA1D-137A-46D2-BCC8-C401E9873B15}"
                   SQLTask:SqlStmtSourceType="FileConnection"
                   SQLTask:SqlStatementSource="Alta_Cuentas_FALTATERMINAR.sql" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-              </DTS:ObjectData>
-            </DTS:Executable>
-            <DTS:Executable
-              DTS:refId="Package\Alta Articulos\InsertsABM\Alta_Insumos"
-              DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
-              DTS:Description="Tarea Ejecutar SQL"
-              DTS:DTSID="{2a4ef00d-a07e-4971-b2f1-ab5019b91c8b}"
-              DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
-              DTS:LocaleID="-1"
-              DTS:ObjectName="Alta_Insumos"
-              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="1">
-              <DTS:Variables />
-              <DTS:ObjectData>
-                <SQLTask:SqlTaskData
-                  SQLTask:Connection="{7E0FDA1D-137A-46D2-BCC8-C401E9873B15}"
-                  SQLTask:SqlStmtSourceType="FileConnection"
-                  SQLTask:SqlStatementSource="Alta_Insumos.sql" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-              </DTS:ObjectData>
-            </DTS:Executable>
-            <DTS:Executable
-              DTS:refId="Package\Alta Articulos\InsertsABM\Alta_Insumos_Sobre_Rubros"
-              DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
-              DTS:Description="Tarea Ejecutar SQL"
-              DTS:DTSID="{23DD4CF6-0746-4EBF-B921-AD1699191F1A}"
-              DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
-              DTS:LocaleID="-1"
-              DTS:ObjectName="Alta_Insumos_Sobre_Rubros"
-              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="1">
-              <DTS:Variables />
-              <DTS:ObjectData>
-                <SQLTask:SqlTaskData
-                  SQLTask:Connection="{7E0FDA1D-137A-46D2-BCC8-C401E9873B15}"
-                  SQLTask:SqlStmtSourceType="FileConnection"
-                  SQLTask:SqlStatementSource="Alta_Insumos_Sobre_Rubros.sql" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
               </DTS:ObjectData>
             </DTS:Executable>
             <DTS:Executable
@@ -1087,50 +1181,8 @@
                   SQLTask:SqlStatementSource="Alta_Temporadas.sql" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
               </DTS:ObjectData>
             </DTS:Executable>
-            <DTS:Executable
-              DTS:refId="Package\Alta Articulos\InsertsABM\EXEC SP_Quitar_color_descripcion_insumos"
-              DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
-              DTS:Description="Tarea Ejecutar SQL"
-              DTS:DTSID="{8C27C8DA-919C-467B-8B8D-790C94FF73BC}"
-              DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
-              DTS:LocaleID="-1"
-              DTS:ObjectName="EXEC SP_Quitar_color_descripcion_insumos"
-              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="1">
-              <DTS:Variables />
-              <DTS:ObjectData>
-                <SQLTask:SqlTaskData
-                  SQLTask:Connection="{7E0FDA1D-137A-46D2-BCC8-C401E9873B15}"
-                  SQLTask:SqlStatementSource="EXEC SP_Quitar_color_descripcion_insumos" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-              </DTS:ObjectData>
-            </DTS:Executable>
-            <DTS:Executable
-              DTS:refId="Package\Alta Articulos\InsertsABM\Exec SP_Quitar_color_descripcion_insumos"
-              DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
-              DTS:Description="Tarea Ejecutar SQL"
-              DTS:DTSID="{539E8E2B-C47E-4853-8D90-0D33C5CC6E27}"
-              DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
-              DTS:LocaleID="-1"
-              DTS:ObjectName="Exec SP_Quitar_color_descripcion_insumos"
-              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-              DTS:ThreadHint="1">
-              <DTS:Variables />
-              <DTS:ObjectData>
-                <SQLTask:SqlTaskData
-                  SQLTask:Connection="{7E0FDA1D-137A-46D2-BCC8-C401E9873B15}"
-                  SQLTask:SqlStatementSource="EXEC SP_Quitar_color_descripcion_insumos" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-              </DTS:ObjectData>
-            </DTS:Executable>
           </DTS:Executables>
           <DTS:PrecedenceConstraints>
-            <DTS:PrecedenceConstraint
-              DTS:refId="Package\Alta Articulos\InsertsABM.PrecedenceConstraints[Restricción]"
-              DTS:CreationName=""
-              DTS:DTSID="{FA976340-FBDE-41B4-A084-23A485797711}"
-              DTS:From="Package\Alta Articulos\InsertsABM\Alta_Insumos"
-              DTS:LogicalAnd="True"
-              DTS:ObjectName="Restricción"
-              DTS:To="Package\Alta Articulos\InsertsABM\EXEC SP_Quitar_color_descripcion_insumos" />
             <DTS:PrecedenceConstraint
               DTS:refId="Package\Alta Articulos\InsertsABM.PrecedenceConstraints[Restricción 1]"
               DTS:CreationName=""
@@ -1156,22 +1208,6 @@
               DTS:ObjectName="Restricción 11"
               DTS:To="Package\Alta Articulos\InsertsABM\Alta_Proveedores_FT" />
             <DTS:PrecedenceConstraint
-              DTS:refId="Package\Alta Articulos\InsertsABM.PrecedenceConstraints[Restricción 12]"
-              DTS:CreationName=""
-              DTS:DTSID="{B486E5E3-D5A1-43AF-8331-C0640DAA3E52}"
-              DTS:From="Package\Alta Articulos\InsertsABM\Alta_Proveedores_FT"
-              DTS:LogicalAnd="True"
-              DTS:ObjectName="Restricción 12"
-              DTS:To="Package\Alta Articulos\InsertsABM\Alta_Insumos" />
-            <DTS:PrecedenceConstraint
-              DTS:refId="Package\Alta Articulos\InsertsABM.PrecedenceConstraints[Restricción 13]"
-              DTS:CreationName=""
-              DTS:DTSID="{B7303E7F-FE98-467B-8C33-11C0B9707699}"
-              DTS:From="Package\Alta Articulos\InsertsABM\Alta_Insumos_Sobre_Rubros"
-              DTS:LogicalAnd="True"
-              DTS:ObjectName="Restricción 13"
-              DTS:To="Package\Alta Articulos\InsertsABM\Exec SP_Quitar_color_descripcion_insumos" />
-            <DTS:PrecedenceConstraint
               DTS:refId="Package\Alta Articulos\InsertsABM.PrecedenceConstraints[Restricción 14]"
               DTS:CreationName=""
               DTS:DTSID="{B24FDF24-8C46-4BBA-BB66-0B18A893736D}"
@@ -1187,30 +1223,6 @@
               DTS:LogicalAnd="True"
               DTS:ObjectName="Restricción 15"
               DTS:To="Package\Alta Articulos\InsertsABM\Alta_Atributos" />
-            <DTS:PrecedenceConstraint
-              DTS:refId="Package\Alta Articulos\InsertsABM.PrecedenceConstraints[Restricción 16]"
-              DTS:CreationName=""
-              DTS:DTSID="{F6F7E11A-D228-4B55-B594-94907B0F11FB}"
-              DTS:From="Package\Alta Articulos\InsertsABM\Alta_Articulos"
-              DTS:LogicalAnd="True"
-              DTS:ObjectName="Restricción 16"
-              DTS:To="Package\Alta Articulos\InsertsABM\Alta_ArticuloAtributos" />
-            <DTS:PrecedenceConstraint
-              DTS:refId="Package\Alta Articulos\InsertsABM.PrecedenceConstraints[Restricción 17]"
-              DTS:CreationName=""
-              DTS:DTSID="{023E1B6C-0CBF-41F1-9130-191A856573F6}"
-              DTS:From="Package\Alta Articulos\InsertsABM\Exec SP_Quitar_color_descripcion_insumos"
-              DTS:LogicalAnd="True"
-              DTS:ObjectName="Restricción 17"
-              DTS:To="Package\Alta Articulos\InsertsABM\Alta_Articulos" />
-            <DTS:PrecedenceConstraint
-              DTS:refId="Package\Alta Articulos\InsertsABM.PrecedenceConstraints[Restricción 18]"
-              DTS:CreationName=""
-              DTS:DTSID="{6D903E02-87B0-46E4-B755-8D4692DC681C}"
-              DTS:From="Package\Alta Articulos\InsertsABM\EXEC SP_Quitar_color_descripcion_insumos"
-              DTS:LogicalAnd="True"
-              DTS:ObjectName="Restricción 18"
-              DTS:To="Package\Alta Articulos\InsertsABM\Alta_Insumos_Sobre_Rubros" />
             <DTS:PrecedenceConstraint
               DTS:refId="Package\Alta Articulos\InsertsABM.PrecedenceConstraints[Restricción 2]"
               DTS:CreationName=""
@@ -1329,6 +1341,22 @@
           DTS:LogicalAnd="True"
           DTS:ObjectName="Restricción 3"
           DTS:To="Package\Alta Articulos\Importaciones Excels" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Alta Articulos.PrecedenceConstraints[Restricción 4]"
+          DTS:CreationName=""
+          DTS:DTSID="{8892D6EB-CCAD-4586-974F-B8FA5658026D}"
+          DTS:From="Package\Alta Articulos\InsertsABM"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Restricción 4"
+          DTS:To="Package\Alta Articulos\AltaInsumos" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Alta Articulos.PrecedenceConstraints[Restricción 5]"
+          DTS:CreationName=""
+          DTS:DTSID="{2346BFF0-B6FD-4810-B9FF-3EBAD6AD47E3}"
+          DTS:From="Package\Alta Articulos\AltaInsumos"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Restricción 5"
+          DTS:To="Package\Alta Articulos\AltaArticulos" />
       </DTS:PrecedenceConstraints>
     </DTS:Executable>
     <DTS:Executable
@@ -1387,6 +1415,174 @@
       <GraphLayout
         Capacity="128" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="169,42"
+          Id="Package\Alta Articulos\AltaArticulos\Alta_ArticuloAtributos"
+          TopLeft="22.6666611532372,82.9444444186156" />
+        <NodeLayout
+          Size="142,42"
+          Id="Package\Alta Articulos\AltaArticulos\Alta_Articulos"
+          TopLeft="18.5833278509482,7.23333330233982" />
+        <EdgeLayout
+          Id="Package\Alta Articulos\AltaArticulos.PrecedenceConstraints[Restricción]"
+          TopLeft="89.5833278509482,49.2333333023398">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="17.7499999689557,33.7111111162758"
+              Start="0,0"
+              End="17.7499999689557,26.2111111162758">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,12.8555555581379" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,12.8555555581379"
+                    Point2="0,16.8555555581379"
+                    Point3="4,16.8555555581379" />
+                  <mssgle:LineSegment
+                    End="13.7499999689557,16.8555555581379" />
+                  <mssgle:CubicBezierSegment
+                    Point1="13.7499999689557,16.8555555581379"
+                    Point2="17.7499999689557,16.8555555581379"
+                    Point3="17.7499999689557,20.8555555581379" />
+                  <mssgle:LineSegment
+                    End="17.7499999689557,26.2111111162758" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="205,180"
+          Size="205,223"
+          Id="Package\Alta Articulos\AltaArticulos"
+          TopLeft="502.499992015461,615.466684271494" />
+        <NodeLayout
+          Size="142,42"
+          Id="Package\Alta Articulos\AltaInsumos\Alta_Insumos"
+          TopLeft="13.2222261130808,5.5" />
+        <NodeLayout
+          Size="213,42"
+          Id="Package\Alta Articulos\AltaInsumos\Alta_Insumos_Sobre_Rubros"
+          TopLeft="17.9141436700118,170.212113463516" />
+        <NodeLayout
+          Size="281,42"
+          Id="Package\Alta Articulos\AltaInsumos\Exec SP_Quitar_color_descripcion_insumos"
+          TopLeft="11.0833300157556,234.661101860574" />
+        <NodeLayout
+          Size="284,42"
+          Id="Package\Alta Articulos\AltaInsumos\EXEC SP_Quitar_color_descripcion_insumos"
+          TopLeft="1.33333101537542,81.5111013685328" />
+        <EdgeLayout
+          Id="Package\Alta Articulos\AltaInsumos.PrecedenceConstraints[Restricción]"
+          TopLeft="84.2222261130808,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="59.1111049022946,34.0111013685328"
+              Start="0,0"
+              End="59.1111049022946,26.5111013685328">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.0055506842664" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.0055506842664"
+                    Point2="0,17.0055506842664"
+                    Point3="4,17.0055506842664" />
+                  <mssgle:LineSegment
+                    End="55.1111049022946,17.0055506842664" />
+                  <mssgle:CubicBezierSegment
+                    Point1="55.1111049022946,17.0055506842664"
+                    Point2="59.1111049022946,17.0055506842664"
+                    Point3="59.1111049022946,21.0055506842664" />
+                  <mssgle:LineSegment
+                    End="59.1111049022946,26.5111013685328" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Alta Articulos\AltaInsumos.PrecedenceConstraints[Restricción 1]"
+          TopLeft="143.333331015375,123.511101368533">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-18.752520678697,46.7010120949835"
+              Start="0,0"
+              End="-18.752520678697,39.2010120949835">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.3505060474918" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.3505060474918"
+                    Point2="0,23.3505060474918"
+                    Point3="-4,23.3505060474918" />
+                  <mssgle:LineSegment
+                    End="-14.752520678697,23.3505060474918" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-14.752520678697,23.3505060474918"
+                    Point2="-18.752520678697,23.3505060474918"
+                    Point3="-18.752520678697,27.3505060474918" />
+                  <mssgle:LineSegment
+                    End="-18.752520678697,39.2010120949835" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Alta Articulos\AltaInsumos.PrecedenceConstraints[Restricción 2]"
+          TopLeft="231.247477003345,191.212113463516">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-79.4974803209229,43.4489883970582"
+              Start="0,0"
+              End="-79.4974803209229,35.9489883970582">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-75.4974803209229,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-75.4974803209229,0"
+                    Point2="-79.4974803209229,0"
+                    Point3="-79.4974803209229,4" />
+                  <mssgle:LineSegment
+                    End="-79.4974803209229,35.9489883970582" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="False"
+          PanelSize="347,332"
+          Size="347,43"
+          Id="Package\Alta Articulos\AltaInsumos"
+          TopLeft="96.6666647295157,580.666652254266" />
+        <NodeLayout
           Size="164,42"
           Id="Package\Alta Articulos\Create SP\SP_Asigno_Padres"
           TopLeft="17,70.5" />
@@ -1399,7 +1595,7 @@
           Id="Package\Alta Articulos\Create SP\SP_Error_actualizacion_insert_articulos"
           TopLeft="8,2.5" />
         <NodeLayout
-          Size="169.333333333334,42"
+          Size="169,42"
           Id="Package\Alta Articulos\Create SP\SP_Insert_Articulos"
           TopLeft="22.7289636846767,158.409090909091" />
         <NodeLayout
@@ -1407,7 +1603,7 @@
           Id="Package\Alta Articulos\Create SP\SP_Quitar_color_descripcion_insumos"
           TopLeft="234.944440036184,185.333330117664" />
         <NodeLayout
-          Size="169.333333333334,42"
+          Size="169,42"
           Id="Package\Alta Articulos\Create SP\SP_Validar_CUIT"
           TopLeft="262.906565025336,58.7878811512037" />
         <EdgeLayout
@@ -1441,9 +1637,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -1477,9 +1671,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -1513,9 +1705,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -1549,9 +1739,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -1579,16 +1767,14 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="False"
-          PanelSize="532.666666666667,334"
-          Size="146.666666666667,42.6666666666667"
+          PanelSize="533,334"
+          Size="147,43"
           Id="Package\Alta Articulos\Create SP"
           TopLeft="30.0833333022891,195.888888888888" />
         <NodeLayout
@@ -1634,7 +1820,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -1668,16 +1856,18 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="False"
           PanelSize="438.666666666667,261.333333333334"
-          Size="173.333333333334,42.6666666666667"
+          Size="439,43"
           Id="Package\Alta Articulos\Create Triggers"
-          TopLeft="31.5416666511446,140" />
+          TopLeft="31.5416666511446,140.866666651169" />
         <NodeLayout
           Size="188,42"
           Id="Package\Alta Articulos\Importaciones Excels\ImportArticulosCob"
@@ -1721,9 +1911,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -1745,36 +1933,26 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="False"
           PanelSize="488,302"
-          Size="200,42.6666666666667"
+          Size="200,43"
           Id="Package\Alta Articulos\Importaciones Excels"
           TopLeft="29.3888888681928,80.6666666279234" />
         <NodeLayout
-          Size="169.333333333334,42"
-          Id="Package\Alta Articulos\InsertsABM\Alta_ArticuloAtributos"
-          TopLeft="184,667" />
-        <NodeLayout
-          Size="142,42"
-          Id="Package\Alta Articulos\InsertsABM\Alta_Articulos"
-          TopLeft="179.916666697711,589.555555581384" />
-        <NodeLayout
-          Size="169.333333333334,42"
+          Size="169,42"
           Id="Package\Alta Articulos\InsertsABM\Alta_Atributos"
           TopLeft="25,545" />
         <NodeLayout
-          Size="178.666666666667,42"
+          Size="179,42"
           Id="Package\Alta Articulos\InsertsABM\Alta_Categoria_Talles"
           TopLeft="275.848484848484,83.5606076490521" />
         <NodeLayout
-          Size="189.333333333334,42"
+          Size="189,42"
           Id="Package\Alta Articulos\InsertsABM\Alta_CategoriaAtributos"
           TopLeft="277.666666666666,245.757575757552" />
         <NodeLayout
@@ -1790,87 +1968,37 @@
           Id="Package\Alta Articulos\InsertsABM\Alta_Cuentas_FT"
           TopLeft="18.666666666667,92.6666666666424" />
         <NodeLayout
-          Size="142,42"
-          Id="Package\Alta Articulos\InsertsABM\Alta_Insumos"
-          TopLeft="294.222223257025,459.853534204131" />
-        <NodeLayout
-          Size="214,42"
-          Id="Package\Alta Articulos\InsertsABM\Alta_Insumos_Sobre_Rubros"
-          TopLeft="257.247474768171,537.545454545454" />
-        <NodeLayout
           Size="156,42"
           Id="Package\Alta Articulos\InsertsABM\Alta_Localidades"
           TopLeft="19.9090909090909,397.757575757551" />
         <NodeLayout
-          Size="130.666666666667,42"
+          Size="131,42"
           Id="Package\Alta Articulos\InsertsABM\Alta_Paises"
           TopLeft="26.3636363636363,245.848484848449" />
         <NodeLayout
-          Size="177.333333333334,42"
+          Size="177,42"
           Id="Package\Alta Articulos\InsertsABM\Alta_Proveedores_FT"
           TopLeft="272.583330756674,390.444449920105" />
         <NodeLayout
-          Size="149.333333333334,42"
+          Size="149,42"
           Id="Package\Alta Articulos\InsertsABM\Alta_Provincias"
           TopLeft="22,321.666666666642" />
         <NodeLayout
-          Size="158.666666666667,42"
+          Size="159,42"
           Id="Package\Alta Articulos\InsertsABM\Alta_Retenciones_FT"
           TopLeft="15,15" />
         <NodeLayout
-          Size="128.666666666667,42"
+          Size="129,42"
           Id="Package\Alta Articulos\InsertsABM\Alta_Talles"
           TopLeft="307.916666573534,170.111109690509" />
         <NodeLayout
-          Size="178.666666666667,42"
+          Size="179,42"
           Id="Package\Alta Articulos\InsertsABM\Alta_UnidadesMedida"
           TopLeft="283.666666666667,318.575757575733" />
         <NodeLayout
           Size="164,42"
           Id="Package\Alta Articulos\InsertsABM\Altra_Temporadas"
           TopLeft="22.575757575757,476.393939393922" />
-        <NodeLayout
-          Size="281.333333333334,42"
-          Id="Package\Alta Articulos\InsertsABM\Exec SP_Quitar_color_descripcion_insumos"
-          TopLeft="348.916660530286,595.527773780791" />
-        <NodeLayout
-          Size="284,42"
-          Id="Package\Alta Articulos\InsertsABM\EXEC SP_Quitar_color_descripcion_insumos"
-          TopLeft="461.499992156195,486.111108450757" />
-        <EdgeLayout
-          Id="Package\Alta Articulos\InsertsABM.PrecedenceConstraints[Restricción]"
-          TopLeft="436.222223257025,480.853534204131">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="25.2777688991695,26.2575742466265"
-              Start="0,0"
-              End="17.7777688991695,26.2575742466265">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="8.63888444958477,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="8.63888444958477,0"
-                    Point2="12.6388844495848,0"
-                    Point3="12.6388844495848,4" />
-                  <mssgle:LineSegment
-                    End="12.6388844495848,22.2575742466265" />
-                  <mssgle:CubicBezierSegment
-                    Point1="12.6388844495848,22.2575742466265"
-                    Point2="12.6388844495848,26.2575742466265"
-                    Point3="16.6388844495848,26.2575742466265" />
-                  <mssgle:LineSegment
-                    End="17.7777688991695,26.2575742466265" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package\Alta Articulos\InsertsABM.PrecedenceConstraints[Restricción 1]"
           TopLeft="91.5833333333335,57">
@@ -1950,56 +2078,6 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Alta Articulos\InsertsABM.PrecedenceConstraints[Restricción 12]"
-          TopLeft="363.236110340183,432.444449920105">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,27.409084284026"
-              Start="0,0"
-              End="0,19.909084284026">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,19.909084284026" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Alta Articulos\InsertsABM.PrecedenceConstraints[Restricción 13]"
-          TopLeft="471.247474768171,558.545454545454">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="18.3358524287816,36.9823192353369"
-              Start="0,0"
-              End="18.3358524287816,29.4823192353369">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="14.3358524287816,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="14.3358524287816,0"
-                    Point2="18.3358524287816,0"
-                    Point3="18.3358524287816,4" />
-                  <mssgle:LineSegment
-                    End="18.3358524287816,29.4823192353369" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package\Alta Articulos\InsertsABM.PrecedenceConstraints[Restricción 14]"
           TopLeft="186,545">
           <EdgeLayout.Curve>
@@ -2047,90 +2125,6 @@
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,19.106060606078" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Alta Articulos\InsertsABM.PrecedenceConstraints[Restricción 16]"
-          TopLeft="250.916666697711,631.555555581384">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="17.7499999689557,35.4444444186159"
-              Start="0,0"
-              End="17.7499999689557,27.9444444186159">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,13.722222209308" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,13.722222209308"
-                    Point2="0,17.722222209308"
-                    Point3="4,17.722222209308" />
-                  <mssgle:LineSegment
-                    End="13.7499999689557,17.722222209308" />
-                  <mssgle:CubicBezierSegment
-                    Point1="13.7499999689557,17.722222209308"
-                    Point2="17.7499999689557,17.722222209308"
-                    Point3="17.7499999689557,21.722222209308" />
-                  <mssgle:LineSegment
-                    End="17.7499999689557,27.9444444186159" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Alta Articulos\InsertsABM.PrecedenceConstraints[Restricción 17]"
-          TopLeft="348.916660530286,613.541664681087">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-26.999993832575,0"
-              Start="0,0"
-              End="-19.499993832575,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-19.499993832575,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Alta Articulos\InsertsABM.PrecedenceConstraints[Restricción 18]"
-          TopLeft="461.499992156195,512.777775117424">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-97.2525173880235,24.76767942803"
-              Start="0,0"
-              End="-97.2525173880235,17.26767942803">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-93.2525173880235,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-93.2525173880235,0"
-                    Point2="-97.2525173880235,0"
-                    Point3="-97.2525173880235,4" />
-                  <mssgle:LineSegment
-                    End="-97.2525173880235,17.26767942803" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2329,35 +2323,35 @@
         </EdgeLayout>
         <ContainerLayout
           HeaderHeight="43"
-          IsExpanded="True"
-          PanelSize="750.666666666667,764"
-          Size="750.666666666667,806.666666666667"
+          IsExpanded="False"
+          PanelSize="751,764"
+          Size="154,43"
           Id="Package\Alta Articulos\InsertsABM"
-          TopLeft="31.9469696659256,270.46969700844" />
+          TopLeft="34.4469696286727,274.803030264286" />
         <NodeLayout
-          Size="169.333333333334,42"
+          Size="169,42"
           Id="Package\Alta Articulos\Puesta a 0 BD"
           TopLeft="37.5,11" />
         <EdgeLayout
           Id="Package\Alta Articulos.PrecedenceConstraints[Restricción]"
-          TopLeft="129.388888868193,123.33333329459">
+          TopLeft="229.388888868193,102.166666627923">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="75.4861111162851,38.0000000387433"
+              EndConnector="21.6527777829518,38.7000000232456"
               Start="0,0"
-              End="67.9861111162851,38.0000000387433">
+              End="21.6527777829518,31.2000000232456">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,34.0000000387433" />
+                    End="17.6527777829518,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,34.0000000387433"
-                    Point2="0,38.0000000387433"
-                    Point3="4,38.0000000387433" />
+                    Point1="17.6527777829518,0"
+                    Point2="21.6527777829518,0"
+                    Point3="21.6527777829518,4" />
                   <mssgle:LineSegment
-                    End="67.9861111162851,38.0000000387433" />
+                    End="21.6527777829518,31.2000000232456" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2368,24 +2362,24 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Alta Articulos.PrecedenceConstraints[Restricción 1]"
-          TopLeft="118.208333317811,182.666666666667">
+          TopLeft="251.041666651145,183.866666651169">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="58.5416666511445,34.5555555555547"
+              EndConnector="-73.9583333488555,33.522222237719"
               Start="0,0"
-              End="51.0416666511445,34.5555555555547">
+              End="-66.4583333488555,33.522222237719">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,30.5555555555547" />
+                    End="0,29.522222237719" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,30.5555555555547"
-                    Point2="0,34.5555555555547"
-                    Point3="4,34.5555555555547" />
+                    Point1="0,29.522222237719"
+                    Point2="0,33.522222237719"
+                    Point3="-4,33.522222237719" />
                   <mssgle:LineSegment
-                    End="51.0416666511445,34.5555555555547" />
+                    End="-66.4583333488555,33.522222237719" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2396,30 +2390,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Alta Articulos.PrecedenceConstraints[Restricción 2]"
-          TopLeft="103.416666635622,238.555555555555">
+          TopLeft="107.515151465481,238.888888888888">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="303.863636363636,31.9141414528854"
+              EndConnector="0,35.914141375398"
               Start="0,0"
-              End="303.863636363636,24.4141414528854">
+              End="0,28.414141375398">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,11.9570707264427" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,11.9570707264427"
-                    Point2="0,15.9570707264427"
-                    Point3="4,15.9570707264427" />
-                  <mssgle:LineSegment
-                    End="299.863636363636,15.9570707264427" />
-                  <mssgle:CubicBezierSegment
-                    Point1="299.863636363636,15.9570707264427"
-                    Point2="303.863636363636,15.9570707264427"
-                    Point3="303.863636363636,19.9570707264427" />
-                  <mssgle:LineSegment
-                    End="303.863636363636,24.4141414528854" />
+                    End="0,28.414141375398" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2430,7 +2412,7 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Alta Articulos.PrecedenceConstraints[Restricción 3]"
-          TopLeft="125.77777776743,53">
+          TopLeft="125.694444434096,53">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -2450,31 +2432,99 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Alta Articulos.PrecedenceConstraints[Restricción 4]"
+          TopLeft="111.446969628673,317.803030264286">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="158.719695100843,262.86362198998"
+              Start="0,0"
+              End="158.719695100843,255.36362198998">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,127.43181099499" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,127.43181099499"
+                    Point2="0,131.43181099499"
+                    Point3="4,131.43181099499" />
+                  <mssgle:LineSegment
+                    End="154.719695100843,131.43181099499" />
+                  <mssgle:CubicBezierSegment
+                    Point1="154.719695100843,131.43181099499"
+                    Point2="158.719695100843,131.43181099499"
+                    Point3="158.719695100843,135.43181099499" />
+                  <mssgle:LineSegment
+                    End="158.719695100843,255.36362198998" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Alta Articulos.PrecedenceConstraints[Restricción 5]"
+          TopLeft="443.666664729516,602.166652254266">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="58.8333272859453,124.800032017228"
+              Start="0,0"
+              End="51.3333272859453,124.800032017228">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="25.4166636429727,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="25.4166636429727,0"
+                    Point2="29.4166636429727,0"
+                    Point3="29.4166636429727,4" />
+                  <mssgle:LineSegment
+                    End="29.4166636429727,120.800032017228" />
+                  <mssgle:CubicBezierSegment
+                    Point1="29.4166636429727,120.800032017228"
+                    Point2="29.4166636429727,124.800032017228"
+                    Point3="33.4166636429727,124.800032017228" />
+                  <mssgle:LineSegment
+                    End="51.3333272859453,124.800032017228" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="787.333333333334,1134.66666666667"
-          Size="787.333333333334,1178"
+          PanelSize="857,1521"
+          Size="857,1564"
           Id="Package\Alta Articulos"
-          TopLeft="30.9393939393938,6893.22727272727" />
+          TopLeft="30.9393939393938,13747.8939393939" />
         <NodeLayout
-          Size="213.333333333334,42"
+          Size="213,42"
           Id="Package\Importaciones Remitos\Create SP\SP_Extraer_Archivo_Remitos"
           TopLeft="19.0833170351887,32.4166610682996" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="238.666666666667,130"
-          Size="238.666666666667,172.666666666667"
+          PanelSize="239,130"
+          Size="239,173"
           Id="Package\Importaciones Remitos\Create SP"
           TopLeft="63.6666506479187,31.6666624049339" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="422,409.333333333334"
+          PanelSize="422,409"
           Size="422,452"
           Id="Package\Importaciones Remitos"
-          TopLeft="1008.1249849281,6923.99999620318" />
+          TopLeft="1008.1249849281,13778.6666628698" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
